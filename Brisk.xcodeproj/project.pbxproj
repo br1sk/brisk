@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
-		C28001DB1D148AB800569A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001DA1D148AB800569A72 /* ViewController.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
 		C28001EB1D148AB800569A72 /* BriskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001EA1D148AB800569A72 /* BriskTests.swift */; };
 		C28001F61D148AB800569A72 /* BriskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001F51D148AB800569A72 /* BriskUITests.swift */; };
+		C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CB1D148CDC00D240C4 /* RadarViewController.swift */; };
+		C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CD1D14900C00D240C4 /* RadarService.swift */; };
+		C28399D01D14901800D240C4 /* Radar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CF1D14901800D240C4 /* Radar.swift */; };
+		C28399D21D14904100D240C4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D11D14904100D240C4 /* Product.swift */; };
+		C28399D41D14907500D240C4 /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D31D14907500D240C4 /* Classification.swift */; };
+		C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D51D1490AD00D240C4 /* Reproducability.swift */; };
+		C28399D81D1490C700D240C4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D71D1490C700D240C4 /* Area.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,6 @@
 /* Begin PBXFileReference section */
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C28001DA1D148AB800569A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C28001DC1D148AB800569A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28001DF1D148AB800569A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C28001E11D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +50,13 @@
 		C28001F11D148AB800569A72 /* BriskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BriskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001F51D148AB800569A72 /* BriskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriskUITests.swift; sourceTree = "<group>"; };
 		C28001F71D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28399CB1D148CDC00D240C4 /* RadarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarViewController.swift; sourceTree = "<group>"; };
+		C28399CD1D14900C00D240C4 /* RadarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarService.swift; sourceTree = "<group>"; };
+		C28399CF1D14901800D240C4 /* Radar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radar.swift; sourceTree = "<group>"; };
+		C28399D11D14904100D240C4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C28399D31D14907500D240C4 /* Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
+		C28399D51D1490AD00D240C4 /* Reproducability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reproducability.swift; sourceTree = "<group>"; };
+		C28399D71D1490C700D240C4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
-				C28001DA1D148AB800569A72 /* ViewController.swift */,
+				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
+				C28399CD1D14900C00D240C4 /* RadarService.swift */,
+				C28399D11D14904100D240C4 /* Product.swift */,
+				C28399D31D14907500D240C4 /* Classification.swift */,
+				C28399D51D1490AD00D240C4 /* Reproducability.swift */,
+				C28399D71D1490C700D240C4 /* Area.swift */,
+				C28399CF1D14901800D240C4 /* Radar.swift */,
 				C28001DC1D148AB800569A72 /* Assets.xcassets */,
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 				C28001E11D148AB800569A72 /* Info.plist */,
@@ -252,8 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28001DB1D148AB800569A72 /* ViewController.swift in Sources */,
+				C28399D01D14901800D240C4 /* Radar.swift in Sources */,
+				C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */,
+				C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */,
+				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
+				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				C28399D81D1490C700D240C4 /* Area.swift in Sources */,
+				C28399D41D14907500D240C4 /* Classification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +499,7 @@
 				C28001FC1D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C28001FD1D148AB800569A72 /* Build configuration list for PBXNativeTarget "BriskTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +508,7 @@
 				C28001FF1D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C28002001D148AB800569A72 /* Build configuration list for PBXNativeTarget "BriskUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +517,7 @@
 				C28002021D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

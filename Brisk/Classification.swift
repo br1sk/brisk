@@ -1,0 +1,1 @@
+typealias Classification = String
