@@ -7,12 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
+		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
+		C20DDC141D1652C20086D304 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC131D1652C20086D304 /* Keychain.swift */; };
+		C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */; };
+		C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC171D16771A0086D304 /* StoryboardRouter.swift */; };
+		C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC191D167D5F0086D304 /* RadarDocument.swift */; };
+		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
+		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
-		C28001DB1D148AB800569A72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001DA1D148AB800569A72 /* ViewController.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
-		C28001EB1D148AB800569A72 /* BriskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001EA1D148AB800569A72 /* BriskTests.swift */; };
 		C28001F61D148AB800569A72 /* BriskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001F51D148AB800569A72 /* BriskUITests.swift */; };
+		C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CB1D148CDC00D240C4 /* RadarViewController.swift */; };
+		C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */; };
+		C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A141D14F29B00D240C4 /* Validatable.swift */; };
+		C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */; };
+		C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */; };
+		C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */; };
+		C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */; };
+		C2839A241D14FC7000D240C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A231D14FC7000D240C4 /* Result.swift */; };
+		C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */; };
+		C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */; };
+		C2C360191D172DB400217D22 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360181D172DB400217D22 /* TabViewController.swift */; };
+		C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */; };
+		C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,18 +53,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
+		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
+		C2042B521D17397900DEF594 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		C20DDC131D1652C20086D304 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		C20DDC171D16771A0086D304 /* StoryboardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardRouter.swift; sourceTree = "<group>"; };
+		C20DDC191D167D5F0086D304 /* RadarDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarDocument.swift; sourceTree = "<group>"; };
+		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
+		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C28001DA1D148AB800569A72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C28001DC1D148AB800569A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28001DF1D148AB800569A72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C28001E11D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28001E61D148AB800569A72 /* BriskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BriskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C28001EA1D148AB800569A72 /* BriskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriskTests.swift; sourceTree = "<group>"; };
 		C28001EC1D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28001F11D148AB800569A72 /* BriskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BriskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001F51D148AB800569A72 /* BriskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriskUITests.swift; sourceTree = "<group>"; };
 		C28001F71D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C28399CB1D148CDC00D240C4 /* RadarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarViewController.swift; sourceTree = "<group>"; };
+		C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		C2839A141D14F29B00D240C4 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+Extension.swift"; sourceTree = "<group>"; };
+		C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+Extension.swift"; sourceTree = "<group>"; };
+		C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Extension.swift"; sourceTree = "<group>"; };
+		C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtensionTests.swift; sourceTree = "<group>"; };
+		C2839A231D14FC7000D240C4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
+		C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarPreferencesViewController.swift; sourceTree = "<group>"; };
+		C2C360181D172DB400217D22 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadingWindowController.swift; sourceTree = "<group>"; };
+		C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRadarPreferencesViewController.swift; sourceTree = "<group>"; };
+		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		126829078580050524ADC48E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */,
+				9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C28001CC1D148AB800569A72 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +131,8 @@
 				C28001E91D148AB800569A72 /* BriskTests */,
 				C28001F41D148AB800569A72 /* BriskUITests */,
 				C28001D61D148AB800569A72 /* Products */,
+				126829078580050524ADC48E /* Pods */,
+				C4CC83B6A8A6286F3AF47B9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,10 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
-				C28001DA1D148AB800569A72 /* ViewController.swift */,
-				C28001DC1D148AB800569A72 /* Assets.xcassets */,
-				C28001DE1D148AB800569A72 /* Main.storyboard */,
-				C28001E11D148AB800569A72 /* Info.plist */,
+				C219CBD91D1736EB002F89FC /* Application.swift */,
+				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
+				C20DDC131D1652C20086D304 /* Keychain.swift */,
+				C2839A211D14F5BF00D240C4 /* Controllers */,
+				C2839A1E1D14F59400D240C4 /* Extensions */,
+				C2839A201D14F5A900D240C4 /* Models */,
+				C2839A221D14F5CC00D240C4 /* Resources */,
 			);
 			path = Brisk;
 			sourceTree = "<group>";
@@ -107,7 +164,7 @@
 		C28001E91D148AB800569A72 /* BriskTests */ = {
 			isa = PBXGroup;
 			children = (
-				C28001EA1D148AB800569A72 /* BriskTests.swift */,
+				C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */,
 				C28001EC1D148AB800569A72 /* Info.plist */,
 			);
 			path = BriskTests;
@@ -122,6 +179,62 @@
 			path = BriskUITests;
 			sourceTree = "<group>";
 		};
+		C2839A1E1D14F59400D240C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
+				C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */,
+				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
+				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
+				C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */,
+				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
+				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C2839A201D14F5A900D240C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C20DDC191D167D5F0086D304 /* RadarDocument.swift */,
+				C2839A231D14FC7000D240C4 /* Result.swift */,
+				C2839A141D14F29B00D240C4 /* Validatable.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C2839A211D14F5BF00D240C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */,
+				C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */,
+				C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */,
+				C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */,
+				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
+				C2C360181D172DB400217D22 /* TabViewController.swift */,
+				C2042B521D17397900DEF594 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C2839A221D14F5CC00D240C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28001DC1D148AB800569A72 /* Assets.xcassets */,
+				C28001E11D148AB800569A72 /* Info.plist */,
+				C28001DE1D148AB800569A72 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C4CC83B6A8A6286F3AF47B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C28001FA1D148AB800569A72 /* Build configuration list for PBXNativeTarget "Brisk" */;
 			buildPhases = (
+				5044117728B28669F55893B3 /* [CP] Check Pods Manifest.lock */,
 				C28001D11D148AB800569A72 /* Sources */,
 				C28001D21D148AB800569A72 /* Frameworks */,
 				C28001D31D148AB800569A72 /* Resources */,
+				0FE9F8AD31E59F6784A7B564 /* [CP] Embed Pods Frameworks */,
+				CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,13 +363,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FE9F8AD31E59F6784A7B564 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brisk/Pods-Brisk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5044117728B28669F55893B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brisk/Pods-Brisk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C28001D11D148AB800569A72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28001DB1D148AB800569A72 /* ViewController.swift in Sources */,
+				C219CBDA1D1736EB002F89FC /* Application.swift in Sources */,
+				C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */,
+				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
+				C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */,
+				C2042B531D17397900DEF594 /* ViewController.swift in Sources */,
+				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
+				C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */,
+				C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */,
+				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
+				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
+				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
+				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
+				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
+				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
+				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
+				C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */,
+				C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */,
+				C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */,
+				C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28001EB1D148AB800569A72 /* BriskTests.swift in Sources */,
+				C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +567,7 @@
 		};
 		C28001FB1D148AB800569A72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -396,6 +580,7 @@
 		};
 		C28001FC1D148AB800569A72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -475,6 +660,7 @@
 				C28001FC1D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C28001FD1D148AB800569A72 /* Build configuration list for PBXNativeTarget "BriskTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +669,7 @@
 				C28001FF1D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C28002001D148AB800569A72 /* Build configuration list for PBXNativeTarget "BriskUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +678,7 @@
 				C28002021D148AB800569A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

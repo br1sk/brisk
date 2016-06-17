@@ -1,4 +1,8 @@
-import Cocoa
+import AppKit
 
-final class ViewController: NSViewController {
+class ViewController: NSViewController {
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        NSApp.activateIgnoringOtherApps(true)
+    }
 }
