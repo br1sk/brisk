@@ -37,7 +37,7 @@ final class RadarViewController: NSViewController {
         super.viewDidLoad()
         self.setupTextViewDelegates()
         AppleRadarService.retrieveRadarComponents { [weak self] components in
-            self?.radarComponents = components
+            self?.updateRadarComponents(components)
         }
     }
 
@@ -50,6 +50,14 @@ final class RadarViewController: NSViewController {
     }
 
     // MARK: - Private Methods
+
+    private func updateRadarComponents(components: RadarComponents) {
+        self.radarComponents = components
+        self.areaPopUp.setItemsWithTitles(components.areas.map { $0.name })
+        self.classificationPopUp.setItemsWithTitles(components.classifications.map { $0.name })
+        self.productPopUp.setItemsWithTitles(components.products.map { $0.name })
+        self.reproducibilityPopUp.setItemsWithTitles(components.reproducibilities.map { $0.name })
+    }
 
     private func currentRadar() -> Radar? {
         for field in self.validatables {
@@ -97,7 +105,6 @@ final class RadarViewController: NSViewController {
 
 extension RadarViewController: NSTextViewDelegate {
     override func controlTextDidChange(obj: NSNotification) {
-//        super.controlTextDidChange(obj)
         self.enableSubmitIfValid()
     }
 
@@ -152,5 +159,12 @@ extension NSPopUpButton: Validatable {
 extension NSPopUpButton {
     var selectedTitle: String {
         return self.selectedItem?.title ?? ""
+    }
+
+    func setItemsWithTitles(titles: [String]) {
+        let selectedTitle = self.selectedTitle
+        self.removeAllItems()
+        self.addItemsWithTitles(titles)
+        self.selectItemWithTitle(selectedTitle)
     }
 }
