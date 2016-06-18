@@ -1,1 +1,4 @@
-typealias Reproducability = String
+struct Reproducability {
+    let id: String
+    let name: String
+}

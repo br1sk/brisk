@@ -19,6 +19,7 @@
 		C28399D41D14907500D240C4 /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D31D14907500D240C4 /* Classification.swift */; };
 		C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D51D1490AD00D240C4 /* Reproducability.swift */; };
 		C28399D81D1490C700D240C4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D71D1490C700D240C4 /* Area.swift */; };
+		C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C28399D31D14907500D240C4 /* Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
 		C28399D51D1490AD00D240C4 /* Reproducability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reproducability.swift; sourceTree = "<group>"; };
 		C28399D71D1490C700D240C4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
+				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
 				C28399CD1D14900C00D240C4 /* RadarService.swift */,
 				C28399D11D14904100D240C4 /* Product.swift */,
 				C28399D31D14907500D240C4 /* Classification.swift */,
@@ -273,6 +276,7 @@
 				C28399D01D14901800D240C4 /* Radar.swift in Sources */,
 				C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */,
 				C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */,
+				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
