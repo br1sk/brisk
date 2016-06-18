@@ -5,14 +5,21 @@ private let kSubmitURL = "http://10.10.248.180/radar"
 
 struct AppleRadarService: RadarService {
 
-    func submit(radar radar: Radar) {
+    func submit(radar radar: Radar, completion: (Result<NSDictionary, APIError>) -> Void) {
         Alamofire.request(.POST, kSubmitURL, parameters: radar.toDictionary()).responseJSON { response in
-            guard let dictionary = response.result.value as? NSDictionary else {
-                return
+            dispatch_async(dispatch_get_main_queue()) {
+                switch response.result {
+                    case .Success(let responseDictionary):
+                        completion(.Success(responseDictionary as? NSDictionary ?? [:]))
+                    case .Failure(_):
+                        let responseDictionary = response.data?.toJSONDictionary()
+                        let errorCode = response.response?.statusCode ?? 500
+                        let errorMessage = responseDictionary?["error"] as? String ?? "Unknown error"
+                        let error = APIError(code: errorCode, message: errorMessage)
+                        completion(.Failure(error))
+                    }
             }
-            print(dictionary)
         }
-
     }
 
     static func retrieveRadarComponents(completion: RadarComponents -> Void) {

@@ -48,7 +48,9 @@ final class RadarViewController: NSViewController {
         }
 
         let appleService = AppleRadarService()
-        appleService.submit(radar: radar)
+        appleService.submit(radar: radar) { result in
+
+        }
     }
 
     // MARK: - Private Methods
