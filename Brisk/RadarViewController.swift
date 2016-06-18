@@ -47,13 +47,30 @@ final class RadarViewController: NSViewController {
             return
         }
 
-        let appleService = AppleRadarService()
-        appleService.submit(radar: radar) { result in
+        self.submitButton.enabled = false
 
+        let appleService = AppleRadarService()
+        appleService.submit(radar: radar) { [weak self] result in
+            switch result {
+                case .Success(_):
+                    self?.view.window?.orderOut(self)
+                case .Failure(let error):
+                    self?.showErrorWithMessage(error.message)
+            }
+
+            self?.submitButton.enabled = true
         }
     }
 
     // MARK: - Private Methods
+
+    private func showErrorWithMessage(message: String) {
+        if let window = self.view.window {
+            let alert = NSAlert()
+            alert.messageText = message
+            alert.beginSheetModalForWindow(window, completionHandler: nil)
+        }
+    }
 
     private func updateRadarComponents(components: RadarComponents) {
         self.radarComponents = components
