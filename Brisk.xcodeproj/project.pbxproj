@@ -21,6 +21,10 @@
 		C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D51D1490AD00D240C4 /* Reproducibility.swift */; };
 		C28399D81D1490C700D240C4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D71D1490C700D240C4 /* Area.swift */; };
 		C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */; };
+		C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A141D14F29B00D240C4 /* Validatable.swift */; };
+		C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */; };
+		C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */; };
+		C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */; };
 		D20C329C1D14D9B100FD6C41 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329B1D14D9B100FD6C41 /* API.swift */; };
 		D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */; };
 		D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */; };
@@ -65,6 +69,10 @@
 		C28399D51D1490AD00D240C4 /* Reproducibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reproducibility.swift; sourceTree = "<group>"; };
 		C28399D71D1490C700D240C4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		C2839A141D14F29B00D240C4 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+Extension.swift"; sourceTree = "<group>"; };
+		C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+Extension.swift"; sourceTree = "<group>"; };
+		C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Extension.swift"; sourceTree = "<group>"; };
 		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20C329B1D14D9B100FD6C41 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarService.swift; sourceTree = "<group>"; };
@@ -136,10 +144,14 @@
 				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
 				C28399CD1D14900C00D240C4 /* RadarService.swift */,
 				D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */,
+				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
+				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
+				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
 				C28399D11D14904100D240C4 /* Product.swift */,
 				C28399D31D14907500D240C4 /* Classification.swift */,
 				C28399D51D1490AD00D240C4 /* Reproducibility.swift */,
 				C28399D71D1490C700D240C4 /* Area.swift */,
+				C2839A141D14F29B00D240C4 /* Validatable.swift */,
 				D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */,
 				C28399CF1D14901800D240C4 /* Radar.swift */,
 				D20C329B1D14D9B100FD6C41 /* API.swift */,
@@ -358,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28399D01D14901800D240C4 /* Radar.swift in Sources */,
+				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
 				D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */,
 				D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */,
 				C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */,
@@ -366,8 +379,11 @@
 				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C28399D81D1490C700D240C4 /* Area.swift in Sources */,
 				D20C329C1D14D9B100FD6C41 /* API.swift in Sources */,
+				C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */,
+				C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */,
 				C28399D41D14907500D240C4 /* Classification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

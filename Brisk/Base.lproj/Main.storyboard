@@ -739,10 +739,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="66"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="66"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -751,7 +751,7 @@
                                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="M43-IK-JJ6">
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="M43-IK-JJ6">
                                             <rect key="frame" x="555" y="1" width="16" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -767,10 +767,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -795,10 +795,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="70"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="70"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -807,7 +807,7 @@
                                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="One-zS-ER6">
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="One-zS-ER6">
                                             <rect key="frame" x="555" y="1" width="16" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -851,10 +851,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
