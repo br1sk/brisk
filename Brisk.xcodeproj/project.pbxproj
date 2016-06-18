@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
@@ -17,9 +18,12 @@
 		C28399D01D14901800D240C4 /* Radar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CF1D14901800D240C4 /* Radar.swift */; };
 		C28399D21D14904100D240C4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D11D14904100D240C4 /* Product.swift */; };
 		C28399D41D14907500D240C4 /* Classification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D31D14907500D240C4 /* Classification.swift */; };
-		C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D51D1490AD00D240C4 /* Reproducability.swift */; };
+		C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D51D1490AD00D240C4 /* Reproducibility.swift */; };
 		C28399D81D1490C700D240C4 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399D71D1490C700D240C4 /* Area.swift */; };
 		C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */; };
+		D20C329C1D14D9B100FD6C41 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329B1D14D9B100FD6C41 /* API.swift */; };
+		D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */; };
+		D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
+		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28001DC1D148AB800569A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,9 +62,13 @@
 		C28399CF1D14901800D240C4 /* Radar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radar.swift; sourceTree = "<group>"; };
 		C28399D11D14904100D240C4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C28399D31D14907500D240C4 /* Classification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classification.swift; sourceTree = "<group>"; };
-		C28399D51D1490AD00D240C4 /* Reproducability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reproducability.swift; sourceTree = "<group>"; };
+		C28399D51D1490AD00D240C4 /* Reproducibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reproducibility.swift; sourceTree = "<group>"; };
 		C28399D71D1490C700D240C4 /* Area.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Extension.swift"; sourceTree = "<group>"; };
+		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C329B1D14D9B100FD6C41 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarService.swift; sourceTree = "<group>"; };
+		D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		126829078580050524ADC48E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */,
+				9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C28001CC1D148AB800569A72 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +113,8 @@
 				C28001E91D148AB800569A72 /* BriskTests */,
 				C28001F41D148AB800569A72 /* BriskUITests */,
 				C28001D61D148AB800569A72 /* Products */,
+				126829078580050524ADC48E /* Pods */,
+				C4CC83B6A8A6286F3AF47B9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +135,14 @@
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
 				C28399CD1D14900C00D240C4 /* RadarService.swift */,
+				D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */,
 				C28399D11D14904100D240C4 /* Product.swift */,
 				C28399D31D14907500D240C4 /* Classification.swift */,
-				C28399D51D1490AD00D240C4 /* Reproducability.swift */,
+				C28399D51D1490AD00D240C4 /* Reproducibility.swift */,
 				C28399D71D1490C700D240C4 /* Area.swift */,
+				D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */,
 				C28399CF1D14901800D240C4 /* Radar.swift */,
+				D20C329B1D14D9B100FD6C41 /* API.swift */,
 				C28001DC1D148AB800569A72 /* Assets.xcassets */,
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 				C28001E11D148AB800569A72 /* Info.plist */,
@@ -143,6 +168,14 @@
 			path = BriskUITests;
 			sourceTree = "<group>";
 		};
+		C4CC83B6A8A6286F3AF47B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C28001FA1D148AB800569A72 /* Build configuration list for PBXNativeTarget "Brisk" */;
 			buildPhases = (
+				5044117728B28669F55893B3 /* [CP] Check Pods Manifest.lock */,
 				C28001D11D148AB800569A72 /* Sources */,
 				C28001D21D148AB800569A72 /* Frameworks */,
 				C28001D31D148AB800569A72 /* Resources */,
+				0FE9F8AD31E59F6784A7B564 /* [CP] Embed Pods Frameworks */,
+				CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,19 +304,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FE9F8AD31E59F6784A7B564 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brisk/Pods-Brisk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5044117728B28669F55893B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brisk/Pods-Brisk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C28001D11D148AB800569A72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C28399D01D14901800D240C4 /* Radar.swift in Sources */,
-				C28399D61D1490AD00D240C4 /* Reproducability.swift in Sources */,
+				D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */,
+				D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */,
+				C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */,
 				C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */,
 				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
 				C28399D81D1490C700D240C4 /* Area.swift in Sources */,
+				D20C329C1D14D9B100FD6C41 /* API.swift in Sources */,
 				C28399D41D14907500D240C4 /* Classification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +499,7 @@
 		};
 		C28001FB1D148AB800569A72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -424,6 +512,7 @@
 		};
 		C28001FC1D148AB800569A72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

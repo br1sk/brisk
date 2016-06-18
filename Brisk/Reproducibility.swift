@@ -1,10 +1,10 @@
 import Foundation
 
-struct Area {
+struct Reproducibility {
     let id: String
     let name: String
 
-    static func withDictionary(dictionary: NSDictionary) -> Area? {
+    static func withDictionary(dictionary: NSDictionary) -> Reproducibility? {
         guard let id = dictionary["id"] as? String, name = dictionary["name"] as? String else {
             return nil
         }
@@ -12,4 +12,3 @@ struct Area {
         return self.init(id: id, name: name)
     }
 }
-

@@ -15,10 +15,7 @@ final class RadarViewController: NSViewController {
     @IBOutlet private var notesTextView: NSTextView!
     @IBOutlet private var submitButton: NSButton!
 
-    private var products = [Product]()
-    private var areas = [Area]()
-    private var classifications = [Classification]()
-    private var reproducibility = [Reproducability]()
+    private var radarComponents: RadarComponents[]()
     private var validatables: [Validatable] {
         return [
             self.actualTextView,
@@ -47,6 +44,11 @@ final class RadarViewController: NSViewController {
         }
 
         _ = radar
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        AppleRadarService.retrieveProductsAndReproducibilityAndArea()
     }
 
     // MARK: - Private Methods

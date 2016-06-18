@@ -1,7 +1,7 @@
 struct Radar {
     let product: Product
     let classification: Classification
-    let reproducibility: Reproducability
+    let reproducibility: Reproducibility
     let area: Area
     let title: String
     let description: String
