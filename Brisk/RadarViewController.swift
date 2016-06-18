@@ -15,7 +15,7 @@ final class RadarViewController: NSViewController {
     @IBOutlet private var notesTextView: NSTextView!
     @IBOutlet private var submitButton: NSButton!
 
-    private var radarComponents: RadarComponents[]()
+    private var radarComponents: RadarComponents?
     private var validatables: [Validatable] {
         return [
             self.actualTextView,
@@ -36,6 +36,9 @@ final class RadarViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTextViewDelegates()
+        AppleRadarService.retrieveRadarComponents { [weak self] components in
+            self?.radarComponents = components
+        }
     }
 
     @IBAction private func submitRadar(sender: AnyObject) {
@@ -44,11 +47,6 @@ final class RadarViewController: NSViewController {
         }
 
         _ = radar
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        AppleRadarService.retrieveProductsAndReproducibilityAndArea()
     }
 
     // MARK: - Private Methods
@@ -60,12 +58,13 @@ final class RadarViewController: NSViewController {
             }
         }
 
-        guard let product = self.products.find({ $0.name == self.productPopUp.selectedTitle }),
-            let classification = self.classifications
+
+        guard let product = self.radarComponents?.products.find({ $0.name == self.productPopUp.selectedTitle }),
+            let classification = self.radarComponents?.classifications
                 .find({ $0.name == self.classificationPopUp.selectedTitle }),
-            let reproducibility = self.reproducibility
+            let reproducibility = self.radarComponents?.reproducibilities
                 .find({ $0.name == self.reproducibilityPopUp.selectedTitle }),
-            let area = self.areas.find({ $0.name == self.areaPopUp.selectedTitle }) else
+            let area = self.radarComponents?.areas.find({ $0.name == self.areaPopUp.selectedTitle }) else
         {
             return nil
         }
