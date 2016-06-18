@@ -27,6 +27,7 @@
 		C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */; };
 		C2839A241D14FC7000D240C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A231D14FC7000D240C4 /* Result.swift */; };
 		C2839A261D14FCBE00D240C4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A251D14FCBE00D240C4 /* APIError.swift */; };
+		C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */; };
 		D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */; };
 		D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtensionTests.swift; sourceTree = "<group>"; };
 		C2839A231D14FC7000D240C4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C2839A251D14FCBE00D240C4 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarService.swift; sourceTree = "<group>"; };
 		D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarComponents.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
+				C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */,
 				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
 				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
 				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
@@ -417,6 +420,7 @@
 				D20C32A01D14EA2100FD6C41 /* RadarComponents.swift in Sources */,
 				C2839A261D14FCBE00D240C4 /* APIError.swift in Sources */,
 				D20C329E1D14DB9000FD6C41 /* AppleRadarService.swift in Sources */,
+				C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */,
 				C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */,
 				C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */,
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
