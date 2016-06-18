@@ -87,14 +87,11 @@ final class RadarViewController: NSViewController {
     }
 
     private func enableSubmitIfValid() {
-        for field in self.validatables {
-            if !field.isValid {
-                self.submitButton.enabled = false
-                return
-            }
+        let isValid = self.validatables.reduce(true) { valid, validatable in
+            return valid && validatable.isValid
         }
 
-        self.submitButton.enabled = true
+        self.submitButton.enabled = isValid
     }
 }
 
