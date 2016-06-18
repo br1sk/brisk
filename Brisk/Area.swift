@@ -3,13 +3,14 @@ import Foundation
 struct Area {
     let id: String
     let name: String
-
-    static func withDictionary(dictionary: NSDictionary) -> Area? {
-        guard let id = dictionary["id"] as? String, name = dictionary["name"] as? String else {
-            return nil
-        }
-
-        return self.init(id: id, name: name)
-    }
 }
 
+extension Area {
+    init?(dictionary: NSDictionary) {
+        if let id = dictionary["identifier"] as? String, let name = dictionary["name"] as? String {
+            self.init(id: id, name: name)
+        } else {
+            return nil
+        }
+    }
+}

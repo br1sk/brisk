@@ -19,10 +19,10 @@ struct AppleRadarService: RadarService {
             let classificationDictionaries = dictionary["classifications"] as? [NSDictionary]
             let reproducibilityDictionaries = dictionary["reproducibilities"] as? [NSDictionary]
 
-            let products = productDictionaries!.flatMap(Product.withDictionary)
-            let areas = areaDictionaries!.flatMap(Area.withDictionary)
-            let classifications = classificationDictionaries!.flatMap(Classification.withDictionary)
-            let reproducibilities = reproducibilityDictionaries!.flatMap(Reproducibility.withDictionary)
+            let products = productDictionaries!.flatMap(Product.init)
+            let areas = areaDictionaries!.flatMap(Area.init)
+            let classifications = classificationDictionaries!.flatMap(Classification.init)
+            let reproducibilities = reproducibilityDictionaries!.flatMap(Reproducibility.init)
 
             dispatch_async(dispatch_get_main_queue()) {
                 let components = RadarComponents(products: products, areas: areas,
