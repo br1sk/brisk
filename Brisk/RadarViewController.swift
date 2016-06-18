@@ -1,26 +1,25 @@
 import Cocoa
 
 final class RadarViewController: NSViewController {
-    @IBOutlet var productPopUp: NSPopUpButton!
-    @IBOutlet var areaPopUp: NSPopUpButton!
-    @IBOutlet var versionTextField: NSTextField!
-    @IBOutlet var classificationPopUp: NSPopUpButton!
-    @IBOutlet var reproducibilityPopUp: NSPopUpButton!
-    @IBOutlet var configurationTextField: NSTextField!
-    @IBOutlet var titleTextField: NSTextField!
-    @IBOutlet var descriptionTextView: NSTextView!
-    @IBOutlet var stepsTextView: NSTextView!
-    @IBOutlet var expectedTextView: NSTextView!
-    @IBOutlet var actualTextView: NSTextView!
-    @IBOutlet var notesTextView: NSTextView!
-    @IBOutlet var submitButton: NSButton!
+    @IBOutlet private var productPopUp: NSPopUpButton!
+    @IBOutlet private var areaPopUp: NSPopUpButton!
+    @IBOutlet private var versionTextField: NSTextField!
+    @IBOutlet private var classificationPopUp: NSPopUpButton!
+    @IBOutlet private var reproducibilityPopUp: NSPopUpButton!
+    @IBOutlet private var configurationTextField: NSTextField!
+    @IBOutlet private var titleTextField: NSTextField!
+    @IBOutlet private var descriptionTextView: NSTextView!
+    @IBOutlet private var stepsTextView: NSTextView!
+    @IBOutlet private var expectedTextView: NSTextView!
+    @IBOutlet private var actualTextView: NSTextView!
+    @IBOutlet private var notesTextView: NSTextView!
+    @IBOutlet private var submitButton: NSButton!
 
-    @IBAction func submitRadar(sender: AnyObject) {
+    @IBAction private func submitRadar(sender: AnyObject) {
     }
 
     // MARK: - Private Methods
 
-    private func currentRadar() -> Radar {
-        let 
-    }
+//    private func currentRadar() -> Radar {
+//    }
 }
