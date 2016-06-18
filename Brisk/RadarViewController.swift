@@ -1,4 +1,4 @@
-import Cocoa
+import AppKit
 
 final class RadarViewController: NSViewController {
     @IBOutlet private var productPopUp: NSPopUpButton!
@@ -65,7 +65,6 @@ final class RadarViewController: NSViewController {
                 return nil
             }
         }
-
 
         guard let product = self.radarComponents?.products.find({ $0.name == self.productPopUp.selectedTitle }),
             let classification = self.radarComponents?.classifications

@@ -1,7 +1,6 @@
-import Cocoa
+import AppKit
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-    }
+    func applicationDidFinishLaunching(aNotification: NSNotification) {}
 }
