@@ -47,7 +47,8 @@ final class RadarViewController: NSViewController {
             return
         }
 
-        _ = radar
+        let appleService = AppleRadarService()
+        appleService.submit(radar: radar)
     }
 
     // MARK: - Private Methods
@@ -64,7 +65,6 @@ final class RadarViewController: NSViewController {
     private func currentRadar() -> Radar? {
         for field in self.validatables {
             if !field.isValid {
-                return nil
             }
         }
 

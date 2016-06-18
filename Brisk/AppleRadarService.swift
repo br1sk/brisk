@@ -1,15 +1,22 @@
 import Alamofire
 
-private let kAppleRadarServiceURL = "http://10.10.248.180/types"
+private let kTypesURL = "http://10.10.248.180/types"
+private let kSubmitURL = "http://10.10.248.180/radar"
 
 struct AppleRadarService: RadarService {
 
     func submit(radar radar: Radar) {
-        
+        Alamofire.request(.POST, kSubmitURL, parameters: radar.toDictionary()).responseJSON { response in
+            guard let dictionary = response.result.value as? NSDictionary else {
+                return
+            }
+            print(dictionary)
+        }
+
     }
 
     static func retrieveRadarComponents(completion: RadarComponents -> Void) {
-        Alamofire.request(.GET, kAppleRadarServiceURL, encoding: .URLEncodedInURL).responseJSON { response in
+        Alamofire.request(.GET, kTypesURL, encoding: .URLEncodedInURL).responseJSON { response in
             guard let dictionary = response.result.value as? NSDictionary else {
                 return
             }
@@ -30,5 +37,24 @@ struct AppleRadarService: RadarService {
                 completion(components)
             }
         }
+    }
+}
+
+private extension Radar {
+    private func toDictionary() -> [String: AnyObject] {
+        return [
+            "product": self.product.id,
+            "classification": self.classification.id,
+            "reproducibility": self.reproducibility.id,
+            "area": self.area.id,
+            "title": self.title,
+            "description": self.description,
+            "steps": self.steps,
+            "expected": self.expected,
+            "actual": self.actual,
+            "configuration": self.configuration,
+            "version": self.version,
+            "notes": self.notes,
+        ]
     }
 }
