@@ -702,11 +702,17 @@
                             </popUpButton>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-nw-4Gs">
                                 <rect key="frame" x="563" y="509" width="122" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="dpq-9b-Imm"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="twH-71-LwP">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="HUy-04-wVn" id="OEh-W2-bUv"/>
+                                </connections>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="g4t-ja-U1r">
                                 <rect key="frame" x="113" y="49" width="572" height="410"/>
@@ -718,6 +724,9 @@
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <connections>
+                                            <outlet property="delegate" destination="HUy-04-wVn" id="elz-bL-Mg5"/>
+                                        </connections>
                                     </textField>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-DO-hjm">
                                         <rect key="frame" x="0.0" y="235" width="572" height="68"/>
@@ -891,11 +900,17 @@
                             </customView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-mq-FR4">
                                 <rect key="frame" x="563" y="480" width="122" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="Kdd-Ld-WJr"/>
+                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="dyf-rd-otk">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="HUy-04-wVn" id="sBc-S4-EH6"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="87y-BM-XPm">
                                 <rect key="frame" x="237" y="483" width="99" height="17"/>
@@ -971,7 +986,7 @@
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
                                 <rect key="frame" x="608" y="13" width="83" height="32"/>
-                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
+                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -1034,7 +1049,7 @@ DQ
                             <constraint firstItem="EfJ-B0-TXm" firstAttribute="top" secondItem="g4t-ja-U1r" secondAttribute="bottom" constant="8" id="Anz-U1-ZeR"/>
                             <constraint firstItem="Ws1-0o-O0p" firstAttribute="leading" secondItem="5dM-wd-a3b" secondAttribute="trailing" constant="8" id="AuI-G6-tHH"/>
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="BUr-2h-w3H"/>
-                            <constraint firstItem="slV-6o-OdD" firstAttribute="leading" secondItem="l3V-hh-I5h" secondAttribute="trailing" constant="8" id="Bsg-s2-5Xz"/>
+                            <constraint firstItem="slV-6o-OdD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l3V-hh-I5h" secondAttribute="trailing" constant="8" id="Bsg-s2-5Xz"/>
                             <constraint firstItem="tzm-FL-SCJ" firstAttribute="trailing" secondItem="slV-6o-OdD" secondAttribute="trailing" id="CAT-gV-k3l"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="width" secondItem="w1D-nw-4Gs" secondAttribute="width" id="DI9-Pq-sFP"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="leading" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" constant="8" id="FAL-1x-Z3K"/>
