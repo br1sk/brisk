@@ -179,8 +179,8 @@
 		C2839A1F1D14F5A200D240C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C28399CD1D14900C00D240C4 /* RadarService.swift */,
 				D20C329D1D14DB9000FD6C41 /* AppleRadarService.swift */,
+				C28399CD1D14900C00D240C4 /* RadarService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -188,13 +188,13 @@
 		C2839A201D14F5A900D240C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C28399D11D14904100D240C4 /* Product.swift */,
-				C28399D31D14907500D240C4 /* Classification.swift */,
-				D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */,
-				C2839A141D14F29B00D240C4 /* Validatable.swift */,
-				C28399CF1D14901800D240C4 /* Radar.swift */,
-				C28399D51D1490AD00D240C4 /* Reproducibility.swift */,
 				C28399D71D1490C700D240C4 /* Area.swift */,
+				C28399D31D14907500D240C4 /* Classification.swift */,
+				C28399D11D14904100D240C4 /* Product.swift */,
+				C28399CF1D14901800D240C4 /* Radar.swift */,
+				D20C329F1D14EA2100FD6C41 /* RadarComponents.swift */,
+				C28399D51D1490AD00D240C4 /* Reproducibility.swift */,
+				C2839A141D14F29B00D240C4 /* Validatable.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -211,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				C28001DC1D148AB800569A72 /* Assets.xcassets */,
-				C28001DE1D148AB800569A72 /* Main.storyboard */,
 				C28001E11D148AB800569A72 /* Info.plist */,
+				C28001DE1D148AB800569A72 /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
