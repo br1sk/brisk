@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="rNu-aq-ZAA">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -650,7 +650,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Radar" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="New Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -667,7 +667,7 @@
         <!--Window Controller-->
         <scene sceneID="dbt-xN-tJj">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="rNu-aq-ZAA" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Login" showSeguePresentationStyle="single" id="rNu-aq-ZAA" sceneMemberID="viewController">
                     <window key="window" title="Login to Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Vt6-OZ-YUe">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="291" height="143"/>
@@ -746,17 +746,12 @@ DQ
                                     <action selector="login:" target="rP9-PH-ZAn" id="RpH-03-E9t"/>
                                 </connections>
                             </button>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-4h-3PC">
-                                <rect key="frame" x="185" y="22" width="16" height="16"/>
-                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ccb-Tg-oOx" firstAttribute="top" secondItem="TOp-Tb-0e2" secondAttribute="bottom" constant="8" id="3IF-wi-G9P"/>
                             <constraint firstAttribute="bottom" secondItem="ccb-Tg-oOx" secondAttribute="bottom" constant="20" id="48q-ew-FLH"/>
-                            <constraint firstItem="2dy-4h-3PC" firstAttribute="centerY" secondItem="ccb-Tg-oOx" secondAttribute="centerY" id="5Hh-Ke-Hir"/>
                             <constraint firstAttribute="trailing" secondItem="ccb-Tg-oOx" secondAttribute="trailing" constant="20" id="BUV-tw-BUL"/>
                             <constraint firstAttribute="trailing" secondItem="dqB-2M-Pn4" secondAttribute="trailing" constant="20" id="OUV-JB-px3"/>
-                            <constraint firstItem="ccb-Tg-oOx" firstAttribute="leading" secondItem="2dy-4h-3PC" secondAttribute="trailing" constant="8" id="Tej-zW-Kfy"/>
                             <constraint firstItem="TOp-Tb-0e2" firstAttribute="top" secondItem="dqB-2M-Pn4" secondAttribute="bottom" constant="10" id="Vl0-R8-u0v"/>
                             <constraint firstItem="OgN-wZ-iFf" firstAttribute="leading" secondItem="EZj-N8-Ddm" secondAttribute="leading" constant="20" id="c0E-Q5-lA6"/>
                             <constraint firstItem="OgN-wZ-iFf" firstAttribute="trailing" secondItem="fZb-CB-GOn" secondAttribute="trailing" id="dev-je-3w6"/>
@@ -772,7 +767,6 @@ DQ
                         <outlet property="appleIDTextField" destination="dqB-2M-Pn4" id="on5-vs-MTQ"/>
                         <outlet property="loginButton" destination="ccb-Tg-oOx" id="RhB-T8-8jT"/>
                         <outlet property="passwordTextField" destination="TOp-Tb-0e2" id="IxR-vN-RpP"/>
-                        <outlet property="progressIndicator" destination="2dy-4h-3PC" id="Sab-P2-88s"/>
                     </connections>
                 </viewController>
                 <customObject id="Vzg-3m-G7u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

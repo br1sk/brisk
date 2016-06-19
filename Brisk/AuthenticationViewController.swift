@@ -2,7 +2,6 @@ import AppKit
 
 final class AuthenticationViewController: NSViewController {
     @IBOutlet private var loginButton: NSButton!
-    @IBOutlet private var progressIndicator: NSProgressIndicator!
     @IBOutlet private var appleIDTextField: NSTextField!
     @IBOutlet private var passwordTextField: NSSecureTextField!
 
@@ -13,9 +12,10 @@ final class AuthenticationViewController: NSViewController {
         ]
     }
 
+    var userDidLogin: (() -> Void)?
+
     override func viewWillAppear() {
         super.viewWillAppear()
-
         self.appleIDTextField.becomeFirstResponder()
     }
 
@@ -24,11 +24,8 @@ final class AuthenticationViewController: NSViewController {
     @IBAction private func login(sender: AnyObject) {
         let username = self.appleIDTextField.stringValue
         let password = self.passwordTextField.stringValue
-//        self.enableInterface(false)
-//        self.progressIndicator.startAnimation(self)
-
-//        self.progressIndicator.stopAnimation(self)
-//        self.enableInterface(true)
+        Keychain.set(username: username, password: password, forKey: .Radar)
+        self.userDidLogin?()
     }
 
     private func enableInterface(enable: Bool) {
