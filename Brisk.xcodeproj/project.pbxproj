@@ -151,13 +151,12 @@
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C219CBD91D1736EB002F89FC /* Application.swift */,
-				C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */,
-				C2839A1E1D14F59400D240C4 /* Extensions */,
+				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
 				C20DDC131D1652C20086D304 /* Keychain.swift */,
+				C2839A211D14F5BF00D240C4 /* Controllers */,
+				C2839A1E1D14F59400D240C4 /* Extensions */,
 				C2839A201D14F5A900D240C4 /* Models */,
 				C2839A221D14F5CC00D240C4 /* Resources */,
-				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
-				C2839A211D14F5BF00D240C4 /* ViewControllers */,
 			);
 			path = Brisk;
 			sourceTree = "<group>";
@@ -186,10 +185,10 @@
 				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
 				C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */,
 				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
+				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
+				C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */,
 				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
 				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
-				C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */,
-				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -204,17 +203,18 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		C2839A211D14F5BF00D240C4 /* ViewControllers */ = {
+		C2839A211D14F5BF00D240C4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */,
-				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
-				C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */,
 				C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */,
+				C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */,
+				C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */,
+				C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */,
+				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		C2839A221D14F5CC00D240C4 /* Resources */ = {
