@@ -798,16 +798,20 @@ DQ
         <!--Tab View Controller-->
         <scene sceneID="fWe-Z7-BzO">
             <objects>
-                <tabViewController showSeguePresentationStyle="single" tabStyle="toolbar" id="BhG-02-uGX" sceneMemberID="viewController">
+                <tabViewController showSeguePresentationStyle="single" tabStyle="toolbar" id="BhG-02-uGX" customClass="TabViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="fEr-J6-xJD"/>
                         <tabViewItem id="sv2-MN-mnh"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="EE6-pS-Eyp">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems/>
+                        <connections>
+                            <outlet property="delegate" destination="BhG-02-uGX" id="hiM-nb-0y6"/>
+                        </connections>
                     </tabView>
                     <connections>
                         <segue destination="UrK-pc-2Bl" kind="relationship" relationship="tabItems" id="SmS-Nq-IjH"/>
