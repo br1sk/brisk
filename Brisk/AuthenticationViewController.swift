@@ -26,6 +26,7 @@ final class AuthenticationViewController: NSViewController {
         let password = self.passwordTextField.stringValue
         Keychain.set(username: username, password: password, forKey: .Radar)
         StoryboardRouter.reloadTopWindowController()
+        NSDocumentController.sharedDocumentController().newDocument(self)
     }
 
     private func enableInterface(enable: Bool) {

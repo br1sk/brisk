@@ -646,8 +646,39 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Brisk" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Brisk" customModuleProvider="target">
+                    <connections>
+                        <outlet property="statusMenu" destination="ELE-Es-Vzl" id="OoV-hJ-uLb"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="ELE-Es-Vzl">
+                    <items>
+                        <menuItem title="New Radar" keyEquivalent="n" id="ntn-G9-iTn">
+                            <connections>
+                                <action selector="newDocument:" target="Ady-hI-5gd" id="tGo-Dd-NyP"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="C9k-Lz-Ugo"/>
+                        <menuItem title="About Brisk" id="pxB-gx-pau">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="UQW-Bj-qL7"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Preferences..." keyEquivalent="," id="g2w-EJ-Nx0">
+                            <connections>
+                                <segue destination="zOe-Vb-W6F" kind="show" id="u0i-MK-qWK"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="kjv-tX-lcM"/>
+                        <menuItem title="Quit Brisk" keyEquivalent="q" id="8I1-TH-BL4">
+                            <connections>
+                                <action selector="terminate:" target="Ady-hI-5gd" id="aRZ-Ie-uC0"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
             </objects>
             <point key="canvasLocation" x="1093" y="-199"/>
         </scene>
@@ -1394,4 +1425,7 @@ DQ
             <point key="canvasLocation" x="75.5" y="874"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="u0i-MK-qWK"/>
+    </inferredMetricsTieBreakers>
 </document>
