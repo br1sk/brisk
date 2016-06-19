@@ -14,6 +14,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         return false
     }
 
+    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if flag {
+            return true
+        }
+
+        NSDocumentController.sharedDocumentController().newDocument(self)
+        return false
+    }
+
     func applicationWillTerminate(notification: NSNotification) {
         self.cleanupStatusItem()
     }
