@@ -1,0 +1,24 @@
+{
+  "name": "Sonar",
+  "version": "0.0.1",
+  "summary": "Apple's radar communication in Swift",
+  "homepage": "https://github.com/br1sk/Sonar",
+  "license": "MIT",
+  "authors": {
+    "Martin Conte Mac Donell": "reflejo@gmail.com"
+  },
+  "platforms": {
+    "ios": "9.0",
+    "osx": "10.11"
+  },
+  "source": {
+    "git": "https://github.com/br1sk/Sonar.git"
+  },
+  "source_files": "Sources/**/*.swift",
+  "requires_arc": true,
+  "dependencies": {
+    "Alamofire": [
+      "~> 3.4.1"
+    ]
+  }
+}

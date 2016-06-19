@@ -1,0 +1,6 @@
+framework module Sonar {
+  umbrella header "Sonar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -650,10 +650,10 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="Radar" id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Radar" id="B8D-0N-5wS" customClass="CascadingWindowController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="New Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="239" width="480" height="271"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -662,14 +662,14 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="249.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="dbt-xN-tJj">
             <objects>
                 <windowController storyboardIdentifier="Login" showSeguePresentationStyle="single" id="rNu-aq-ZAA" sceneMemberID="viewController">
                     <window key="window" title="Login to Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Vt6-OZ-YUe">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES"/>
                         <rect key="contentRect" x="196" y="240" width="291" height="143"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
                     </window>
@@ -1094,7 +1094,7 @@ DQ
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
                                 <rect key="frame" x="608" y="13" width="83" height="32"/>
-                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
+                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -1144,6 +1144,9 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-Ov-n1g">
+                                <rect key="frame" x="590" y="23" width="16" height="16"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="StP-3g-DTl" firstAttribute="top" secondItem="Uqa-kZ-Xsz" secondAttribute="top" id="04W-cF-IrB"/>
@@ -1171,12 +1174,14 @@ DQ
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="baseline" secondItem="op3-Ze-W87" secondAttribute="baseline" id="PST-cU-bib"/>
                             <constraint firstItem="bkT-Mr-Eu5" firstAttribute="top" secondItem="5dM-wd-a3b" secondAttribute="bottom" constant="12" id="Per-1z-j8K"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="width" secondItem="Ws1-0o-O0p" secondAttribute="width" id="QK2-Ex-Ou8"/>
+                            <constraint firstItem="OHe-Ov-n1g" firstAttribute="centerY" secondItem="EfJ-B0-TXm" secondAttribute="centerY" id="RVn-FP-BBM"/>
                             <constraint firstItem="xl3-yf-7kD" firstAttribute="top" secondItem="MRi-6q-fEZ" secondAttribute="top" id="Rck-AO-v2b"/>
                             <constraint firstItem="xl3-yf-7kD" firstAttribute="trailing" secondItem="A2T-ef-XlO" secondAttribute="trailing" id="SzL-lo-o7p"/>
                             <constraint firstItem="g4t-ja-U1r" firstAttribute="leading" secondItem="lwO-Mw-YFg" secondAttribute="trailing" constant="8" id="Vc0-fK-KOZ"/>
                             <constraint firstAttribute="trailing" secondItem="g4t-ja-U1r" secondAttribute="trailing" constant="20" id="WG8-eK-9ko"/>
                             <constraint firstItem="X7m-L6-qiF" firstAttribute="width" secondItem="Ws1-0o-O0p" secondAttribute="width" id="XmE-Pi-c0s"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="leading" secondItem="slV-6o-OdD" secondAttribute="trailing" constant="8" id="b4Y-Gx-oAF"/>
+                            <constraint firstItem="EfJ-B0-TXm" firstAttribute="leading" secondItem="OHe-Ov-n1g" secondAttribute="trailing" constant="8" id="bLn-Ix-cVH"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="top" secondItem="OBM-6V-JDI" secondAttribute="top" constant="20" id="bgL-zm-mS0"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="fQn-ru-RqY"/>
                             <constraint firstItem="g4t-ja-U1r" firstAttribute="top" secondItem="QUk-rv-IAw" secondAttribute="bottom" constant="8" id="gKs-T9-7o7"/>
@@ -1207,6 +1212,7 @@ DQ
                         <outlet property="expectedTextView" destination="gru-Hx-HUu" id="Imj-Qk-RWf"/>
                         <outlet property="notesTextView" destination="XAj-Op-M2S" id="ZJf-HO-Ryt"/>
                         <outlet property="productPopUp" destination="Ws1-0o-O0p" id="LBH-Er-64a"/>
+                        <outlet property="progressIndicator" destination="OHe-Ov-n1g" id="yeE-KM-aIo"/>
                         <outlet property="reproducibilityPopUp" destination="l3V-hh-I5h" id="da9-Gz-dl6"/>
                         <outlet property="stepsTextView" destination="vfP-NU-90N" id="42R-Fl-60n"/>
                         <outlet property="submitButton" destination="EfJ-B0-TXm" id="Jqo-CF-Tta"/>

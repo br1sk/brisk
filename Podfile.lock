@@ -1,12 +1,25 @@
 PODS:
   - Alamofire (3.4.1)
+  - Sonar (0.0.1):
+    - Alamofire (~> 3.4.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Sonar (from `https://github.com/br1sk/Sonar.git`)
+
+EXTERNAL SOURCES:
+  Sonar:
+    :git: https://github.com/br1sk/Sonar.git
+
+CHECKOUT OPTIONS:
+  Sonar:
+    :commit: c7aaf26643d39d4b538be94dccc0d75dfc335402
+    :git: https://github.com/br1sk/Sonar.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Sonar: 76308d73b94ba4c7e7552c12697ad88c350cb78a
 
-PODFILE CHECKSUM: e3075cd0711832845d4794614fcd2203beab390a
+PODFILE CHECKSUM: cd9bfd8608551bf155cb49c45cc6b5cf908f19d8
 
 COCOAPODS: 1.0.1

@@ -1,4 +1,7 @@
 import AppKit
+import Sonar
+
+private let kSonar = Sonar()
 
 final class RadarViewController: NSViewController {
     @IBOutlet private var actualTextView: NSTextView!
@@ -14,8 +17,9 @@ final class RadarViewController: NSViewController {
     @IBOutlet private var submitButton: NSButton!
     @IBOutlet private var titleTextField: NSTextField!
     @IBOutlet private var versionTextField: NSTextField!
+    @IBOutlet private var progressIndicator: NSProgressIndicator!
 
-    private var radarComponents: RadarComponents?
+    private var products = [Product]()
     private var validatables: [Validatable] {
         return [
             self.actualTextView,
@@ -37,10 +41,24 @@ final class RadarViewController: NSViewController {
         super.viewDidLoad()
 
         self.setupTextViewDelegates()
-        AppleRadarService.retrieveRadarComponents { [weak self] components in
-            self?.updateRadarComponents(components)
+        self.areaPopUp.setItemsWithTitles(Area.All.map { $0.name })
+        self.classificationPopUp.setItemsWithTitles(Classification.All.map { $0.name })
+        self.reproducibilityPopUp.setItemsWithTitles(Reproducibility.All.map { $0.name })
+
+        let (username, password) = Keychain.get(.Radar)!
+        kSonar.login(withAppleID: username, password: password) { [weak self] result in
+            print(result)
+            switch result {
+            case .Success(let products):
+                self?.products = products
+                self?.productPopUp.setItemsWithTitles(products.map { $0.name })
+            case .Failure(let error):
+                self?.showErrorWithMessage(error.message)
+            }
         }
     }
+
+    // MARK: - Private Methods
 
     @IBAction private func submitRadar(sender: AnyObject) {
         guard let radar = self.currentRadar() else {
@@ -48,21 +66,22 @@ final class RadarViewController: NSViewController {
         }
 
         self.submitButton.enabled = false
+        self.progressIndicator.startAnimation(self)
 
-        let appleService = AppleRadarService()
-        appleService.submit(radar: radar) { [weak self] result in
+        kSonar.create(radar: radar) { [weak self] result in
             switch result {
-                case .Success(_):
-                    self?.view.window?.orderOut(self)
-                case .Failure(let error):
-                    self?.showErrorWithMessage(error.message)
+            case .Success(let radarID):
+                print("Submtited radar \(radarID)")
+                NSPasteboard.generalPasteboard().writeObjects([String(radarID)])
+                self?.view.window?.close()
+            case .Failure(let error):
+                self?.showErrorWithMessage(error.message)
             }
 
+            self?.progressIndicator.stopAnimation(self)
             self?.submitButton.enabled = true
         }
     }
-
-    // MARK: - Private Methods
 
     private func showErrorWithMessage(message: String) {
         if let window = self.view.window {
@@ -72,37 +91,25 @@ final class RadarViewController: NSViewController {
         }
     }
 
-    private func updateRadarComponents(components: RadarComponents) {
-        self.radarComponents = components
-
-        self.areaPopUp.setItemsWithTitles(components.areas.map { $0.name })
-        self.classificationPopUp.setItemsWithTitles(components.classifications.map { $0.name })
-        self.productPopUp.setItemsWithTitles(components.products.map { $0.name })
-        self.reproducibilityPopUp.setItemsWithTitles(components.reproducibilities.map { $0.name })
-    }
-
     private func currentRadar() -> Radar? {
         for field in self.validatables {
             if !field.isValid {
+                return nil
             }
         }
 
-        guard let product = self.radarComponents?.products.find({ $0.name == self.productPopUp.selectedTitle }),
-            let classification = self.radarComponents?.classifications
-                .find({ $0.name == self.classificationPopUp.selectedTitle }),
-            let reproducibility = self.radarComponents?.reproducibilities
-                .find({ $0.name == self.reproducibilityPopUp.selectedTitle }),
-            let area = self.radarComponents?.areas.find({ $0.name == self.areaPopUp.selectedTitle }) else
-        {
-            return nil
-        }
-
-        return Radar(product: product, classification: classification, reproducibility: reproducibility,
-                     area: area, title: self.titleTextField.stringValue,
-                     description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
-                     expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
-                     configuration: self.configurationTextField.stringValue,
-                     version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue)
+        let product = self.products.find { $0.name == self.productPopUp.selectedTitle }!
+        let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
+        let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
+        let area = Area.All.find { $0.name == self.areaPopUp.selectedTitle }!
+        return Radar(
+            classification: classification, product: product, reproducibility: reproducibility,
+            title: self.titleTextField.stringValue,
+            description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
+            expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
+            configuration: self.configurationTextField.stringValue,
+            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue, area: area
+        )
     }
 
     private func enableSubmitIfValid() {

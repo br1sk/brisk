@@ -1,7 +1,5 @@
 import AppKit
 
-private let kStoryboard = NSStoryboard(name: "Main", bundle: nil)
-
 final class StoryboardRouter: NSObject {
     private static var sharedRouter = StoryboardRouter()
     private var windowController: NSWindowController?
@@ -13,16 +11,17 @@ final class StoryboardRouter: NSObject {
     private func reloadTopWindowController() {
         self.windowController?.window?.delegate = nil
         self.windowController?.close()
+        NSApp.stopModal()
 
         let radarLogin = Keychain.get(.Radar)
         if radarLogin == nil {
-            self.windowController = kStoryboard.instantiateWindowControllerWithIdentifier("Login")
+            self.windowController = NSStoryboard.main.instantiateWindowControllerWithIdentifier("Login")
+            NSApp.runModalForWindow(self.windowController!.window!)
         } else {
-            self.windowController = kStoryboard.instantiateWindowControllerWithIdentifier("Radar")
+            NSDocumentController.sharedDocumentController().newDocument(self)
         }
 
-        self.windowController!.showWindow(self)
-        self.windowController!.window!.delegate = self
+        self.windowController?.window?.delegate = self
         NSApp.activateIgnoringOtherApps(true)
     }
 }
