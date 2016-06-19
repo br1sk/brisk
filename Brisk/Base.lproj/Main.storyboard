@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="rNu-aq-ZAA">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -653,7 +653,6 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="New Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
@@ -664,6 +663,121 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="dbt-xN-tJj">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="rNu-aq-ZAA" sceneMemberID="viewController">
+                    <window key="window" title="Login to Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Vt6-OZ-YUe">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="291" height="143"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="rP9-PH-ZAn" kind="relationship" relationship="window.shadowedContentViewController" id="sfO-Yu-PgS"/>
+                    </connections>
+                </windowController>
+                <customObject id="V1V-Kn-EDo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="250"/>
+        </scene>
+        <!--Authentication View Controller-->
+        <scene sceneID="mXt-1n-xGP">
+            <objects>
+                <viewController id="rP9-PH-ZAn" customClass="AuthenticationViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="EZj-N8-Ddm">
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="123"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-CB-GOn">
+                                <rect key="frame" x="24" y="84" width="60" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Apple ID:" id="Gub-in-Eb3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OgN-wZ-iFf">
+                                <rect key="frame" x="18" y="52" width="66" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="KQk-a1-rOX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-2M-Pn4">
+                                <rect key="frame" x="90" y="81" width="181" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="O4L-tX-VGo"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="steve@apple.com" drawsBackground="YES" id="x8M-GC-p80">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="rP9-PH-ZAn" id="sBw-UX-Sug"/>
+                                </connections>
+                            </textField>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TOp-Tb-0e2">
+                                <rect key="frame" x="90" y="49" width="181" height="22"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="1TD-RE-8v8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="rP9-PH-ZAn" id="dgy-hX-wrG"/>
+                                </connections>
+                            </secureTextField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-Tg-oOx">
+                                <rect key="frame" x="203" y="13" width="74" height="32"/>
+                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ktG-hd-USu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="login:" target="rP9-PH-ZAn" id="RpH-03-E9t"/>
+                                </connections>
+                            </button>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="2dy-4h-3PC">
+                                <rect key="frame" x="185" y="22" width="16" height="16"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ccb-Tg-oOx" firstAttribute="top" secondItem="TOp-Tb-0e2" secondAttribute="bottom" constant="8" id="3IF-wi-G9P"/>
+                            <constraint firstAttribute="bottom" secondItem="ccb-Tg-oOx" secondAttribute="bottom" constant="20" id="48q-ew-FLH"/>
+                            <constraint firstItem="2dy-4h-3PC" firstAttribute="centerY" secondItem="ccb-Tg-oOx" secondAttribute="centerY" id="5Hh-Ke-Hir"/>
+                            <constraint firstAttribute="trailing" secondItem="ccb-Tg-oOx" secondAttribute="trailing" constant="20" id="BUV-tw-BUL"/>
+                            <constraint firstAttribute="trailing" secondItem="dqB-2M-Pn4" secondAttribute="trailing" constant="20" id="OUV-JB-px3"/>
+                            <constraint firstItem="ccb-Tg-oOx" firstAttribute="leading" secondItem="2dy-4h-3PC" secondAttribute="trailing" constant="8" id="Tej-zW-Kfy"/>
+                            <constraint firstItem="TOp-Tb-0e2" firstAttribute="top" secondItem="dqB-2M-Pn4" secondAttribute="bottom" constant="10" id="Vl0-R8-u0v"/>
+                            <constraint firstItem="OgN-wZ-iFf" firstAttribute="leading" secondItem="EZj-N8-Ddm" secondAttribute="leading" constant="20" id="c0E-Q5-lA6"/>
+                            <constraint firstItem="OgN-wZ-iFf" firstAttribute="trailing" secondItem="fZb-CB-GOn" secondAttribute="trailing" id="dev-je-3w6"/>
+                            <constraint firstItem="TOp-Tb-0e2" firstAttribute="leading" secondItem="dqB-2M-Pn4" secondAttribute="leading" id="fSV-X7-g0u"/>
+                            <constraint firstItem="dqB-2M-Pn4" firstAttribute="leading" secondItem="fZb-CB-GOn" secondAttribute="trailing" constant="8" id="gNv-op-ENK"/>
+                            <constraint firstItem="OgN-wZ-iFf" firstAttribute="baseline" secondItem="TOp-Tb-0e2" secondAttribute="baseline" id="iDO-VO-FoQ"/>
+                            <constraint firstItem="TOp-Tb-0e2" firstAttribute="width" secondItem="dqB-2M-Pn4" secondAttribute="width" id="kdK-Lg-Hyc"/>
+                            <constraint firstItem="fZb-CB-GOn" firstAttribute="baseline" secondItem="dqB-2M-Pn4" secondAttribute="baseline" id="uH0-Jd-kC8"/>
+                            <constraint firstItem="dqB-2M-Pn4" firstAttribute="top" secondItem="EZj-N8-Ddm" secondAttribute="top" constant="20" id="uf2-4K-yvx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleIDTextField" destination="dqB-2M-Pn4" id="on5-vs-MTQ"/>
+                        <outlet property="loginButton" destination="ccb-Tg-oOx" id="RhB-T8-8jT"/>
+                        <outlet property="passwordTextField" destination="TOp-Tb-0e2" id="IxR-vN-RpP"/>
+                        <outlet property="progressIndicator" destination="2dy-4h-3PC" id="Sab-P2-88s"/>
+                    </connections>
+                </viewController>
+                <customObject id="Vzg-3m-G7u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817.5" y="534.5"/>
         </scene>
         <!--New Radar-->
         <scene sceneID="bIb-re-9Xr">

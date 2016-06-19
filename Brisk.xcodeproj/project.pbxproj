@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
+		C20DDC141D1652C20086D304 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC131D1652C20086D304 /* Keychain.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
+		C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		C20DDC131D1652C20086D304 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28001DC1D148AB800569A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
+				C20DDC131D1652C20086D304 /* Keychain.swift */,
 				C2839A211D14F5BF00D240C4 /* ViewControllers */,
 				C2839A1F1D14F5A200D240C4 /* Services */,
 				C2839A1E1D14F59400D240C4 /* Extensions */,
@@ -211,6 +216,7 @@
 		C2839A211D14F5BF00D240C4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */,
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 			);
 			name = ViewControllers;
@@ -424,12 +430,14 @@
 				C28399D61D1490AD00D240C4 /* Reproducibility.swift in Sources */,
 				C28399CE1D14900C00D240C4 /* RadarService.swift in Sources */,
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
+				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
 				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
 				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C28399D81D1490C700D240C4 /* Area.swift in Sources */,
+				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
 				C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */,
 				C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */,
 				C28399D41D14907500D240C4 /* Classification.swift in Sources */,
