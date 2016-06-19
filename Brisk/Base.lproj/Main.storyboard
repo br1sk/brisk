@@ -22,7 +22,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="zOe-Vb-W6F" kind="show" id="IEW-fo-Qzo"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -645,7 +649,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Brisk" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="1093" y="-199"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -681,10 +685,10 @@
             </objects>
             <point key="canvasLocation" x="818" y="250"/>
         </scene>
-        <!--Authentication View Controller-->
+        <!--Apple Radar-->
         <scene sceneID="mXt-1n-xGP">
             <objects>
-                <viewController id="rP9-PH-ZAn" customClass="AuthenticationViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Apple Radar" showSeguePresentationStyle="single" id="rP9-PH-ZAn" customClass="AuthenticationViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="EZj-N8-Ddm">
                         <rect key="frame" x="0.0" y="0.0" width="291" height="123"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -708,7 +712,7 @@
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dqB-2M-Pn4">
                                 <rect key="frame" x="90" y="81" width="181" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="O4L-tX-VGo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="181" id="O4L-tX-VGo"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="steve@apple.com" drawsBackground="YES" id="x8M-GC-p80">
                                     <font key="font" metaFont="system"/>
@@ -772,6 +776,167 @@ DQ
                 <customObject id="Vzg-3m-G7u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="817.5" y="534.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="PjS-oh-kSn">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="zOe-Vb-W6F" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="hXh-7k-S94">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="BhG-02-uGX" kind="relationship" relationship="window.shadowedContentViewController" id="W5X-xC-Jte"/>
+                    </connections>
+                </windowController>
+                <customObject id="POs-qR-Iux" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="151"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="fWe-Z7-BzO">
+            <objects>
+                <tabViewController showSeguePresentationStyle="single" tabStyle="toolbar" id="BhG-02-uGX" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="fEr-J6-xJD"/>
+                        <tabViewItem id="sv2-MN-mnh"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="EE6-pS-Eyp">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="UrK-pc-2Bl" kind="relationship" relationship="tabItems" id="SmS-Nq-IjH"/>
+                        <segue destination="A5r-df-S82" kind="relationship" relationship="tabItems" id="Xhp-gr-0IR"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="yNi-dS-dcP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="662"/>
+        </scene>
+        <!--Apple Radar-->
+        <scene sceneID="JMz-2N-E9Z">
+            <objects>
+                <viewController title="Apple Radar" showSeguePresentationStyle="single" id="UrK-pc-2Bl" customClass="AppleRadarPreferencesViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="h1c-eA-ZwT">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="61"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="flv-I4-DLG">
+                                <rect key="frame" x="347" y="13" width="89" height="32"/>
+                                <buttonCell key="cell" type="push" title="Log Out" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jhy-5u-Yg5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="logOut:" target="UrK-pc-2Bl" id="x0n-ce-CrD"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-XP-3sm">
+                                <rect key="frame" x="107" y="23" width="240" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="steve@apple.com" id="PUz-fJ-TkR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vjX-jh-MXy">
+                                <rect key="frame" x="18" y="23" width="85" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Logged in as:" id="TP0-o4-SZW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="flv-I4-DLG" firstAttribute="leading" secondItem="iWY-XP-3sm" secondAttribute="trailing" constant="8" id="C5v-AE-Vjn"/>
+                            <constraint firstAttribute="trailing" secondItem="flv-I4-DLG" secondAttribute="trailing" constant="20" id="FGo-n7-bOO"/>
+                            <constraint firstItem="flv-I4-DLG" firstAttribute="top" secondItem="h1c-eA-ZwT" secondAttribute="top" constant="20" id="Frb-t1-SNt"/>
+                            <constraint firstItem="vjX-jh-MXy" firstAttribute="leading" secondItem="h1c-eA-ZwT" secondAttribute="leading" constant="20" id="Ib6-8B-OWz"/>
+                            <constraint firstItem="vjX-jh-MXy" firstAttribute="baseline" secondItem="iWY-XP-3sm" secondAttribute="baseline" id="csb-6m-c5K"/>
+                            <constraint firstAttribute="bottom" secondItem="flv-I4-DLG" secondAttribute="bottom" constant="20" id="eNj-2H-xZq"/>
+                            <constraint firstItem="iWY-XP-3sm" firstAttribute="leading" secondItem="vjX-jh-MXy" secondAttribute="trailing" constant="8" id="v8l-Fb-L3v"/>
+                            <constraint firstItem="iWY-XP-3sm" firstAttribute="baseline" secondItem="flv-I4-DLG" secondAttribute="baseline" id="xWa-HN-hpx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleIDTextField" destination="iWY-XP-3sm" id="xu0-jz-cqI"/>
+                    </connections>
+                </viewController>
+                <customObject id="3de-qA-hG7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1347" y="1016.5"/>
+        </scene>
+        <!--Open Radar-->
+        <scene sceneID="UJb-pK-qqg">
+            <objects>
+                <viewController title="Open Radar" showSeguePresentationStyle="single" id="A5r-df-S82" customClass="OpenRadarPreferencesViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="p59-mJ-TV3">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="89"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FzK-9K-6Wp">
+                                <rect key="frame" x="18" y="52" width="54" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="API Key:" id="wso-qu-HEf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-I4-UTN">
+                                <rect key="frame" x="324" y="13" width="112" height="32"/>
+                                <buttonCell key="cell" type="push" title="Get API Key" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BPD-fP-mud">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">o</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="getAPIKey:" target="A5r-df-S82" id="qZi-UH-L1B"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-rv-PXK">
+                                <rect key="frame" x="78" y="49" width="352" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="352" id="0gt-vm-ehu"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="2IW-Oc-6jo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="A5r-df-S82" id="yKn-ti-HWc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="FzK-9K-6Wp" firstAttribute="leading" secondItem="p59-mJ-TV3" secondAttribute="leading" constant="20" id="8Zg-Mo-7nX"/>
+                            <constraint firstAttribute="trailing" secondItem="qZF-I4-UTN" secondAttribute="trailing" constant="20" id="TsI-0J-vBb"/>
+                            <constraint firstAttribute="bottom" secondItem="qZF-I4-UTN" secondAttribute="bottom" constant="20" id="Ymi-PL-z9g"/>
+                            <constraint firstItem="iyh-rv-PXK" firstAttribute="baseline" secondItem="FzK-9K-6Wp" secondAttribute="baseline" id="aff-8p-10a"/>
+                            <constraint firstItem="qZF-I4-UTN" firstAttribute="top" secondItem="iyh-rv-PXK" secondAttribute="bottom" constant="8" id="caO-WJ-Msy"/>
+                            <constraint firstItem="iyh-rv-PXK" firstAttribute="leading" secondItem="FzK-9K-6Wp" secondAttribute="trailing" constant="8" id="jlc-ps-Ecv"/>
+                            <constraint firstAttribute="trailing" secondItem="iyh-rv-PXK" secondAttribute="trailing" constant="20" id="kcA-G0-HPg"/>
+                            <constraint firstItem="iyh-rv-PXK" firstAttribute="top" secondItem="p59-mJ-TV3" secondAttribute="top" constant="18" id="nB1-sc-Hlz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="APIKeyTextField" destination="iyh-rv-PXK" id="XXI-a9-beV"/>
+                    </connections>
+                </viewController>
+                <customObject id="dg4-4Q-65E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963" y="1030.5"/>
         </scene>
         <!--New Radar-->
         <scene sceneID="bIb-re-9Xr">

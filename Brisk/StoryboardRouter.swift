@@ -18,7 +18,7 @@ final class StoryboardRouter: NSObject {
             self.windowController = NSStoryboard.main.instantiateWindowControllerWithIdentifier("Login")
             NSApp.runModalForWindow(self.windowController!.window!)
         } else {
-            NSDocumentController.sharedDocumentController().newDocument(self)
+//            NSDocumentController.sharedDocumentController().newDocument(self)
         }
 
         self.windowController?.window?.delegate = self

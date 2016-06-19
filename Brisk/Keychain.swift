@@ -6,6 +6,7 @@ private let kService = "Brisk"
 
 enum KeychainKey: String {
     case Radar = "Radar Login"
+    case OpenRadar = "Open Radar Token"
 }
 
 struct Keychain {
@@ -44,7 +45,7 @@ struct Keychain {
             return false
         }
 
-        self.purge()
+        self.delete(key)
 
         let attributes: [CFString: AnyObject] = [
             kSecAttrAccessible: kAccessibilityLevel,
@@ -59,9 +60,10 @@ struct Keychain {
         return status.success
     }
 
-    static func purge() -> Bool {
+    static func delete(key: KeychainKey) -> Bool {
         let attributes: [CFString: AnyObject] = [
             kSecAttrAccessible: kAccessibilityLevel,
+            kSecAttrLabel: key.rawValue,
             kSecAttrService: kService,
             kSecClass: kSecClassGenericPassword,
         ]
