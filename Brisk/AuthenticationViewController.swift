@@ -25,7 +25,7 @@ final class AuthenticationViewController: NSViewController {
         let username = self.appleIDTextField.stringValue
         let password = self.passwordTextField.stringValue
         Keychain.set(username: username, password: password, forKey: .Radar)
-        self.userDidLogin?()
+        StoryboardRouter.reloadTopWindowController()
     }
 
     private func enableInterface(enable: Bool) {

@@ -11,6 +11,7 @@
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
 		C20DDC141D1652C20086D304 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC131D1652C20086D304 /* Keychain.swift */; };
 		C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */; };
+		C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC171D16771A0086D304 /* StoryboardRouter.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		C20DDC131D1652C20086D304 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		C20DDC171D16771A0086D304 /* StoryboardRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardRouter.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C28001DC1D148AB800569A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C20DDC131D1652C20086D304 /* Keychain.swift */,
+				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
 				C2839A211D14F5BF00D240C4 /* ViewControllers */,
 				C2839A1F1D14F5A200D240C4 /* Services */,
 				C2839A1E1D14F59400D240C4 /* Extensions */,
@@ -439,6 +442,7 @@
 				C28399D21D14904100D240C4 /* Product.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
 				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C28399D81D1490C700D240C4 /* Area.swift in Sources */,
 				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
