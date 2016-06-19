@@ -1,6 +1,6 @@
 import AppKit
 
-final class AppleRadarPreferencesViewController: NSViewController {
+final class AppleRadarPreferencesViewController: ViewController {
     @IBOutlet private var appleIDTextField: NSTextField!
 
     override func viewDidLoad() {

@@ -1,6 +1,6 @@
 import AppKit
 
-final class AuthenticationViewController: NSViewController {
+final class AuthenticationViewController: ViewController {
     @IBOutlet private var loginButton: NSButton!
     @IBOutlet private var appleIDTextField: NSTextField!
     @IBOutlet private var passwordTextField: NSSecureTextField!

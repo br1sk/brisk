@@ -30,19 +30,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Private Methods
 
     private func setupStatusItem() {
-        let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
-        statusItem.highlightMode = true
-        statusItem.image = NSImage(named: NSImageNameFlowViewTemplate)
-        statusItem.menu = self.statusMenu
-
-        self.statusItem = statusItem
+        let image = NSImage(named: NSImageNameFlowViewTemplate)!
+        self.statusItem = NSStatusItem.create(image: image, menu: self.statusMenu)
     }
 
     private func cleanupStatusItem() {
-        if let statusItem = self.statusItem {
-            NSStatusBar.systemStatusBar().removeStatusItem(statusItem)
-        }
-
+        self.statusItem?.remove()
         self.statusItem = nil
     }
 }

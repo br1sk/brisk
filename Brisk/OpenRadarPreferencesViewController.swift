@@ -3,7 +3,7 @@ import AppKit
 private let kAPIKeyURL = NSURL(string: "https://openradar.appspot.com/apikey")!
 private let kOpenRadarUsername = "openradar"
 
-final class OpenRadarPreferencesViewController: NSViewController {
+final class OpenRadarPreferencesViewController: ViewController {
     @IBOutlet private var APIKeyTextField: NSTextField!
 
     override func viewDidLoad() {

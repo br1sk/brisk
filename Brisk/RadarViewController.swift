@@ -3,7 +3,7 @@ import Sonar
 
 private let kSonar = Sonar()
 
-final class RadarViewController: NSViewController {
+final class RadarViewController: ViewController {
     @IBOutlet private var actualTextView: NSTextView!
     @IBOutlet private var areaPopUp: NSPopUpButton!
     @IBOutlet private var classificationPopUp: NSPopUpButton!
