@@ -21,7 +21,9 @@ final class OpenRadarPreferencesViewController: ViewController {
     }
 
     private func saveCurrentToken() {
-        let token = self.APIKeyTextField.stringValue
+        let token = self.APIKeyTextField.stringValue.stringByTrimmingCharactersInSet(
+            NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        )
         Keychain.set(username: kOpenRadarUsername, password: token, forKey: .OpenRadar)
     }
 }
