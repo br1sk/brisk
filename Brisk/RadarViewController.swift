@@ -52,6 +52,41 @@ final class RadarViewController: ViewController {
         self.productPopUp.setItemsWith(Product.All, getTitle: { $0.name }, getGroup: { $0.category })
     }
 
+    func restoreRadar(radar: Radar) {
+        self.classificationPopUp.selectItemWithTitle(radar.classification.name)
+        self.reproducibilityPopUp.selectItemWithTitle(radar.reproducibility.name)
+        self.productPopUp.selectItemWithTitle(radar.product.name)
+        if let area = radar.area {
+            self.areaPopUp.selectItemWithTitle(area.name)
+        }
+
+        self.titleTextField.stringValue = radar.title
+        self.descriptionTextView.string = radar.description
+        self.stepsTextView.string = radar.steps
+        self.expectedTextView.string = radar.expected
+        self.actualTextView.string = radar.actual
+        self.configurationTextField.stringValue = radar.configuration
+        self.versionTextField.stringValue = radar.version
+        self.notesTextView.string = radar.notes
+
+        self.enableSubmitIfValid()
+    }
+
+    func currentRadar() -> Radar {
+        let product = Product.All.find { $0.name == self.productPopUp.selectedTitle }!
+        let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
+        let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
+        let area = Area.All.find { $0.name == self.areaPopUp.selectedTitle }!
+        return Radar(
+            classification: classification, product: product, reproducibility: reproducibility,
+            title: self.titleTextField.stringValue,
+            description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
+            expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
+            configuration: self.configurationTextField.stringValue,
+            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue, area: area
+        )
+    }
+
     // MARK: - Private Methods
 
     @IBAction private func submitRadar(sender: AnyObject) {
@@ -59,6 +94,11 @@ final class RadarViewController: ViewController {
             if !field.isValid {
                 return
             }
+        }
+
+        guard let (username, password) = Keychain.get(.Radar) else {
+            self.showErrorWithMessage("Submitting radar without username/password")
+            return
         }
 
         var radar = self.currentRadar()
@@ -73,21 +113,20 @@ final class RadarViewController: ViewController {
             }
         }
 
-        let (username, password) = Keychain.get(.Radar)!
         let appleRadar = Sonar(service: .AppleRadar(appleID: username, password: password))
         appleRadar.loginThenCreate(radar: radar) { [weak self] result in
             switch result {
                 case .Success(let radarID):
-                    if let (_, token) = Keychain.get(.OpenRadar) {
-                        radar.ID = radarID
+                    guard let (_, token) = Keychain.get(.OpenRadar) else {
+                        return completion(success: true)
+                    }
 
-                        let openRadar = Sonar(service: .OpenRadar(token: token))
-                        openRadar.loginThenCreate(radar: radar) { result in
-                            completion(success: true)
-                        }
-                    } else {
+                    radar.ID = radarID
+                    let openRadar = Sonar(service: .OpenRadar(token: token))
+                    openRadar.loginThenCreate(radar: radar) { result in
                         completion(success: true)
                     }
+
                 case .Failure(let error):
                     self?.showErrorWithMessage(error.message)
                     completion(success: false)
@@ -107,42 +146,6 @@ final class RadarViewController: ViewController {
                 window.close()
             }
         }
-    }
-
-    func restoreRadar(radar: Radar) {
-        self.classificationPopUp.selectItemWithTitle(radar.classification.name)
-        self.reproducibilityPopUp.selectItemWithTitle(radar.reproducibility.name)
-        self.productPopUp.selectItemWithTitle(radar.product.name)
-
-        self.titleTextField.stringValue = radar.title
-        self.descriptionTextView.string = radar.description
-        self.stepsTextView.string = radar.steps
-        self.expectedTextView.string = radar.expected
-        self.actualTextView.string = radar.actual
-        self.configurationTextField.stringValue = radar.configuration
-        self.versionTextField.stringValue = radar.version
-        self.notesTextView.string = radar.notes
-
-        if let area = radar.area {
-            self.areaPopUp.selectItemWithTitle(area.name)
-        }
-
-        self.enableSubmitIfValid()
-    }
-
-    func currentRadar() -> Radar {
-        let product = Product.All.find { $0.name == self.productPopUp.selectedTitle }!
-        let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
-        let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
-        let area = Area.All.find { $0.name == self.areaPopUp.selectedTitle }!
-        return Radar(
-            classification: classification, product: product, reproducibility: reproducibility,
-            title: self.titleTextField.stringValue,
-            description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
-            expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
-            configuration: self.configurationTextField.stringValue,
-            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue, area: area
-        )
     }
 
     private func enableSubmitIfValid() {

@@ -4,19 +4,17 @@ import Sonar
 private struct DocumentError: ErrorType {}
 
 final class RadarDocument: NSDocument {
-    private var radar: Radar?
-
     override func makeWindowControllers() {
         self.createWindowController(withRadar: nil)
     }
 
     override func dataOfType(typeName: String) throws -> NSData {
         let viewController = self.windowControllers.first?.contentViewController as? RadarViewController
-        guard let radar = viewController?.currentRadar() else {
-            throw DocumentError()
+        if let radar = viewController?.currentRadar() {
+            return try radar.toData()
         }
 
-        return try radar.toData()
+        throw DocumentError()
     }
 
     override func readFromData(data: NSData, ofType typeName: String) throws {
