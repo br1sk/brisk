@@ -14,7 +14,7 @@ Apple's radar request router.
 - Create:      The `Route` used to create a new radar.
 - ViewProblem: The main apple's radar page.
 */
-enum SonarRouter {
+enum AppleRadarRouter {
 
     case Products(CSRF: String)
     case Login(appleID: String, password: String)
@@ -49,14 +49,48 @@ enum SonarRouter {
                         headers: headers, data: nil, parameters: ["_": String(timestamp)])
 
             case .Create(let radar, let CSRF):
-                let headers = ["Referer": SonarRouter.ViewProblem.URL.URLString]
+                let JSON = [
+                    "problemTitle": radar.title,
+                    "configIDPop": "",
+                    "configTitlePop": "",
+                    "configDescriptionPop": "",
+                    "configurationText": radar.configuration,
+                    "notes": radar.notes,
+                    "configurationSplit": "Configuration:\r\n",
+                    "configurationSplitValue": radar.configuration,
+                    "workAroundText": "",
+                    "descriptionText": radar.body,
+                    "problemAreaTypeCode": radar.area.map { String($0.appleIdentifier) } ?? "",
+                    "classificationCode": String(radar.classification.appleIdentifier),
+                    "reproducibilityCode": String(radar.reproducibility.appleIdentifier),
+                    "component": [
+                        "ID": String(radar.product.appleIdentifier),
+                        "compName": radar.product.name,
+                    ],
+                    "draftID": "",
+                    "draftFlag": "0",
+                    "versionBuild": radar.version,
+                    "desctextvalidate": radar.body,
+                    "stepstoreprvalidate": radar.steps,
+                    "experesultsvalidate": radar.expected,
+                    "actresultsvalidate": radar.actual,
+                    "addnotesvalidate": radar.notes,
+                    "hiddenFileSizeNew": "",  // v2
+                    "attachmentsValue": "\r\n\r\nAttachments:\r\n",
+                    "configurationFileCheck": "",  // v2
+                    "configurationFileFinal": "",  // v2
+                    "csrftokencheck": CSRF,
+                ]
+
+                let body = try! NSJSONSerialization.dataWithJSONObject(JSON, options: [])
+                let headers = ["Referer": AppleRadarRouter.ViewProblem.URL.URLString]
                 return (path: "/developer/problem/createNewDevUIProblem", method: .POST, headers: headers,
-                        data: radar.toJSON(CSRF: CSRF), parameters: [:])
+                        data: body, parameters: [:])
         }
     }
 }
 
-extension SonarRouter: URLRequestConvertible {
+extension AppleRadarRouter: URLRequestConvertible {
 
     /// The URL that will be used for the request.
     var URL: NSURL {
@@ -70,7 +104,7 @@ extension SonarRouter: URLRequestConvertible {
         if let URL = NSURL(string: path) where URL.host != nil {
             fullURL = URL
         } else {
-            fullURL = SonarRouter.baseURL.URLByAppendingPathComponent(path)
+            fullURL = AppleRadarRouter.baseURL.URLByAppendingPathComponent(path)
         }
 
         let request = NSMutableURLRequest(URL: fullURL)

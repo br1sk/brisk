@@ -25,7 +25,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func application(sender: NSApplication, openFiles filenames: [String]) {
         let documentController = NSDocumentController.sharedDocumentController()
-        let type = "public.plain-text"
+        let type = "com.brisk.radar"
 
         for filename in filenames {
             let URL = NSURL(fileURLWithPath: filename)

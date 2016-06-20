@@ -46,8 +46,6 @@ private extension Radar {
             "description": self.description,
             "classification_id": self.classification.appleIdentifier,
             "product_id": self.product.appleIdentifier,
-            "product_name": self.product.name,
-            "product_category": self.product.category,
             "reproducibility_id": self.reproducibility.appleIdentifier,
             "steps": self.steps,
             "expected": self.expected,
@@ -69,8 +67,6 @@ private extension Radar {
             let description = JSON["description"] as? String,
             let classificationID = JSON["classification_id"] as? Int,
             let productID = JSON["product_id"] as? Int,
-            let productName = JSON["product_name"] as? String,
-            let productCategory = JSON["product_category"] as? String,
             let reproducibilityID = JSON["reproducibility_id"] as? Int,
             let steps = JSON["steps"] as? String,
             let expected = JSON["expected"] as? String,
@@ -91,7 +87,7 @@ private extension Radar {
         let reproducibility = Reproducibility.All.find { $0.appleIdentifier == reproducibilityID }
             ?? Reproducibility.All.first!
         let area = Area.All.find { $0.appleIdentifier == areaID } ?? Area.All.first!
-        let product = Product(appleIdentifier: productID, category: productCategory, name: productName)
+        let product = Product.All.find { $0.appleIdentifier == productID } ?? Product.All.first!
 
         self.init(classification: classification, product: product, reproducibility: reproducibility,
                      title: title, description: description, steps: steps, expected: expected, actual: actual,

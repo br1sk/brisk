@@ -17,7 +17,7 @@
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>public.plain-text</string>
+				<string>com.brisk.radar</string>
 			</array>
 			<key>LSTypeIsPackage</key>
 			<integer>0</integer>
@@ -58,5 +58,23 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>Brisk.Application</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeIdentifier</key>
+			<string>com.brisk.radar</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>brisk</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

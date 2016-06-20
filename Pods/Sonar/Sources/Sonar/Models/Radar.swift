@@ -1,6 +1,11 @@
 import Foundation
 
+private let kProductiOSID = 1
+private let kProductiTunesConnectID = 12
+
 public struct Radar {
+    // The unique identifier on apple's radar platform.
+    public var ID: Int?
     // The type of problem.
     public let classification: Classification
     // The product related to the report.
@@ -35,8 +40,9 @@ public struct Radar {
     public init(classification: Classification, product: Product, reproducibility: Reproducibility,
                 title: String, description: String, steps: String, expected: String, actual: String,
                 configuration: String, version: String, notes: String, area: Area? = nil,
-                applicationID: String? = nil, userID: String? = nil)
+                applicationID: String? = nil, userID: String? = nil, ID: Int? = nil)
     {
+        self.ID = ID
         self.classification = classification
         self.product = product
         self.reproducibility = reproducibility
@@ -54,21 +60,12 @@ public struct Radar {
     }
 }
 
-// MARK: JSON representation
-
-private let kProductiOSID = 1
-private let kProductiTunesConnectID = 12
+// MARK: - Body
 
 extension Radar {
 
-    /**
-     Creates the JSON ready to be sent to apple's radar.
-
-     - parameter CSRF: The Cross-Site Request Forgery token protection.
-
-     - returns: A JSON representing the receivers in apple's radar format.
-    */
-    func toJSON(CSRF CSRF: String) -> NSData {
+    /// The composed body string using many of the components from the Radar model.
+    var body: String {
         let baseTemplate = [
             ("Summary", self.description),
             ("Steps to Reproduce", self.steps),
@@ -89,43 +86,9 @@ extension Radar {
         ]
 
         let values = baseTemplate + (templates[self.product.appleIdentifier] ?? [])
-        let description = values
+        let body = values
             .map { "\($0):\r\n\($1)" }
             .joinWithSeparator("\r\n\r\n")
-
-        let JSON = [
-            "problemTitle": self.title,
-            "configIDPop": "",
-            "configTitlePop": "",
-            "configDescriptionPop": "",
-            "configurationText": self.configuration,
-            "notes": self.notes,
-            "configurationSplit": "Configuration:\r\n",
-            "configurationSplitValue": self.configuration,
-            "workAroundText": "",
-            "descriptionText": description,
-            "problemAreaTypeCode": self.area.map { String($0.appleIdentifier) } ?? "",
-            "classificationCode": String(self.classification.appleIdentifier),
-            "reproducibilityCode": String(self.reproducibility.appleIdentifier),
-            "component": [
-                "ID": String(self.product.appleIdentifier),
-                "compName": self.product.name,
-            ],
-            "draftID": "",
-            "draftFlag": "0",
-            "versionBuild": self.version,
-            "desctextvalidate": description,
-            "stepstoreprvalidate": self.steps,
-            "experesultsvalidate": self.expected,
-            "actresultsvalidate": self.actual,
-            "addnotesvalidate": self.notes,
-            "hiddenFileSizeNew": "",  // v2
-            "attachmentsValue": "\r\n\r\nAttachments:\r\n",
-            "configurationFileCheck": "",  // v2
-            "configurationFileFinal": "",  // v2
-            "csrftokencheck": CSRF,
-        ]
-
-        return try! NSJSONSerialization.dataWithJSONObject(JSON, options: [])
+        return body + "\r\n\r\n"
     }
 }

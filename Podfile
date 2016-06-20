@@ -1,6 +1,5 @@
 use_frameworks!
 
-target 'Brisk' do
-    pod 'Alamofire'
-    pod 'Sonar', :git => "https://github.com/br1sk/Sonar.git"
+target "Brisk" do
+    pod "Sonar", :git => "https://github.com/br1sk/Sonar.git"
 end

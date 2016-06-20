@@ -2,121 +2,62 @@ import Alamofire
 import Foundation
 
 public class Sonar {
+    private let tracker: BugTracker
 
-    private var CSRF: String?
-    private let manager: Alamofire.Manager
+    public init(service: ServiceAuthentication) {
+        switch service {
+            case .AppleRadar(let appleID, let password):
+                self.tracker = AppleRadar(appleID: appleID, password: password)
 
-    public init() {
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-        configuration.HTTPCookieStorage = cookies
-        configuration.HTTPCookieAcceptPolicy = .Always
-
-        self.manager = Alamofire.Manager(configuration: configuration)
-    }
-
-    /**
-     Login into radar by an apple ID and password.
-
-     - parameter appleID:  Username to be used on `bugreport.apple.com` authentication.
-     - parameter password: Password to be used on `bugreport.apple.com` authentication.
-     - parameter closure:  A closure that will be called when the login is completed, on success it will
-                           contain a list of `Product`s; on failure a `SonarError`.
-    */
-    public func login(withAppleID appleID: String, password: String,
-                      closure: Result<[Product], SonarError> -> Void)
-    {
-        self.manager
-            .request(SonarRouter.Login(appleID: appleID, password: password))
-            .validate()
-            .responseString { [weak self] response in
-                guard case let .Success(value) = response.result else {
-                    closure(.Failure(SonarError.fromResponse(response)))
-                    return
-                }
-
-                if let error = value.match("class=\"dserror\".*?>(.*?)</", group: 1) {
-                    closure(.Failure(SonarError(message: error)))
-                    return
-                }
-
-                guard let CSRF = value.match("<input.*csrftoken.*value=\"(.*)\"", group: 1) else {
-                    closure(.Failure(SonarError(message: "CSRF not found. Maybe the ID is invalid?")))
-                    return
-                }
-
-                self?.CSRF = CSRF
-                self?.products(closure)
-            }
-    }
-
-    /**
-     Fetches the list of available products (needs authentication first).
-
-     - parameter closure:  A closure that will be called when the login is completed, on success it will
-                           contain a list of `Product`s; on failure a `SonarError`.
-    */
-    public func products(closure: Result<[Product], SonarError> -> Void) {
-        guard let CSRF = self.CSRF else {
-            closure(.Failure(SonarError(message: "User is not logged in")))
-            return
+            case .OpenRadar(let token):
+                self.tracker = OpenRadar(token: token)
         }
-
-        self.manager
-            .request(SonarRouter.Products(CSRF: CSRF))
-            .validate()
-            .responseJSON { response in
-                guard case let .Success(value) = response.result else {
-                    closure(.Failure(SonarError.fromResponse(response)))
-                    return
-                }
-
-                let products = (value as? [NSDictionary])?.flatMap(Product.init) ?? []
-                closure(.Success(products))
-            }
     }
 
     /**
-     Creates a new ticket into apple's radar (needs authentication first).
+     Login into bug tracker. This method will use the authentication information provided by the service enum.
+
+     - parameter closure: A closure that will be called when the login is completed,
+                          on failure a `SonarError`.
+    */
+    public func login(closure: Result<Void, SonarError> -> Void) {
+        self.tracker.login { result in
+            closure(result)
+            self.hold()
+        }
+    }
+
+    /**
+     Creates a new ticket into the bug tracker (needs authentication first).
 
      - parameter radar:   The radar model with the information for the ticket.
      - parameter closure: A closure that will be called when the login is completed, on success it will
                           contain a radar ID; on failure a `SonarError`.
     */
     public func create(radar radar: Radar, closure: Result<Int, SonarError> -> Void) {
-        guard let CSRF = self.CSRF else {
-            closure(.Failure(SonarError(message: "User is not logged in")))
-            return
+        self.tracker.create(radar: radar) { result in
+            closure(result)
+            self.hold()
         }
-
-        let route = SonarRouter.Create(radar: radar, CSRF: CSRF)
-        let (_, method, headers, body, _) = route.components
-        let createMultipart = { (data: MultipartFormData) -> Void in
-            data.appendBodyPart(data: body ?? NSData(), name: "hJsonScreenVal")
-
-            // TODO: Add attachments here (needs to change Radar.toJSON too).
-        }
-
-        self.manager
-            .upload(method, route.URL, headers: headers, multipartFormData: createMultipart) { result in
-                guard case let .Success(upload, _, _) = result else {
-                    closure(.Failure(.UnknownError))
-                    return
-                }
-
-                upload.validate().responseString { response in
-                    guard case let .Success(value) = response.result else {
-                        closure(.Failure(SonarError.fromResponse(response)))
-                        return
-                    }
-
-                    guard let radarID = Int(value) else {
-                        closure(.Failure(SonarError(message: "Invalid Radar ID received")))
-                        return
-                    }
-
-                    closure(.Success(radarID))
-                }
-            }
     }
+
+    /**
+     Similar to `create` but logs the user in first.
+
+     - parameter radar:   The radar model with the information for the ticket.
+     - parameter closure: A closure that will be called when the login is completed, on success it will
+                          contain a radar ID; on failure a `SonarError`.
+    */
+    public func loginThenCreate(radar radar: Radar, closure: Result<Int, SonarError> -> Void) {
+        self.tracker.login { result in
+            if case let .Failure(error) = result {
+                closure(.Failure(error))
+                return
+            }
+
+            self.create(radar: radar, closure: closure)
+        }
+    }
+
+    private func hold() {}
 }

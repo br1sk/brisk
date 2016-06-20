@@ -4,13 +4,13 @@ extension Classification {
     public static let Power = Classification(appleIdentifier: 3, name: "Power")
     public static let Performance = Classification(appleIdentifier: 4, name: "Performance")
     public static let UI = Classification(appleIdentifier: 5, name: "UI/Usability")
-    public static let SeriousBug = Classification(appleIdentifier: 6, name: "Serious Bug")
+    public static let SeriousBug = Classification(appleIdentifier: 7, name: "Serious Bug")
     public static let OtherBug = Classification(appleIdentifier: 8, name: "Other Bug")
     public static let Feature = Classification(appleIdentifier: 10, name: "Feature (New)")
     public static let Enhancement = Classification(appleIdentifier: 11, name: "Enhancement")
 
     public static let All: [Classification] = [
-        .Security, .Crash, .Power, .Performance, .UI, .SeriousBug, .Feature, .Enhancement
+        .Security, .Crash, .Power, .Performance, .UI, .SeriousBug, .OtherBug, .Feature, .Enhancement
     ]
 }
 
@@ -88,5 +88,68 @@ extension Area {
         .NSURL, .PhoneApp, .Photos, .Reminders, .SafariServices, .SceneKit, .SetupAssistant, .SoftwareUpdate,
         .Spotlight, .SpringBorad, .SpriteKit, .StoreKit, .SystemSlow, .TouchID, .UIKit, .VPN, .WebKit, .WiFi,
         .Xcode, .OtherArea
+    ]
+}
+
+extension Product {
+
+    private init(_ appleIdentifier: Int, _ category: String, _ name: String) {
+        self.appleIdentifier = appleIdentifier
+        self.category = category
+        self.name = name
+    }
+
+    public static let iOS = Product(579020, "iOS", "OS and Development")
+    public static let iOSSDK = Product(584784, "iOS SDK", "OS and Development")
+    public static let macOS = Product(137701, "OS X", "OS and Development")
+    public static let macOSSDK = Product(430026, "OS X SDK", "OS and Development")
+    public static let macOSServer = Product(84100, "OS X Server", "OS and Development")
+    public static let tvOS = Product(660932, "tvOS", "OS and Development")
+    public static let tvOSSDK = Product(662000, "tvOS SDK", "OS and Development")
+    public static let watchOS = Product(645251, "watchOS", "OS and Development")
+    public static let watchOSSDK = Product(645445, "watchOS SDK", "OS and Development")
+    public static let DeveloperTools = Product(175326, "Developer Tools", "OS and Development")
+    public static let Documentation = Product(183045, "Documentation", "OS and Development")
+    public static let iTunesConnect = Product(500515, "iTunes Connect", "OS and Development")
+    public static let ParallaxPreviewer = Product(720650, "Parallax Previewer", "OS and Development")
+    public static let SampleCode = Product(205728, "Sample Code", "OS and Development")
+    public static let TechNote = Product(385563, "Tech Note/Q&A", "OS and Development")
+    public static let iBooks = Product(571983, "iBooks", "Applications and Software")
+    public static let iCloud = Product(458288, "iCloud", "Applications and Software")
+    public static let iLife = Product(445858, "iLife", "Applications and Software")
+    public static let iTunes = Product(430173, "iTunes", "Applications and Software")
+    public static let iWork = Product(372025, "iWork", "Applications and Software")
+    public static let Mail = Product(372031, "Mail", "Applications and Software")
+    public static let ProApps = Product(175412, "Pro Apps", "Applications and Software")
+    public static let QuickTime = Product(84201, "QuickTime", "Applications and Software")
+    public static let Safari = Product(175305, "Safari", "Applications and Software")
+    public static let SafariBeta = Product(697770, "Safari Technology Preview", "Applications and Software")
+    public static let Siri = Product(750751, "Siri", "Applications and Software")
+    public static let SwiftPlaygrounds = Product(743970, "Swift Playgrounds", "Applications and Software")
+    public static let AppleTV = Product(430025, "Apple TV", "Hardware")
+    public static let iPad = Product(375383, "iPad", "Hardware")
+    public static let iPhone = Product(262954, "iPhone/iPod touch", "Hardware")
+    public static let iPod = Product(185585, "iPod", "Hardware")
+    public static let Mac = Product(213680, "Mac", "Hardware")
+    public static let Printing = Product(213679, "Printing/Fax", "Hardware")
+    public static let OtherHardware = Product(657117, "Other Hardware", "Hardware")
+    public static let CarPlayAccessoryCert = Product(571212, "CarPlay Accessory Certification", "Hardware")
+    public static let HomeKitAccessoryCert = Product(601986, "HomeKit Accessory Certification", "Hardware")
+    public static let Accessibility = Product(437784, "Accessibility", "Other")
+    public static let AppStore = Product(251822, "App Store", "Other")
+    public static let MacAppStore = Product(430023, "Mac App Store", "Other")
+    public static let BugReporter = Product(242322, "Bug Reporter", "Other")
+    public static let iAdNetwork = Product(445860, "iAd Network", "Other")
+    public static let iAdProducer = Product(446084, "iAd Producer", "Other")
+    public static let Java = Product(84060, "Java", "Other")
+    public static let Other = Product(20206, "Other", "Other")
+
+    public static let All: [Product] = [
+        .iOS, .iOSSDK, .macOS, .macOSSDK, .macOSServer, .tvOS, .tvOSSDK, .watchOS, .watchOSSDK,
+        .DeveloperTools, .Documentation, .iTunesConnect, .ParallaxPreviewer, .SampleCode, .TechNote,
+        .iBooks, .iCloud, .iLife, .iTunes, .iWork, .Mail, .ProApps, .QuickTime, .Safari, .SafariBeta, .Siri,
+        .SwiftPlaygrounds, .AppleTV, .iPad, .iPhone, .iPod, .Mac, .Printing, .OtherHardware,
+        .CarPlayAccessoryCert, .HomeKitAccessoryCert, .Accessibility, .AppStore, .MacAppStore, .BugReporter,
+        .iAdNetwork, .iAdProducer, .Java, .Other,
     ]
 }

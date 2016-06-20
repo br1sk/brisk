@@ -1,8 +1,6 @@
 import AppKit
 import Sonar
 
-private let kSonar = Sonar()
-
 final class RadarViewController: ViewController {
     @IBOutlet private var actualTextView: NSTextView!
     @IBOutlet private var areaPopUp: NSPopUpButton!
@@ -19,7 +17,6 @@ final class RadarViewController: ViewController {
     @IBOutlet private var versionTextField: NSTextField!
     @IBOutlet private var progressIndicator: NSProgressIndicator!
 
-    private var products = [Product]()
     private var validatables: [Validatable] {
         return [
             self.actualTextView,
@@ -52,18 +49,7 @@ final class RadarViewController: ViewController {
         self.areaPopUp.setItemsWithTitles(Area.All.map { $0.name })
         self.classificationPopUp.setItemsWithTitles(Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItemsWithTitles(Reproducibility.All.map { $0.name })
-
-        let (username, password) = Keychain.get(.Radar)!
-        kSonar.login(withAppleID: username, password: password) { [weak self] result in
-            print(result)
-            switch result {
-            case .Success(let products):
-                self?.products = products
-                self?.productPopUp.setItemsWithTitles(products.map { $0.name })
-            case .Failure(let error):
-                self?.showErrorWithMessage(error.message, close: true)
-            }
-        }
+        self.productPopUp.setItemsWith(Product.All, getTitle: { $0.name }, getGroup: { $0.category })
     }
 
     // MARK: - Private Methods
@@ -75,24 +61,39 @@ final class RadarViewController: ViewController {
             }
         }
 
-        let radar = self.currentRadar()
+        var radar = self.currentRadar()
         self.submitButton.enabled = false
         self.progressIndicator.startAnimation(self)
 
-        let completion: () -> Void = { [weak self] in
+        let completion: (success: Bool) -> Void = { [weak self] success in
             self?.progressIndicator.stopAnimation(self)
             self?.submitButton.enabled = true
+            if success {
+                self?.view.window?.close()
+            }
         }
 
-        kSonar.create(radar: radar) { [weak self] result in
+        let (username, password) = Keychain.get(.Radar)!
+        let appleRadar = Sonar(service: .AppleRadar(appleID: username, password: password))
+        appleRadar.loginThenCreate(radar: radar) { [weak self] result in
             switch result {
-            case .Success(let radarID):
-                print("Submtited radar \(radarID)")
-                NSPasteboard.generalPasteboard().writeObjects([String(radarID)])
-                self?.view.window?.close()
-            case .Failure(let error):
-                self?.showErrorWithMessage(error.message)
-                completion()
+                case .Success(let radarID):
+                    print("Submtited radar \(radarID)")
+                    NSPasteboard.generalPasteboard().writeObjects([String(radarID)])
+
+                    if let (_, token) = Keychain.get(.OpenRadar) {
+                        radar.ID = radarID
+
+                        let openRadar = Sonar(service: .OpenRadar(token: token))
+                        openRadar.loginThenCreate(radar: radar) { result in
+                            completion(success: true)
+                        }
+                    } else {
+                        completion(success: true)
+                    }
+                case .Failure(let error):
+                    self?.showErrorWithMessage(error.message)
+                    completion(success: false)
             }
         }
     }
@@ -128,10 +129,12 @@ final class RadarViewController: ViewController {
         if let area = radar.area {
             self.areaPopUp.selectItemWithTitle(area.name)
         }
+
+        self.enableSubmitIfValid()
     }
 
     func currentRadar() -> Radar {
-        let product = self.products.find { $0.name == self.productPopUp.selectedTitle }!
+        let product = Product.All.find { $0.name == self.productPopUp.selectedTitle }!
         let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
         let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
         let area = Area.All.find { $0.name == self.areaPopUp.selectedTitle }!
