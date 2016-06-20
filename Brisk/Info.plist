@@ -7,10 +7,20 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>brisk</string>
+			</array>
 			<key>CFBundleTypeName</key>
 			<string>RadarDocument</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<integer>0</integer>
 			<key>NSDocumentClass</key>
 			<string>Brisk.RadarDocument</string>
 		</dict>

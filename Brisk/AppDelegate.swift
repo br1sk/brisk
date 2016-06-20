@@ -23,6 +23,19 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         return false
     }
 
+    func application(sender: NSApplication, openFiles filenames: [String]) {
+        let documentController = NSDocumentController.sharedDocumentController()
+        let type = "public.plain-text"
+
+        for filename in filenames {
+            let URL = NSURL(fileURLWithPath: filename)
+            if let document = try? documentController.makeDocumentWithContentsOfURL(URL, ofType: type) {
+                documentController.addDocument(document)
+                document.showWindows()
+            }
+        }
+    }
+
     func applicationWillTerminate(notification: NSNotification) {
         self.cleanupStatusItem()
     }

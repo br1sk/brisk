@@ -37,6 +37,14 @@ final class RadarViewController: ViewController {
         ]
     }
 
+    private var document: RadarDocument? {
+        return self.windowController?.document as? RadarDocument
+    }
+
+    private var windowController: NSWindowController? {
+        return self.view.window?.windowController
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,7 +61,7 @@ final class RadarViewController: ViewController {
                 self?.products = products
                 self?.productPopUp.setItemsWithTitles(products.map { $0.name })
             case .Failure(let error):
-                self?.showErrorWithMessage(error.message)
+                self?.showErrorWithMessage(error.message, close: true)
             }
         }
     }
@@ -61,12 +69,20 @@ final class RadarViewController: ViewController {
     // MARK: - Private Methods
 
     @IBAction private func submitRadar(sender: AnyObject) {
-        guard let radar = self.currentRadar() else {
-            return
+        for field in self.validatables {
+            if !field.isValid {
+                return
+            }
         }
 
+        let radar = self.currentRadar()
         self.submitButton.enabled = false
         self.progressIndicator.startAnimation(self)
+
+        let completion: () -> Void = { [weak self] in
+            self?.progressIndicator.stopAnimation(self)
+            self?.submitButton.enabled = true
+        }
 
         kSonar.create(radar: radar) { [weak self] result in
             switch result {
@@ -76,28 +92,45 @@ final class RadarViewController: ViewController {
                 self?.view.window?.close()
             case .Failure(let error):
                 self?.showErrorWithMessage(error.message)
+                completion()
             }
-
-            self?.progressIndicator.stopAnimation(self)
-            self?.submitButton.enabled = true
         }
     }
 
-    private func showErrorWithMessage(message: String) {
-        if let window = self.view.window {
-            let alert = NSAlert()
-            alert.messageText = message
-            alert.beginSheetModalForWindow(window, completionHandler: nil)
+    private func showErrorWithMessage(message: String, close: Bool = false) {
+        guard let window = self.view.window else {
+            return
+        }
+
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.beginSheetModalForWindow(window) { _ in
+            if close {
+                window.close()
+            }
         }
     }
 
-    private func currentRadar() -> Radar? {
-        for field in self.validatables {
-            if !field.isValid {
-                return nil
-            }
-        }
+    func restoreRadar(radar: Radar) {
+        self.classificationPopUp.selectItemWithTitle(radar.classification.name)
+        self.reproducibilityPopUp.selectItemWithTitle(radar.reproducibility.name)
+        self.productPopUp.selectItemWithTitle(radar.product.name)
 
+        self.titleTextField.stringValue = radar.title
+        self.descriptionTextView.string = radar.description
+        self.stepsTextView.string = radar.steps
+        self.expectedTextView.string = radar.expected
+        self.actualTextView.string = radar.actual
+        self.configurationTextField.stringValue = radar.configuration
+        self.versionTextField.stringValue = radar.version
+        self.notesTextView.string = radar.notes
+
+        if let area = radar.area {
+            self.areaPopUp.selectItemWithTitle(area.name)
+        }
+    }
+
+    func currentRadar() -> Radar {
         let product = self.products.find { $0.name == self.productPopUp.selectedTitle }!
         let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
         let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
@@ -119,6 +152,12 @@ final class RadarViewController: ViewController {
 
         self.submitButton.enabled = isValid
     }
+
+    private func updateTitleFromDocument() {
+        let newTitle = self.titleTextField.stringValue
+        self.document?.setDisplayName(newTitle)
+        self.windowController?.synchronizeWindowTitleWithDocumentName()
+    }
 }
 
 extension RadarViewController: NSTextViewDelegate {
@@ -133,11 +172,16 @@ extension RadarViewController: NSTextViewDelegate {
     }
 
     override func controlTextDidChange(obj: NSNotification) {
-        self.enableSubmitIfValid()
+        self.textChanged()
     }
 
     func textDidChange(notification: NSNotification) {
+        self.textChanged()
+    }
+
+    private func textChanged() {
         self.enableSubmitIfValid()
+        self.updateTitleFromDocument()
     }
 
     private func setupTextViewDelegates() {
