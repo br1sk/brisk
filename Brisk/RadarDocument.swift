@@ -16,7 +16,7 @@ final class RadarDocument: NSDocument {
             throw DocumentError()
         }
 
-        return radar.toData()
+        return try radar.toData()
     }
 
     override func readFromData(data: NSData, ofType typeName: String) throws {
@@ -40,7 +40,7 @@ final class RadarDocument: NSDocument {
 }
 
 private extension Radar {
-    private func toData() -> NSData {
+    private func toData() throws -> NSData {
         var JSON: [String: AnyObject] = [
             "title": self.title,
             "description": self.description,
@@ -61,7 +61,7 @@ private extension Radar {
         JSON["application_id"] = self.applicationID
         JSON["user_id"] = self.userID
 
-        return try! NSJSONSerialization.dataWithJSONObject(JSON, options: [])
+        return try NSJSONSerialization.dataWithJSONObject(JSON, options: [])
     }
 
     private init?(JSON: NSDictionary) {
@@ -79,7 +79,7 @@ private extension Radar {
             let version = JSON["version"] as? String,
             let notes = JSON["notes"] as? String else
         {
-                return nil
+            return nil
         }
 
         let areaID = JSON["area_id"] as? Int
