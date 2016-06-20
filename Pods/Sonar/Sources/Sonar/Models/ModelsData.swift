@@ -93,7 +93,7 @@ extension Area {
 
 extension Product {
 
-    private init(_ appleIdentifier: Int, _ category: String, _ name: String) {
+    private init(_ appleIdentifier: Int, _ name: String, _ category: String) {
         self.appleIdentifier = appleIdentifier
         self.category = category
         self.name = name
