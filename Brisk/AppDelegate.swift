@@ -43,7 +43,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Private Methods
 
     private func setupStatusItem() {
-        let image = NSImage(named: NSImageNameFlowViewTemplate)!
+        let image = NSImage(named: "bug")!
         self.statusItem = NSStatusItem.create(image: image, menu: self.statusMenu)
     }
 
