@@ -78,9 +78,6 @@ final class RadarViewController: ViewController {
         appleRadar.loginThenCreate(radar: radar) { [weak self] result in
             switch result {
                 case .Success(let radarID):
-                    print("Submtited radar \(radarID)")
-                    NSPasteboard.generalPasteboard().writeObjects([String(radarID)])
-
                     if let (_, token) = Keychain.get(.OpenRadar) {
                         radar.ID = radarID
 
