@@ -1,6 +1,0 @@
-framework module Pods_Brisk {
-  umbrella header "Pods-Brisk-umbrella.h"
-
-  export *
-  module * { export * }
-}
