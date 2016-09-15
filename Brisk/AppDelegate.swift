@@ -6,7 +6,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        self.registerDefaults()
         StoryboardRouter.reloadTopWindowController()
+        self.setupDockIcon()
         self.setupStatusItem()
     }
 
@@ -41,6 +43,22 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     // MARK: - Private Methods
+
+    private func registerDefaults() {
+        let defaults: [String: AnyObject] = [
+            Defaults.ShowDockIcon: false,
+        ]
+
+        NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
+    }
+
+    private func setupDockIcon() {
+        if !NSUserDefaults.standardUserDefaults().boolForKey(Defaults.ShowDockIcon) {
+            return
+        }
+
+        NSApp.setActivationPolicy(.Regular)
+    }
 
     private func setupStatusItem() {
         let image = NSImage(named: "bug")!
