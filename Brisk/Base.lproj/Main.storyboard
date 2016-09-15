@@ -1061,6 +1061,9 @@ DQ
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="A6x-JG-DkY"/>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="productChanged:" target="HUy-04-wVn" id="WjS-rV-ddi"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnJ-2X-9qh">
                                 <rect key="frame" x="111" y="476" width="123" height="26"/>

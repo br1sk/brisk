@@ -134,6 +134,11 @@ final class RadarViewController: ViewController {
         }
     }
 
+    @IBAction private func productChanged(sender: NSPopUpButton) {
+        let product = Product.All.find { $0.name == sender.selectedTitle }!
+        self.areaPopUp.enabled = product.appleIdentifier == Product.iOS.appleIdentifier
+    }
+
     private func showErrorWithMessage(message: String, close: Bool = false) {
         guard let window = self.view.window else {
             return
