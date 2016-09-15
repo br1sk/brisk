@@ -97,8 +97,7 @@ final class RadarViewController: ViewController {
         }
 
         guard let (username, password) = Keychain.get(.Radar) else {
-            self.showErrorWithMessage("Submitting radar without username/password")
-            return
+            return self.showErrorWithMessage("Submitting radar without username/password")
         }
 
         var radar = self.currentRadar()
@@ -145,18 +144,14 @@ final class RadarViewController: ViewController {
         self.areaPopUp.enabled = product.appleIdentifier == Product.iOS.appleIdentifier
     }
 
-    private func showErrorWithMessage(message: String, close: Bool = false) {
+    private func showErrorWithMessage(message: String) {
         guard let window = self.view.window else {
             return
         }
 
         let alert = NSAlert()
         alert.messageText = message
-        alert.beginSheetModalForWindow(window) { _ in
-            if close {
-                window.close()
-            }
-        }
+        alert.beginSheetModalForWindow(window, completionHandler: nil)
     }
 
     private func enableSubmitIfValid() {
