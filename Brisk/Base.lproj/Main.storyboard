@@ -645,6 +645,7 @@
                     </menu>
                     <connections>
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                        <outlet property="dockMenu" destination="O10-D1-aVG" id="Qbp-ZO-wkb"/>
                     </connections>
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Brisk" customModuleProvider="target">
@@ -676,6 +677,27 @@
                         <menuItem title="Quit Brisk" keyEquivalent="q" id="8I1-TH-BL4">
                             <connections>
                                 <action selector="terminate:" target="Ady-hI-5gd" id="aRZ-Ie-uC0"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <menu id="O10-D1-aVG">
+                    <items>
+                        <menuItem title="New Radar" keyEquivalent="n" id="crX-en-X1E">
+                            <connections>
+                                <action selector="newDocument:" target="Ady-hI-5gd" id="OCq-y4-VD9"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="VV1-qI-Dps"/>
+                        <menuItem title="About Brisk" id="Fwv-9s-N5k">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="XBl-jo-LIw"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Preferences..." keyEquivalent="," id="e9S-wH-JNq">
+                            <connections>
+                                <segue destination="zOe-Vb-W6F" kind="show" id="Gca-lP-hmF"/>
                             </connections>
                         </menuItem>
                     </items>
@@ -1074,7 +1096,7 @@ DQ
                                         </textFieldCell>
                                     </textField>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-yv-l5N">
-                                        <rect key="frame" x="0.0" y="310.5" width="572" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="310" width="572" height="69.5"/>
                                         <clipView key="contentView" id="H9Z-Ca-KFx">
                                             <rect key="frame" x="1" y="1" width="570" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1084,10 +1106,10 @@ DQ
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1112,10 +1134,10 @@ DQ
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1140,10 +1162,10 @@ DQ
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="68"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1158,7 +1180,7 @@ DQ
                                         </scroller>
                                     </scrollView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-Cy-HfV">
-                                        <rect key="frame" x="0.0" y="77.5" width="572" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="77" width="572" height="69.5"/>
                                         <clipView key="contentView" id="Fcy-S1-scV">
                                             <rect key="frame" x="1" y="1" width="570" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1168,10 +1190,10 @@ DQ
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1196,10 +1218,10 @@ DQ
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="570" height="67.5"/>
-                                                    <size key="maxSize" width="570" height="10000000"/>
+                                                    <size key="maxSize" width="572" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1454,6 +1476,6 @@ DQ
         <image name="NSPreferencesGeneral" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zV1-KQ-gay"/>
+        <segue reference="XTz-8q-MhS"/>
     </inferredMetricsTieBreakers>
 </document>
