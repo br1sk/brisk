@@ -109,6 +109,7 @@ final class RadarViewController: ViewController {
             self?.progressIndicator.stopAnimation(self)
             self?.submitButton.enabled = true
             if success {
+                self?.document?.saveDocument(self)
                 self?.view.window?.close()
             }
         }
@@ -124,9 +125,14 @@ final class RadarViewController: ViewController {
                     radar.ID = radarID
                     let openRadar = Sonar(service: .OpenRadar(token: token))
                     openRadar.loginThenCreate(radar: radar) { result in
-                        completion(success: true)
+                        switch result {
+                            case .Success:
+                                completion(success: true)
+                            case .Failure(let error):
+                                self?.showErrorWithMessage(error.message)
+                                completion(success: false)
+                        }
                     }
-
                 case .Failure(let error):
                     self?.showErrorWithMessage(error.message)
                     completion(success: false)
