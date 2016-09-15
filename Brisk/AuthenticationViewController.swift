@@ -45,7 +45,7 @@ final class AuthenticationViewController: ViewController {
 }
 
 extension AuthenticationViewController {
-    override func controlTextDidChange(obj: NSNotification) {
+    override func controlTextDidChange(_: NSNotification) {
         self.enableLoginIfValid()
     }
 }

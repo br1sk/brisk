@@ -24,12 +24,13 @@ final class OpenRadarPreferencesViewController: ViewController {
         let token = self.APIKeyTextField.stringValue.stringByTrimmingCharactersInSet(
             NSCharacterSet.whitespaceAndNewlineCharacterSet()
         )
+
         Keychain.set(username: kOpenRadarUsername, password: token, forKey: .OpenRadar)
     }
 }
 
 extension OpenRadarPreferencesViewController: NSTextFieldDelegate {
-    override func controlTextDidEndEditing(obj: NSNotification) {
+    override func controlTextDidEndEditing(_: NSNotification) {
         if self.view.window?.keyWindow == true {
             self.saveCurrentToken()
         }
