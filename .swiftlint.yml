@@ -1,0 +1,9 @@
+included:
+  - Brisk
+disabled_rules:
+  - force_cast
+  - opening_brace
+  - type_name
+  - variable_name
+line_length:
+  - 110
