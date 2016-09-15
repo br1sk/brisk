@@ -838,7 +838,7 @@ DQ
                         <tabViewItem id="Mzz-Pe-pef"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
-                    <tabView key="tabView" type="noTabsNoBorder" id="EE6-pS-Eyp">
+                    <tabView key="tabView" id="EE6-pS-Eyp">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
@@ -918,7 +918,7 @@ DQ
         <!--General-->
         <scene sceneID="CIr-IC-boF">
             <objects>
-                <viewController title="General" id="9Nh-eM-d2p" sceneMemberID="viewController">
+                <viewController title="General" showSeguePresentationStyle="single" id="9Nh-eM-d2p" sceneMemberID="viewController">
                     <view key="view" id="yLd-6I-DVb">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
