@@ -5,13 +5,13 @@ private let kAccessibilityLevel = kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 private let kService = "Brisk"
 
 enum KeychainKey: String {
-    case Radar = "Radar Login"
-    case OpenRadar = "Open Radar Token"
+    case radar = "Radar Login"
+    case openRadar = "Open Radar Token"
 }
 
 struct Keychain {
-    static func get(key: KeychainKey) -> (String, String)? {
-        let attributes: [CFString: AnyObject] = [
+    static func get(_ key: KeychainKey) -> (String, String)? {
+        let attributes: [CFString: Any] = [
             kSecAttrAccessible: kAccessibilityLevel,
             kSecAttrLabel: key.rawValue,
             kSecAttrService: kService,
@@ -21,18 +21,16 @@ struct Keychain {
             kSecReturnData: kCFBooleanTrue,
         ]
 
-        var result: NSDictionary?
-        let status = withUnsafeMutablePointer(&result) {
-            SecItemCopyMatching(attributes, UnsafeMutablePointer($0))
-        }
+        var result: CFTypeRef?
+        let status = SecItemCopyMatching(attributes as CFDictionary, &result)
 
-        if !status.success {
+        guard let dictionary = result as? NSDictionary, status.success else {
             return nil
         }
 
-        let username = result?[kSecAttrAccount as String] as? String
-        let passwordData = result?[kSecValueData as String] as? NSData
-        let password = passwordData.flatMap { String(data: $0, encoding: NSUTF8StringEncoding) }
+        let username = dictionary[kSecAttrAccount as String] as? String
+        let passwordData = dictionary[kSecValueData as String] as? Data
+        let password = passwordData.flatMap { String(data: $0, encoding: String.Encoding.utf8) }
         if let username = username, let password = password {
             return (username, password)
         }
@@ -40,14 +38,15 @@ struct Keychain {
         return nil
     }
 
-    static func set(username username: String, password: String, forKey key: KeychainKey) -> Bool {
-        guard let passwordData = password.dataUsingEncoding(NSUTF8StringEncoding) else {
+    @discardableResult
+    static func set(username: String, password: String, forKey key: KeychainKey) -> Bool {
+        guard let passwordData = password.data(using: String.Encoding.utf8) else {
             return false
         }
 
         self.delete(key)
 
-        let attributes: [CFString: AnyObject] = [
+        let attributes: [CFString: Any] = [
             kSecAttrAccessible: kAccessibilityLevel,
             kSecAttrAccount: username,
             kSecAttrLabel: key.rawValue,
@@ -56,19 +55,20 @@ struct Keychain {
             kSecValueData: passwordData,
         ]
 
-        let status = SecItemAdd(attributes, nil)
+        let status = SecItemAdd(attributes as CFDictionary, nil)
         return status.success
     }
 
-    static func delete(key: KeychainKey) -> Bool {
-        let attributes: [CFString: AnyObject] = [
+    @discardableResult
+    static func delete(_ key: KeychainKey) -> Bool {
+        let attributes: [CFString: Any] = [
             kSecAttrAccessible: kAccessibilityLevel,
             kSecAttrLabel: key.rawValue,
             kSecAttrService: kService,
             kSecClass: kSecClassGenericPassword,
         ]
 
-        let status = SecItemDelete(attributes)
+        let status = SecItemDelete(attributes as CFDictionary)
         return status.success
     }
 }
@@ -83,8 +83,8 @@ public func == (lhs: CFString, rhs: CFString) -> Bool {
     return lhs as String == rhs as String
 }
 
-private extension OSStatus {
-    private var success: Bool {
+fileprivate extension OSStatus {
+    fileprivate var success: Bool {
         return self == noErr
     }
 }

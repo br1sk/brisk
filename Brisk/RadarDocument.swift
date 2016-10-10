@@ -1,14 +1,14 @@
 import AppKit
 import Sonar
 
-private struct DocumentError: ErrorType {}
+private struct DocumentError: Error {}
 
 final class RadarDocument: NSDocument {
     override func makeWindowControllers() {
-        self.createWindowController(withRadar: nil)
+        self.createWindowController(radar: nil)
     }
 
-    override func dataOfType(typeName: String) throws -> NSData {
+    override func data(ofType typeName: String) throws -> Data {
         let viewController = self.windowControllers.first?.contentViewController as? RadarViewController
         if let radar = viewController?.currentRadar() {
             return try radar.toData()
@@ -17,29 +17,29 @@ final class RadarDocument: NSDocument {
         throw DocumentError()
     }
 
-    override func readFromData(data: NSData, ofType typeName: String) throws {
-        let object = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+    override func read(from data: Data, ofType typeName: String) throws {
+        let object = try? JSONSerialization.jsonObject(with: data, options: [])
         if let dictionary = object as? NSDictionary, let radar = Radar(JSON: dictionary) {
-            self.createWindowController(withRadar: radar)
+            self.createWindowController(radar: radar)
         } else {
             throw DocumentError()
         }
     }
 
-    private func createWindowController(withRadar radar: Radar?) {
-        let windowController = NSStoryboard.main.instantiateWindowControllerWithIdentifier("Radar")
+    private func createWindowController(radar: Radar?) {
+        let windowController = NSStoryboard.main.instantiateWindowController(identifier: "Radar")
         if let radar = radar {
             let viewController = windowController.contentViewController as! RadarViewController
-            viewController.restoreRadar(radar)
+            viewController.restore(radar)
         }
 
         self.addWindowController(windowController)
     }
 }
 
-private extension Radar {
-    private func toData() throws -> NSData {
-        var JSON: [String: AnyObject] = [
+fileprivate extension Radar {
+    fileprivate func toData() throws -> Data {
+        var JSON: [String: Any] = [
             "title": self.title,
             "description": self.description,
             "classification_id": self.classification.appleIdentifier,
@@ -57,10 +57,10 @@ private extension Radar {
         JSON["application_id"] = self.applicationID
         JSON["user_id"] = self.userID
 
-        return try NSJSONSerialization.dataWithJSONObject(JSON, options: [])
+        return try JSONSerialization.data(withJSONObject: JSON, options: [])
     }
 
-    private init?(JSON: NSDictionary) {
+    fileprivate init?(JSON: NSDictionary) {
         guard let title = JSON["title"] as? String,
             let description = JSON["description"] as? String,
             let classificationID = JSON["classification_id"] as? Int,

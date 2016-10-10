@@ -1,6 +1,6 @@
 import AppKit
 
-private let kAPIKeyURL = NSURL(string: "https://openradar.appspot.com/apikey")!
+private let kAPIKeyURL = URL(string: "https://openradar.appspot.com/apikey")!
 private let kOpenRadarUsername = "openradar"
 
 final class OpenRadarPreferencesViewController: ViewController {
@@ -9,7 +9,7 @@ final class OpenRadarPreferencesViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let (_, password) = Keychain.get(.OpenRadar) {
+        if let (_, password) = Keychain.get(.openRadar) {
             self.APIKeyTextField.stringValue = password
         }
 
@@ -17,21 +17,18 @@ final class OpenRadarPreferencesViewController: ViewController {
     }
 
     @IBAction private func getAPIKey(sender: AnyObject) {
-        NSWorkspace.sharedWorkspace().openURL(kAPIKeyURL)
+        NSWorkspace.shared().open(kAPIKeyURL)
     }
 
-    private func saveCurrentToken() {
-        let token = self.APIKeyTextField.stringValue.stringByTrimmingCharactersInSet(
-            NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        )
-
-        Keychain.set(username: kOpenRadarUsername, password: token, forKey: .OpenRadar)
+    fileprivate func saveCurrentToken() {
+        let token = self.APIKeyTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        Keychain.set(username: kOpenRadarUsername, password: token, forKey: .openRadar)
     }
 }
 
 extension OpenRadarPreferencesViewController: NSTextFieldDelegate {
-    override func controlTextDidEndEditing(_: NSNotification) {
-        if self.view.window?.keyWindow == true {
+    override func controlTextDidEndEditing(_: Notification) {
+        if self.view.window?.isKeyWindow == true {
             self.saveCurrentToken()
         }
     }

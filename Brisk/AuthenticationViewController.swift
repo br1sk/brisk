@@ -24,28 +24,28 @@ final class AuthenticationViewController: ViewController {
     @IBAction private func login(sender: AnyObject) {
         let username = self.appleIDTextField.stringValue
         let password = self.passwordTextField.stringValue
-        Keychain.set(username: username, password: password, forKey: .Radar)
+        Keychain.set(username: username, password: password, forKey: .radar)
         StoryboardRouter.reloadTopWindowController()
-        NSDocumentController.sharedDocumentController().newDocument(self)
+        NSDocumentController.shared().newDocument(self)
     }
 
     private func enableInterface(enable: Bool) {
-        self.loginButton.enabled = enable
-        self.appleIDTextField.enabled = enable
-        self.passwordTextField.enabled = enable
+        self.loginButton.isEnabled = enable
+        self.appleIDTextField.isEnabled = enable
+        self.passwordTextField.isEnabled = enable
     }
 
-    private func enableLoginIfValid() {
+    fileprivate func enableLoginIfValid() {
         let isValid = self.validatables.reduce(true) { valid, validatable in
             return valid && validatable.isValid
         }
 
-        self.loginButton.enabled = isValid
+        self.loginButton.isEnabled = isValid
     }
 }
 
 extension AuthenticationViewController {
-    override func controlTextDidChange(_: NSNotification) {
+    override func controlTextDidChange(_: Notification) {
         self.enableLoginIfValid()
     }
 }

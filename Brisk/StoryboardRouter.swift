@@ -1,8 +1,8 @@
 import AppKit
 
 final class StoryboardRouter: NSObject {
-    private static var sharedRouter = StoryboardRouter()
-    private var windowController: NSWindowController?
+    fileprivate static var sharedRouter = StoryboardRouter()
+    fileprivate var windowController: NSWindowController?
 
     static func reloadTopWindowController() {
         self.sharedRouter.reloadTopWindowController()
@@ -13,19 +13,19 @@ final class StoryboardRouter: NSObject {
         self.windowController?.close()
         NSApp.stopModal()
 
-        let radarLogin = Keychain.get(.Radar)
+        let radarLogin = Keychain.get(.radar)
         if radarLogin == nil {
-            self.windowController = NSStoryboard.main.instantiateWindowControllerWithIdentifier("Login")
-            NSApp.runModalForWindow(self.windowController!.window!)
+            self.windowController = NSStoryboard.main.instantiateWindowController(identifier: "Login")
+            NSApp.runModal(for: self.windowController!.window!)
         }
 
         self.windowController?.window?.delegate = self
-        NSApp.activateIgnoringOtherApps(true)
+        NSApp.activate(ignoringOtherApps: true)
     }
 }
 
 extension StoryboardRouter: NSWindowDelegate {
-    func windowWillClose(notification: NSNotification) {
+    func windowWillClose(_ notification: Notification) {
         StoryboardRouter.sharedRouter.windowController = nil
     }
 }

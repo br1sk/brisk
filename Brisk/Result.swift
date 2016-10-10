@@ -1,12 +1,12 @@
-enum Result<T, U: ErrorType> {
-    case Success(T)
-    case Failure(U)
+enum Result<T, U: Error> {
+    case success(T)
+    case failure(U)
 
-    init(value: T?, @autoclosure failWith: () -> U) {
+    init(value: T?, failWith: @autoclosure () -> U) {
         if let value = value {
-            self = .Success(value)
+            self = .success(value)
         } else {
-            self = .Failure(failWith())
+            self = .failure(failWith())
         }
     }
 }

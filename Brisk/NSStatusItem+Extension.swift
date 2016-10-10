@@ -1,8 +1,8 @@
 import AppKit
 
 extension NSStatusItem {
-    static func create(image image: NSImage, menu: NSMenu) -> NSStatusItem {
-        let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    static func create(image: NSImage, menu: NSMenu) -> NSStatusItem {
+        let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
         statusItem.highlightMode = true
         statusItem.image = image
         statusItem.menu = menu
@@ -11,6 +11,6 @@ extension NSStatusItem {
     }
 
     func remove() {
-        NSStatusBar.systemStatusBar().removeStatusItem(self)
+        NSStatusBar.system().removeStatusItem(self)
     }
 }

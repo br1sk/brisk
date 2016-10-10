@@ -12,52 +12,52 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         self.setupStatusItem()
     }
 
-    func applicationShouldOpenUntitledFile(sender: NSApplication) -> Bool {
+    func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
         return false
     }
 
-    func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if flag {
             return true
         }
 
-        NSDocumentController.sharedDocumentController().newDocument(self)
+        NSDocumentController.shared().newDocument(self)
         return false
     }
 
-    func application(sender: NSApplication, openFiles filenames: [String]) {
-        let documentController = NSDocumentController.sharedDocumentController()
+    func application(_ sender: NSApplication, openFiles filenames: [String]) {
+        let documentController = NSDocumentController.shared()
         let type = "com.brisk.radar"
 
         for filename in filenames {
-            let URL = NSURL(fileURLWithPath: filename)
-            if let document = try? documentController.makeDocumentWithContentsOfURL(URL, ofType: type) {
+            let url = URL(fileURLWithPath: filename)
+            if let document = try? documentController.makeDocument(withContentsOf: url, ofType: type) {
                 documentController.addDocument(document)
                 document.showWindows()
             }
         }
     }
 
-    func applicationWillTerminate(notification: NSNotification) {
+    func applicationWillTerminate(_ notification: Notification) {
         self.cleanupStatusItem()
     }
 
     // MARK: - Private Methods
 
     private func registerDefaults() {
-        let defaults: [String: AnyObject] = [
-            Defaults.ShowDockIcon: false,
+        let defaults: [String: Any] = [
+            Defaults.showDockIcon: false,
         ]
 
-        NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
+        UserDefaults.standard.register(defaults: defaults)
     }
 
     private func setupDockIcon() {
-        if !NSUserDefaults.standardUserDefaults().boolForKey(Defaults.ShowDockIcon) {
+        if !UserDefaults.standard.bool(forKey: Defaults.showDockIcon) {
             return
         }
 
-        NSApp.setActivationPolicy(.Regular)
+        NSApp.setActivationPolicy(.regular)
     }
 
     private func setupStatusItem() {
