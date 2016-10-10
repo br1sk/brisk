@@ -18,7 +18,7 @@ final class RadarDocument: NSDocument {
     }
 
     override func read(from data: Data, ofType typeName: String) throws {
-        if let json = data.toJsonDictionary(), let radar = Radar(json: json) {
+        if let json = data.toJSONDictionary(), let radar = Radar(json: json) {
             self.createWindowController(radar: radar)
         } else {
             throw DocumentError()

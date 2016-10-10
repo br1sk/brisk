@@ -11,7 +11,7 @@ final class RadarSerializationTests: XCTestCase {
             applicationID: "456", userID: "123"
         )
 
-        let json = try! radar.toData().toJsonDictionary() as NSDictionary?
+        let json = try! radar.toData().toJSONDictionary() as NSDictionary?
         let realJson = loadRadarJSON() as NSDictionary
         XCTAssertEqual(json, realJson)
     }
@@ -44,5 +44,5 @@ final class RadarSerializationTests: XCTestCase {
 
 private func loadRadarJSON() -> [String: Any] {
     let url = Bundle(for: RadarSerializationTests.self).url(forResource: "radar", withExtension: "json")!
-    return try! Data(contentsOf: url).toJsonDictionary()!
+    return try! Data(contentsOf: url).toJSONDictionary()!
 }

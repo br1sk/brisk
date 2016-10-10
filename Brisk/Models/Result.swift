@@ -1,8 +1,8 @@
-enum Result<T, U: Error> {
+public enum Result<T, U: Error> {
     case success(T)
     case failure(U)
 
-    init(value: T?, failWith: @autoclosure () -> U) {
+    public init(value: T?, failWith: @autoclosure () -> U) {
         if let value = value {
             self = .success(value)
         } else {
