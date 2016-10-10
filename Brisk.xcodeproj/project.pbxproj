@@ -17,7 +17,6 @@
 		C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC191D167D5F0086D304 /* RadarDocument.swift */; };
 		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
 		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
-		C255C43F1DAB72F900383D0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C255C43E1DAB72F900383D0A /* XCTest.framework */; };
 		C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F3B711D8B239B00EA3B7D /* Constants.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
@@ -71,7 +70,6 @@
 		C20DDC191D167D5F0086D304 /* RadarDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarDocument.swift; sourceTree = "<group>"; };
 		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
 		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		C255C43E1DAB72F900383D0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C27F3B711D8B239B00EA3B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C255C43F1DAB72F900383D0A /* XCTest.framework in Frameworks */,
 				BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,15 +139,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C255C4401DAB79C100383D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28001EC1D148AB800569A72 /* Info.plist */,
+				C2D0B2061DAB6D0E005E804F /* radar.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C255C4411DAB79CC00383D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28001F71D148AB800569A72 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C28001CC1D148AB800569A72 = {
 			isa = PBXGroup;
 			children = (
 				C28001D71D148AB800569A72 /* Brisk */,
 				C28001E91D148AB800569A72 /* BriskTests */,
 				C28001F41D148AB800569A72 /* BriskUITests */,
-				C28001D61D148AB800569A72 /* Products */,
-				126829078580050524ADC48E /* Pods */,
 				C4CC83B6A8A6286F3AF47B9F /* Frameworks */,
+				126829078580050524ADC48E /* Pods */,
+				C28001D61D148AB800569A72 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,15 +181,15 @@
 		C28001D71D148AB800569A72 /* Brisk */ = {
 			isa = PBXGroup;
 			children = (
-				C28001D81D148AB800569A72 /* AppDelegate.swift */,
-				C219CBD91D1736EB002F89FC /* Application.swift */,
-				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
-				C20DDC131D1652C20086D304 /* Keychain.swift */,
-				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
 				C2839A211D14F5BF00D240C4 /* Controllers */,
 				C2839A1E1D14F59400D240C4 /* Extensions */,
 				C2839A201D14F5A900D240C4 /* Models */,
 				C2839A221D14F5CC00D240C4 /* Resources */,
+				C28001D81D148AB800569A72 /* AppDelegate.swift */,
+				C219CBD91D1736EB002F89FC /* Application.swift */,
+				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
+				C20DDC131D1652C20086D304 /* Keychain.swift */,
+				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
 			);
 			path = Brisk;
 			sourceTree = "<group>";
@@ -183,10 +197,9 @@
 		C28001E91D148AB800569A72 /* BriskTests */ = {
 			isa = PBXGroup;
 			children = (
+				C255C4401DAB79C100383D0A /* Resources */,
 				C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */,
 				C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */,
-				C28001EC1D148AB800569A72 /* Info.plist */,
-				C2D0B2061DAB6D0E005E804F /* radar.json */,
 			);
 			path = BriskTests;
 			sourceTree = "<group>";
@@ -194,8 +207,8 @@
 		C28001F41D148AB800569A72 /* BriskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				C255C4411DAB79CC00383D0A /* Resources */,
 				C28001F51D148AB800569A72 /* BriskUITests.swift */,
-				C28001F71D148AB800569A72 /* Info.plist */,
 			);
 			path = BriskUITests;
 			sourceTree = "<group>";
@@ -212,7 +225,7 @@
 				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
 				C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C2839A201D14F5A900D240C4 /* Models */ = {
@@ -222,7 +235,7 @@
 				C2839A231D14FC7000D240C4 /* Result.swift */,
 				C2839A141D14F29B00D240C4 /* Validatable.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C2839A211D14F5BF00D240C4 /* Controllers */ = {
@@ -236,7 +249,7 @@
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C2839A221D14F5CC00D240C4 /* Resources */ = {
@@ -246,13 +259,12 @@
 				C28001E11D148AB800569A72 /* Info.plist */,
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C4CC83B6A8A6286F3AF47B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C255C43E1DAB72F900383D0A /* XCTest.framework */,
 				C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */,
 				0018868F17477C7D609957AD /* Pods_BriskTests.framework */,
 			);
@@ -554,6 +566,7 @@
 				C28001DF1D148AB800569A72 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -591,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Brisk/Info.plist;
+				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -604,7 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Brisk/Info.plist;
+				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -617,7 +630,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskTests/Info.plist;
+				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,7 +645,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskTests/Info.plist;
+				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -645,7 +658,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskUITests/Info.plist;
+				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -656,7 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskUITests/Info.plist;
+				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
