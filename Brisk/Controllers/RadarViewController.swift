@@ -2,20 +2,20 @@ import AppKit
 import Sonar
 
 final class RadarViewController: ViewController {
-    @IBOutlet private var actualTextView: NSTextView!
+    @IBOutlet fileprivate var actualTextView: NSTextView!
+    @IBOutlet fileprivate var descriptionTextView: NSTextView!
+    @IBOutlet fileprivate var expectedTextView: NSTextView!
+    @IBOutlet fileprivate var notesTextView: NSTextView!
+    @IBOutlet fileprivate var stepsTextView: NSTextView!
     @IBOutlet private var areaPopUp: NSPopUpButton!
     @IBOutlet private var classificationPopUp: NSPopUpButton!
     @IBOutlet private var configurationTextField: NSTextField!
-    @IBOutlet private var descriptionTextView: NSTextView!
-    @IBOutlet private var expectedTextView: NSTextView!
-    @IBOutlet private var notesTextView: NSTextView!
     @IBOutlet private var productPopUp: NSPopUpButton!
+    @IBOutlet private var progressIndicator: NSProgressIndicator!
     @IBOutlet private var reproducibilityPopUp: NSPopUpButton!
-    @IBOutlet private var stepsTextView: NSTextView!
     @IBOutlet private var submitButton: NSButton!
     @IBOutlet private var titleTextField: NSTextField!
     @IBOutlet private var versionTextField: NSTextField!
-    @IBOutlet private var progressIndicator: NSProgressIndicator!
 
     private var validatables: [Validatable] {
         return [
@@ -46,18 +46,18 @@ final class RadarViewController: ViewController {
         super.viewDidLoad()
 
         self.setupTextViewDelegates()
-        self.areaPopUp.setItemsWithTitles(Area.All.map { $0.name })
-        self.classificationPopUp.setItemsWithTitles(Classification.All.map { $0.name })
-        self.reproducibilityPopUp.setItemsWithTitles(Reproducibility.All.map { $0.name })
-        self.productPopUp.setItemsWith(Product.All, getTitle: { $0.name }, getGroup: { $0.category })
+        self.areaPopUp.setItems(titles: Area.All.map { $0.name })
+        self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
+        self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
+        self.productPopUp.set(items: Product.All, getTitle: { $0.name }, getGroup: { $0.category })
     }
 
-    func restoreRadar(radar: Radar) {
-        self.classificationPopUp.selectItemWithTitle(radar.classification.name)
-        self.reproducibilityPopUp.selectItemWithTitle(radar.reproducibility.name)
-        self.productPopUp.selectItemWithTitle(radar.product.name)
+    func restore(_ radar: Radar) {
+        self.classificationPopUp.selectItem(withTitle: radar.classification.name)
+        self.reproducibilityPopUp.selectItem(withTitle: radar.reproducibility.name)
+        self.productPopUp.selectItem(withTitle: radar.product.name)
         if let area = radar.area {
-            self.areaPopUp.selectItemWithTitle(area.name)
+            self.areaPopUp.selectItem(withTitle: area.name)
         }
 
         self.titleTextField.stringValue = radar.title
@@ -89,26 +89,26 @@ final class RadarViewController: ViewController {
 
     // MARK: - Private Methods
 
-    @IBAction private func submitRadar(sender: AnyObject) {
+    @IBAction private func submitRadar(_ sender: Any) {
         for field in self.validatables {
             if !field.isValid {
                 return
             }
         }
 
-        guard let (username, password) = Keychain.get(.Radar) else {
-            return self.showErrorWithMessage("Submitting radar without username/password")
+        guard let (username, password) = Keychain.get(.radar) else {
+            return self.showError(message: "Submitting radar without username/password")
         }
 
         var radar = self.currentRadar()
-        self.submitButton.enabled = false
+        self.submitButton.isEnabled = false
         self.progressIndicator.startAnimation(self)
 
-        let completion: (success: Bool) -> Void = { [weak self] success in
+        let completion: (Bool) -> Void = { [weak self] success in
             self?.progressIndicator.stopAnimation(self)
-            self?.submitButton.enabled = true
+            self?.submitButton.isEnabled = true
             if success {
-                self?.document?.saveDocument(self)
+                self?.document?.save(self)
                 self?.view.window?.close()
             }
         }
@@ -116,55 +116,55 @@ final class RadarViewController: ViewController {
         let appleRadar = Sonar(service: .AppleRadar(appleID: username, password: password))
         appleRadar.loginThenCreate(radar: radar) { [weak self] result in
             switch result {
-                case .Success(let radarID):
-                    guard let (_, token) = Keychain.get(.OpenRadar) else {
-                        return completion(success: true)
+                case .success(let radarID):
+                    guard let (_, token) = Keychain.get(.openRadar) else {
+                        return completion(true)
                     }
 
                     radar.ID = radarID
                     let openRadar = Sonar(service: .OpenRadar(token: token))
                     openRadar.loginThenCreate(radar: radar) { result in
                         switch result {
-                            case .Success:
-                                completion(success: true)
-                            case .Failure(let error):
-                                self?.showErrorWithMessage(error.message)
-                                completion(success: false)
+                            case .success:
+                                completion(true)
+                            case .failure(let error):
+                                self?.showError(message: error.message)
+                                completion(false)
                         }
                     }
-                case .Failure(let error):
-                    self?.showErrorWithMessage(error.message)
-                    completion(success: false)
+                case .failure(let error):
+                    self?.showError(message: error.message)
+                    completion(false)
             }
         }
     }
 
-    @IBAction private func productChanged(sender: NSPopUpButton) {
+    @IBAction private func productChanged(_ sender: NSPopUpButton) {
         let product = Product.All.find { $0.name == sender.selectedTitle }!
-        self.areaPopUp.enabled = product.appleIdentifier == Product.iOS.appleIdentifier
+        self.areaPopUp.isEnabled = product.appleIdentifier == Product.iOS.appleIdentifier
     }
 
-    private func showErrorWithMessage(message: String) {
+    private func showError(message: String) {
         guard let window = self.view.window else {
             return
         }
 
         let alert = NSAlert()
         alert.messageText = message
-        alert.beginSheetModalForWindow(window, completionHandler: nil)
+        alert.beginSheetModal(for: window, completionHandler: nil)
     }
 
-    private func enableSubmitIfValid() {
+    fileprivate func enableSubmitIfValid() {
         let isValid = self.validatables.reduce(true) { valid, validatable in
             return valid && validatable.isValid
         }
 
-        self.submitButton.enabled = isValid
+        self.submitButton.isEnabled = isValid
     }
 
-    private func updateTitleFromDocument() {
+    fileprivate func updateTitleFromDocument() {
         let newTitle = self.titleTextField.stringValue
-        self.document?.setDisplayName(newTitle)
+        self.document?.displayName = newTitle
         self.windowController?.synchronizeWindowTitleWithDocumentName()
     }
 }
@@ -180,11 +180,11 @@ extension RadarViewController: NSTextViewDelegate {
         ]
     }
 
-    override func controlTextDidChange(obj: NSNotification) {
+    override func controlTextDidChange(_ obj: Notification) {
         self.textChanged()
     }
 
-    func textDidChange(notification: NSNotification) {
+    func textDidChange(_ notification: Notification) {
         self.textChanged()
     }
 
@@ -193,7 +193,7 @@ extension RadarViewController: NSTextViewDelegate {
         self.updateTitleFromDocument()
     }
 
-    private func setupTextViewDelegates() {
+    fileprivate func setupTextViewDelegates() {
         for textView in self.textViews {
             textView.delegate = self
         }

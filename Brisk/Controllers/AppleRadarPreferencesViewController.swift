@@ -6,13 +6,13 @@ final class AppleRadarPreferencesViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let (username, _) = Keychain.get(.Radar) {
+        if let (username, _) = Keychain.get(.radar) {
             self.appleIDTextField.stringValue = username
         }
     }
 
-    @IBAction private func logOut(sender: AnyObject) {
-        Keychain.delete(.Radar)
+    @IBAction private func logOut(_ sender: Any) {
+        Keychain.delete(.radar)
         self.view.window?.close()
         StoryboardRouter.reloadTopWindowController()
     }

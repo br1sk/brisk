@@ -7,7 +7,7 @@ extension NSStoryboard {
         return kMainStoryboard
     }
 
-    func instantiateWindowControllerWithIdentifier(identifier: String) -> NSWindowController {
-        return self.instantiateControllerWithIdentifier(identifier) as! NSWindowController
+    func instantiateWindowController(identifier: String) -> NSWindowController {
+        return self.instantiateController(withIdentifier: identifier) as! NSWindowController
     }
 }

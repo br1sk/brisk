@@ -6,8 +6,8 @@ final class TabViewController: NSTabViewController {
         self.setTitle(withItem: self.tabView.selectedTabViewItem)
     }
 
-    override func tabView(tabView: NSTabView, didSelectTabViewItem tabViewItem: NSTabViewItem?) {
-        super.tabView(tabView, didSelectTabViewItem: tabViewItem)
+    override func tabView(_ tabView: NSTabView, willSelect tabViewItem: NSTabViewItem?) {
+        super.tabView(tabView, didSelect: tabViewItem)
         self.setTitle(withItem: tabViewItem)
     }
 

@@ -1,3 +1,3 @@
 struct Defaults {
-    static let ShowDockIcon = "showDockIcon"
+    static let showDockIcon = "showDockIcon"
 }

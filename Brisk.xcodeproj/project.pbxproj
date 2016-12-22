@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0018868F17477C7D609957AD /* Pods_BriskTests.framework */; };
 		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
 		C20DDC141D1652C20086D304 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC131D1652C20086D304 /* Keychain.swift */; };
@@ -16,6 +17,7 @@
 		C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC191D167D5F0086D304 /* RadarDocument.swift */; };
 		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
 		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
+		C255C4431DAB7A9C00383D0A /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C255C4421DAB7A9C00383D0A /* ResultTests.swift */; };
 		C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F3B711D8B239B00EA3B7D /* Constants.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
@@ -29,9 +31,12 @@
 		C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */; };
 		C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */; };
 		C2839A241D14FC7000D240C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A231D14FC7000D240C4 /* Result.swift */; };
-		C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */; };
+		C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* Data+Extension.swift */; };
 		C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */; };
 		C2C360191D172DB400217D22 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360181D172DB400217D22 /* TabViewController.swift */; };
+		C2D0B2071DAB6D0E005E804F /* radar.json in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B2061DAB6D0E005E804F /* radar.json */; };
+		C2D0B2091DAB6D23005E804F /* RadarSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */; };
+		C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */; };
 		C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */; };
 		C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0018868F17477C7D609957AD /* Pods_BriskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BriskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
+		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
 		C2042B521D17397900DEF594 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		C20DDC191D167D5F0086D304 /* RadarDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarDocument.swift; sourceTree = "<group>"; };
 		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
 		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C255C4421DAB7A9C00383D0A /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 		C27F3B711D8B239B00EA3B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,12 +91,16 @@
 		C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Extension.swift"; sourceTree = "<group>"; };
 		C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtensionTests.swift; sourceTree = "<group>"; };
 		C2839A231D14FC7000D240C4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
+		C2839A271D14FE8B00D240C4 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarPreferencesViewController.swift; sourceTree = "<group>"; };
 		C2C360181D172DB400217D22 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		C2D0B2061DAB6D0E005E804F /* radar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radar.json; sourceTree = "<group>"; };
+		C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarSerializationTests.swift; sourceTree = "<group>"; };
+		C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radar+Serialization.swift"; sourceTree = "<group>"; };
 		C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadingWindowController.swift; sourceTree = "<group>"; };
 		C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRadarPreferencesViewController.swift; sourceTree = "<group>"; };
 		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +135,27 @@
 			children = (
 				45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */,
 				9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */,
+				F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */,
+				7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C255C4401DAB79C100383D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28001EC1D148AB800569A72 /* Info.plist */,
+				C2D0B2061DAB6D0E005E804F /* radar.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C255C4411DAB79CC00383D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28001F71D148AB800569A72 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C28001CC1D148AB800569A72 = {
@@ -132,9 +164,9 @@
 				C28001D71D148AB800569A72 /* Brisk */,
 				C28001E91D148AB800569A72 /* BriskTests */,
 				C28001F41D148AB800569A72 /* BriskUITests */,
-				C28001D61D148AB800569A72 /* Products */,
-				126829078580050524ADC48E /* Pods */,
 				C4CC83B6A8A6286F3AF47B9F /* Frameworks */,
+				126829078580050524ADC48E /* Pods */,
+				C28001D61D148AB800569A72 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,15 +183,15 @@
 		C28001D71D148AB800569A72 /* Brisk */ = {
 			isa = PBXGroup;
 			children = (
-				C28001D81D148AB800569A72 /* AppDelegate.swift */,
-				C219CBD91D1736EB002F89FC /* Application.swift */,
-				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
-				C20DDC131D1652C20086D304 /* Keychain.swift */,
-				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
 				C2839A211D14F5BF00D240C4 /* Controllers */,
 				C2839A1E1D14F59400D240C4 /* Extensions */,
 				C2839A201D14F5A900D240C4 /* Models */,
 				C2839A221D14F5CC00D240C4 /* Resources */,
+				C28001D81D148AB800569A72 /* AppDelegate.swift */,
+				C219CBD91D1736EB002F89FC /* Application.swift */,
+				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
+				C20DDC131D1652C20086D304 /* Keychain.swift */,
+				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
 			);
 			path = Brisk;
 			sourceTree = "<group>";
@@ -167,8 +199,10 @@
 		C28001E91D148AB800569A72 /* BriskTests */ = {
 			isa = PBXGroup;
 			children = (
+				C255C4401DAB79C100383D0A /* Resources */,
 				C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */,
-				C28001EC1D148AB800569A72 /* Info.plist */,
+				C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */,
+				C255C4421DAB7A9C00383D0A /* ResultTests.swift */,
 			);
 			path = BriskTests;
 			sourceTree = "<group>";
@@ -176,8 +210,8 @@
 		C28001F41D148AB800569A72 /* BriskUITests */ = {
 			isa = PBXGroup;
 			children = (
+				C255C4411DAB79CC00383D0A /* Resources */,
 				C28001F51D148AB800569A72 /* BriskUITests.swift */,
-				C28001F71D148AB800569A72 /* Info.plist */,
 			);
 			path = BriskUITests;
 			sourceTree = "<group>";
@@ -186,14 +220,15 @@
 			isa = PBXGroup;
 			children = (
 				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
-				C2839A271D14FE8B00D240C4 /* NSData+Extension.swift */,
+				C2839A271D14FE8B00D240C4 /* Data+Extension.swift */,
 				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
 				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
 				C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */,
 				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
 				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
+				C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C2839A201D14F5A900D240C4 /* Models */ = {
@@ -203,7 +238,7 @@
 				C2839A231D14FC7000D240C4 /* Result.swift */,
 				C2839A141D14F29B00D240C4 /* Validatable.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C2839A211D14F5BF00D240C4 /* Controllers */ = {
@@ -217,7 +252,7 @@
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		C2839A221D14F5CC00D240C4 /* Resources */ = {
@@ -227,13 +262,14 @@
 				C28001E11D148AB800569A72 /* Info.plist */,
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C4CC83B6A8A6286F3AF47B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */,
+				0018868F17477C7D609957AD /* Pods_BriskTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C28001FD1D148AB800569A72 /* Build configuration list for PBXNativeTarget "BriskTests" */;
 			buildPhases = (
+				216322EDA7CE01E4C1AF627A /* [CP] Check Pods Manifest.lock */,
 				C28001E21D148AB800569A72 /* Sources */,
 				C28001E31D148AB800569A72 /* Frameworks */,
 				C28001E41D148AB800569A72 /* Resources */,
+				0DE5F5B8CCFB9C76C40B6419 /* [CP] Embed Pods Frameworks */,
+				3E61C15B958FB16681C486D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,7 +343,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Brisk;
 				TargetAttributes = {
 					C28001D41D148AB800569A72 = {
@@ -354,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D0B2071DAB6D0E005E804F /* radar.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +407,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DE5F5B8CCFB9C76C40B6419 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0FE9F8AD31E59F6784A7B564 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +435,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brisk/Pods-Brisk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		216322EDA7CE01E4C1AF627A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E61C15B958FB16681C486D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5044117728B28669F55893B3 /* [CP] Check Pods Manifest.lock */ = {
@@ -427,13 +512,14 @@
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
 				C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */,
 				C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */,
-				C2839A281D14FE8B00D240C4 /* NSData+Extension.swift in Sources */,
+				C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */,
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
 				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
 				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
 				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */,
 				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
 				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
@@ -448,7 +534,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C255C4431DAB7A9C00383D0A /* ResultTests.swift in Sources */,
 				C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */,
+				C2D0B2091DAB6D23005E804F /* RadarSerializationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +570,7 @@
 				C28001DF1D148AB800569A72 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -490,42 +579,28 @@
 		C28001F81D148AB800569A72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -535,37 +610,29 @@
 		C28001F91D148AB800569A72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -573,12 +640,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Brisk/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -586,37 +654,44 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Brisk/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		C28001FE1D148AB800569A72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brisk.app/Contents/MacOS/Brisk";
 			};
 			name = Debug;
 		};
 		C28001FF1D148AB800569A72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brisk.app/Contents/MacOS/Brisk";
 			};
 			name = Release;
@@ -625,11 +700,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Brisk;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -637,11 +711,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = BriskUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Brisk;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
