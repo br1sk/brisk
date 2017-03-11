@@ -22,7 +22,11 @@ final class OpenRadarPreferencesViewController: ViewController {
 
     fileprivate func saveCurrentToken() {
         let token = self.APIKeyTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        Keychain.set(username: kOpenRadarUsername, password: token, forKey: .openRadar)
+        if token.isEmpty {
+            Keychain.delete(.openRadar)
+        } else {
+            Keychain.set(username: kOpenRadarUsername, password: token, forKey: .openRadar)
+        }
     }
 }
 
