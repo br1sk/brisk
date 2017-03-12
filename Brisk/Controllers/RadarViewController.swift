@@ -16,6 +16,20 @@ final class RadarViewController: ViewController {
     @IBOutlet private var submitButton: NSButton!
     @IBOutlet private var titleTextField: NSTextField!
     @IBOutlet private var versionTextField: NSTextField!
+    @IBOutlet private var addAttachmentButton: NSButton!
+    @IBOutlet private var attachmentTextField: NSTextField!
+
+    private var attachments: [Attachment] = [] {
+        didSet {
+            if oldValue != self.attachments {
+                self.document?.updateChangeCount(.changeDone)
+            }
+
+            let attachment = self.attachments.first
+            self.addAttachmentButton.isEnabled = attachment == nil
+            self.attachmentTextField.stringValue = attachment?.filename ?? "No Attachment"
+        }
+    }
 
     private var validatables: [Validatable] {
         return [
@@ -34,7 +48,7 @@ final class RadarViewController: ViewController {
         ]
     }
 
-    private var document: RadarDocument? {
+    fileprivate var document: RadarDocument? {
         return self.windowController?.document as? RadarDocument
     }
 
@@ -68,6 +82,7 @@ final class RadarViewController: ViewController {
         self.configurationTextField.stringValue = radar.configuration
         self.versionTextField.stringValue = radar.version
         self.notesTextView.string = radar.notes
+        self.attachments = radar.attachments
 
         self.enableSubmitIfValid()
     }
@@ -83,7 +98,8 @@ final class RadarViewController: ViewController {
             description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
             expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
             configuration: self.configurationTextField.stringValue,
-            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue, area: area
+            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue,
+            attachments: self.attachments, area: area
         )
     }
 
@@ -108,7 +124,10 @@ final class RadarViewController: ViewController {
             self?.progressIndicator.stopAnimation(self)
             self?.submitButton.isEnabled = true
             if success {
-                self?.document?.save(self)
+                if self?.document?.fileURL != nil {
+                    self?.document?.save(self)
+                }
+
                 self?.view.window?.close()
             }
         }
@@ -142,6 +161,29 @@ final class RadarViewController: ViewController {
     @IBAction private func productChanged(_ sender: NSPopUpButton) {
         let product = Product.All.find { $0.name == sender.selectedTitle }!
         self.areaPopUp.isEnabled = product.appleIdentifier == Product.iOS.appleIdentifier
+    }
+
+    @IBAction private func addAttachment(_ sender: NSButton) {
+        guard let window = self.view.window else {
+            return
+        }
+
+        let panel = NSOpenPanel()
+        panel.beginSheetModal(for: window) { [weak panel] response in
+            guard response == NSFileHandlingPanelOKButton, let url = panel?.urls.first else {
+                return
+            }
+
+            do {
+                let attachment = try Attachment(url: url)
+                self.attachments = [attachment]
+            } catch AttachmentError.invalidMimeType(let fileExtension) {
+                self.showError(message: "Unknown MIME type for extension: '\(fileExtension)'")
+            } catch let error {
+                let alert = NSAlert(error: error)
+                alert.beginSheetModal(for: window, completionHandler: nil)
+            }
+        }
     }
 
     private func showError(message: String) {
@@ -181,6 +223,7 @@ extension RadarViewController: NSTextViewDelegate {
     }
 
     override func controlTextDidChange(_ obj: Notification) {
+        self.document?.updateChangeCount(.changeDone)
         self.textChanged()
     }
 

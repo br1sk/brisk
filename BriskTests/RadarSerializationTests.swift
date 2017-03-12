@@ -4,11 +4,13 @@ import XCTest
 
 final class RadarSerializationTests: XCTestCase {
     func testSerializingRadar() {
+        let attachment = Attachment(filename: "foo.png", mimeType: "image/png",
+                                    data: Data(base64Encoded: "")!)
         let radar = Radar(
             classification: .Security, product: .iOS, reproducibility: .Always, title: "title",
             description: "description", steps: "steps", expected: "expected", actual: "actual",
-            configuration: "config", version: "version", notes: "notes", area: .Accessibility,
-            applicationID: "456", userID: "123"
+            configuration: "config", version: "version", notes: "notes", attachments: [attachment],
+            area: .Accessibility, applicationID: "456", userID: "123"
         )
 
         let json = try! radar.toData().toJSONDictionary() as NSDictionary?
@@ -24,6 +26,7 @@ final class RadarSerializationTests: XCTestCase {
 
     func testDeserializingRadar() {
         let radar = Radar(json: loadRadarJSON())!
+        let attachment = radar.attachments.first!
 
         XCTAssertEqual(radar.actual, "actual")
         XCTAssertEqual(radar.applicationID, "456")
@@ -39,6 +42,10 @@ final class RadarSerializationTests: XCTestCase {
         XCTAssertEqual(radar.title, "title")
         XCTAssertEqual(radar.userID, "123")
         XCTAssertEqual(radar.version, "version")
+        XCTAssertEqual(radar.version, "version")
+        XCTAssertEqual(attachment.filename, "foo.png")
+        XCTAssertEqual(attachment.mimeType, "image/png")
+        XCTAssertEqual(attachment.data, Data(base64Encoded: "")!)
     }
 }
 

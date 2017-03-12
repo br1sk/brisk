@@ -18,6 +18,7 @@
 		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
 		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
 		C255C4431DAB7A9C00383D0A /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C255C4421DAB7A9C00383D0A /* ResultTests.swift */; };
+		C27A5A171E721BD300391E63 /* Attachment+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A5A161E721BD300391E63 /* Attachment+Serialization.swift */; };
 		C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F3B711D8B239B00EA3B7D /* Constants.swift */; };
 		C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001D81D148AB800569A72 /* AppDelegate.swift */; };
 		C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28001DC1D148AB800569A72 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
 		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		C255C4421DAB7A9C00383D0A /* ResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		C27A5A161E721BD300391E63 /* Attachment+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attachment+Serialization.swift"; sourceTree = "<group>"; };
 		C27F3B711D8B239B00EA3B7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C28001D51D148AB800569A72 /* Brisk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brisk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28001D81D148AB800569A72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,10 +201,10 @@
 		C28001E91D148AB800569A72 /* BriskTests */ = {
 			isa = PBXGroup;
 			children = (
-				C255C4401DAB79C100383D0A /* Resources */,
 				C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */,
 				C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */,
 				C255C4421DAB7A9C00383D0A /* ResultTests.swift */,
+				C255C4401DAB79C100383D0A /* Resources */,
 			);
 			path = BriskTests;
 			sourceTree = "<group>";
@@ -210,8 +212,8 @@
 		C28001F41D148AB800569A72 /* BriskUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C255C4411DAB79CC00383D0A /* Resources */,
 				C28001F51D148AB800569A72 /* BriskUITests.swift */,
+				C255C4411DAB79CC00383D0A /* Resources */,
 			);
 			path = BriskUITests;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 				C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */,
 				C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */,
 				C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */,
+				C27A5A161E721BD300391E63 /* Attachment+Serialization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
 				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
+				C27A5A171E721BD300391E63 /* Attachment+Serialization.swift in Sources */,
 				C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */,
 				C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */,
 				C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */,

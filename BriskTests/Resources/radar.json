@@ -12,5 +12,12 @@
     "steps": "steps",
     "title": "title",
     "user_id": "123",
-    "version": "version"
+    "version": "version",
+    "attachments": [
+        {
+            "filename": "foo.png",
+            "mimetype": "image/png",
+            "data": ""
+        }
+    ]
 }

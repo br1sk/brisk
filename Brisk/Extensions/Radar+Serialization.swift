@@ -19,6 +19,7 @@ extension Radar {
         JSON["area_id"] = self.area?.appleIdentifier
         JSON["application_id"] = self.applicationID
         JSON["user_id"] = self.userID
+        JSON["attachments"] = self.attachments.map { $0.toJSON() }
 
         return try JSONSerialization.data(withJSONObject: JSON, options: [])
     }
@@ -42,6 +43,7 @@ extension Radar {
         let areaID = json["area_id"] as? Int
         let applicationID = json["application_id"] as? String
         let userID = json["user_id"] as? String
+        let attachments = (json["attachments"] as? [[String: Any]] ?? []).flatMap(Attachment.init)
 
         let classification = Classification.All.find { $0.appleIdentifier == classificationID }
             ?? Classification.All.first!
@@ -52,7 +54,7 @@ extension Radar {
 
         self.init(classification: classification, product: product, reproducibility: reproducibility,
                      title: title, description: description, steps: steps, expected: expected, actual: actual,
-                     configuration: configuration, version: version, notes: notes, area: area,
-                     applicationID: applicationID, userID: userID)
+                     configuration: configuration, version: version, notes: notes,
+                     attachments: attachments, area: area, applicationID: applicationID, userID: userID)
     }
 }
