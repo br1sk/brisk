@@ -83,8 +83,8 @@ public func == (lhs: CFString, rhs: CFString) -> Bool {
     return lhs as String == rhs as String
 }
 
-fileprivate extension OSStatus {
-    fileprivate var success: Bool {
+private extension OSStatus {
+    var success: Bool {
         return self == noErr
     }
 }

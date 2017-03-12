@@ -32,8 +32,8 @@ extension NSPopUpButton: Validatable {
     }
 }
 
-fileprivate extension NSMenu {
-    fileprivate func set<T>(items: [T], getTitle: (T) -> String, getGroup: (T) -> String) {
+private extension NSMenu {
+    func set<T>(items: [T], getTitle: (T) -> String, getGroup: (T) -> String) {
         var groups = [String]()
         var titlesForGroup = [String: [String]]()
 
