@@ -25,12 +25,10 @@
 		C28001E01D148AB800569A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28001DE1D148AB800569A72 /* Main.storyboard */; };
 		C28001F61D148AB800569A72 /* BriskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28001F51D148AB800569A72 /* BriskUITests.swift */; };
 		C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28399CB1D148CDC00D240C4 /* RadarViewController.swift */; };
-		C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */; };
 		C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A141D14F29B00D240C4 /* Validatable.swift */; };
 		C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */; };
 		C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */; };
 		C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */; };
-		C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */; };
 		C2839A241D14FC7000D240C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A231D14FC7000D240C4 /* Result.swift */; };
 		C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* Data+Extension.swift */; };
 		C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */; };
@@ -86,12 +84,10 @@
 		C28001F51D148AB800569A72 /* BriskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriskUITests.swift; sourceTree = "<group>"; };
 		C28001F71D148AB800569A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28399CB1D148CDC00D240C4 /* RadarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarViewController.swift; sourceTree = "<group>"; };
-		C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Extension.swift"; sourceTree = "<group>"; };
 		C2839A141D14F29B00D240C4 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		C2839A161D14F2B100D240C4 /* NSTextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+Extension.swift"; sourceTree = "<group>"; };
 		C2839A181D14F2CF00D240C4 /* NSTextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+Extension.swift"; sourceTree = "<group>"; };
 		C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Extension.swift"; sourceTree = "<group>"; };
-		C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtensionTests.swift; sourceTree = "<group>"; };
 		C2839A231D14FC7000D240C4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C2839A271D14FE8B00D240C4 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarPreferencesViewController.swift; sourceTree = "<group>"; };
@@ -201,7 +197,6 @@
 		C28001E91D148AB800569A72 /* BriskTests */ = {
 			isa = PBXGroup;
 			children = (
-				C2839A1C1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift */,
 				C2D0B2081DAB6D23005E804F /* RadarSerializationTests.swift */,
 				C255C4421DAB7A9C00383D0A /* ResultTests.swift */,
 				C255C4401DAB79C100383D0A /* Resources */,
@@ -221,7 +216,6 @@
 		C2839A1E1D14F59400D240C4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C2839A121D14DCFC00D240C4 /* CollectionType+Extension.swift */,
 				C2839A271D14FE8B00D240C4 /* Data+Extension.swift */,
 				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
 				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
@@ -519,7 +513,6 @@
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
 				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
 				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
-				C2839A131D14DCFC00D240C4 /* CollectionType+Extension.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
 				C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */,
@@ -539,7 +532,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C255C4431DAB7A9C00383D0A /* ResultTests.swift in Sources */,
-				C2839A1D1D14F50D00D240C4 /* CollectionTypeExtensionTests.swift in Sources */,
 				C2D0B2091DAB6D23005E804F /* RadarSerializationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -88,10 +88,10 @@ final class RadarViewController: ViewController {
     }
 
     func currentRadar() -> Radar {
-        let product = Product.All.find { $0.name == self.productPopUp.selectedTitle }!
-        let classification = Classification.All.find { $0.name == self.classificationPopUp.selectedTitle }!
-        let reproducibility = Reproducibility.All.find { $0.name == self.reproducibilityPopUp.selectedTitle }!
-        let area = Area.All.find { $0.name == self.areaPopUp.selectedTitle }!
+        let product = Product.All.first { $0.name == self.productPopUp.selectedTitle }!
+        let classification = Classification.All.first { $0.name == self.classificationPopUp.selectedTitle }!
+        let reproducibility = Reproducibility.All.first { $0.name == self.reproducibilityPopUp.selectedTitle }!
+        let area = Area.All.first { $0.name == self.areaPopUp.selectedTitle }!
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
             title: self.titleTextField.stringValue,
@@ -159,7 +159,7 @@ final class RadarViewController: ViewController {
     }
 
     @IBAction private func productChanged(_ sender: NSPopUpButton) {
-        let product = Product.All.find { $0.name == sender.selectedTitle }!
+        let product = Product.All.first { $0.name == sender.selectedTitle }!
         self.areaPopUp.isEnabled = product.appleIdentifier == Product.iOS.appleIdentifier
     }
 

@@ -45,12 +45,12 @@ extension Radar {
         let userID = json["user_id"] as? String
         let attachments = (json["attachments"] as? [[String: Any]] ?? []).flatMap(Attachment.init)
 
-        let classification = Classification.All.find { $0.appleIdentifier == classificationID }
+        let classification = Classification.All.first { $0.appleIdentifier == classificationID }
             ?? Classification.All.first!
-        let reproducibility = Reproducibility.All.find { $0.appleIdentifier == reproducibilityID }
+        let reproducibility = Reproducibility.All.first { $0.appleIdentifier == reproducibilityID }
             ?? Reproducibility.All.first!
-        let area = Area.All.find { $0.appleIdentifier == areaID } ?? Area.All.first!
-        let product = Product.All.find { $0.appleIdentifier == productID } ?? Product.All.first!
+        let area = Area.All.first { $0.appleIdentifier == areaID } ?? Area.All.first!
+        let product = Product.All.first { $0.appleIdentifier == productID } ?? Product.All.first!
 
         self.init(classification: classification, product: product, reproducibility: reproducibility,
                      title: title, description: description, steps: steps, expected: expected, actual: actual,
