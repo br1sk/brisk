@@ -10,13 +10,7 @@ extension Attachment {
     }
 
     func toData() throws -> Data {
-        let json: [String: Any] = [
-            "filename": self.filename,
-            "mimetype": self.mimeType,
-            "data": self.data.base64EncodedString(),
-        ]
-
-        return try JSONSerialization.data(withJSONObject: json, options: [])
+        return try JSONSerialization.data(withJSONObject: self.toJSON(), options: [])
     }
 
     init?(json: [String: Any]) {
