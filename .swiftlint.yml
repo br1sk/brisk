@@ -1,9 +1,30 @@
 included:
   - Brisk
+  - BriskTests
+  - BriskUITests
 disabled_rules:
   - force_cast
   - opening_brace
   - type_name
   - variable_name
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - explicit_init
+  - first_where
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - sorted_imports
+  - switch_case_on_newline
+  - trailing_comma
 line_length:
   - 110
+trailing_comma:
+  mandatory_comma: true
+private_outlet:
+  allow_private_set: true
