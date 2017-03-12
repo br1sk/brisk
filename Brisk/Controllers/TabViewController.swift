@@ -3,6 +3,7 @@ import AppKit
 final class TabViewController: NSTabViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
+        NSApp.activate(ignoringOtherApps: true)
         self.setTitle(withItem: self.tabView.selectedTabViewItem)
     }
 
