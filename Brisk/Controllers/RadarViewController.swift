@@ -133,7 +133,10 @@ final class RadarViewController: ViewController {
         }
 
         let appleRadar = Sonar(service: .AppleRadar(appleID: username, password: password))
-        appleRadar.loginThenCreate(radar: radar) { [weak self] result in
+        appleRadar.loginThenCreate(
+            radar: radar,
+            getTwoFactorCode: { [weak self] closure in self?.askForTwoFactorCode(closure: closure) })
+        { [weak self] result in
             switch result {
                 case .success(let radarID):
                     guard let (_, token) = Keychain.get(.openRadar) else {
@@ -142,7 +145,11 @@ final class RadarViewController: ViewController {
 
                     radar.ID = radarID
                     let openRadar = Sonar(service: .OpenRadar(token: token))
-                    openRadar.loginThenCreate(radar: radar) { result in
+                    openRadar.loginThenCreate(
+                        radar: radar, getTwoFactorCode: { closure in
+                            assertionFailure("Didn't handle Open Radar two factor")
+                            closure(nil)
+                    }) { result in
                         switch result {
                             case .success:
                                 completion(true)
@@ -194,6 +201,32 @@ final class RadarViewController: ViewController {
         let alert = NSAlert()
         alert.messageText = message
         alert.beginSheetModal(for: window, completionHandler: nil)
+    }
+
+    private func askForTwoFactorCode(closure: @escaping (String?) -> Void) {
+        guard let window = self.view.window else {
+            return
+        }
+
+        let alert = NSAlert()
+        alert.messageText = "Enter two factor auth code"
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 22))
+        alert.accessoryView = field
+        alert.beginSheetModal(for: window) { [weak self] response in
+            if response == NSAlertFirstButtonReturn {
+                if field.stringValue.isEmpty {
+                    self?.askForTwoFactorCode(closure: closure)
+                } else {
+                    closure(field.stringValue)
+                }
+            } else {
+                closure(nil)
+            }
+        }
+
+        field.becomeFirstResponder()
     }
 
     fileprivate func enableSubmitIfValid() {
