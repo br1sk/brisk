@@ -1,7 +1,7 @@
 import AppKit
 
 final class StoryboardRouter: NSObject {
-    fileprivate static var sharedRouter = StoryboardRouter()
+    fileprivate static let sharedRouter = StoryboardRouter()
     fileprivate var windowController: NSWindowController?
 
     static func reloadTopWindowController() {
@@ -26,6 +26,6 @@ final class StoryboardRouter: NSObject {
 
 extension StoryboardRouter: NSWindowDelegate {
     func windowWillClose(_ notification: Notification) {
-        StoryboardRouter.sharedRouter.windowController = nil
+        self.windowController = nil
     }
 }
