@@ -1,0 +1,23 @@
+{
+    "actual": "actual",
+    "application_id": "456",
+    "area_id": 1,
+    "classification_id": 1,
+    "configuration": "config",
+    "description": "description",
+    "expected": "expected",
+    "notes": "notes",
+    "product_id": 579020,
+    "reproducibility_id": 1,
+    "steps": "steps",
+    "title": "title",
+    "user_id": "123",
+    "version": "version",
+    "attachments": [
+        {
+            "filename": "foo.png",
+            "mimetype": "image/png",
+            "data": ""
+        }
+    ]
+}

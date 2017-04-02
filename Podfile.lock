@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Sonar (0.0.1):
+    - Alamofire (~> 4.4.0)
+
+DEPENDENCIES:
+  - Sonar (from `https://github.com/br1sk/Sonar.git`)
+
+EXTERNAL SOURCES:
+  Sonar:
+    :git: https://github.com/br1sk/Sonar.git
+
+CHECKOUT OPTIONS:
+  Sonar:
+    :commit: ec7242ed86b7bff9894c8ec638689f4ea2631ae6
+    :git: https://github.com/br1sk/Sonar.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Sonar: edb54e18872e0d23052f60e453edef60ba4ac5fa
+
+PODFILE CHECKSUM: 4558c25a0e2f6485392f3ab8e4cd47d06430b562
+
+COCOAPODS: 1.2.0
