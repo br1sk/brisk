@@ -1,0 +1,13 @@
+matrix:
+  include:
+    - os: osx
+      env: ACTION=test
+    - os: osx
+      env: ACTION=lint
+
+language: objective-c
+osx_image: xcode8.3
+
+install: true
+script:
+  - make ci

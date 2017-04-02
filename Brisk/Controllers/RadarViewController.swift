@@ -90,8 +90,10 @@ final class RadarViewController: ViewController {
     func currentRadar() -> Radar {
         let product = Product.All.first { $0.name == self.productPopUp.selectedTitle }!
         let classification = Classification.All.first { $0.name == self.classificationPopUp.selectedTitle }!
-        let reproducibility = Reproducibility.All.first { $0.name == self.reproducibilityPopUp.selectedTitle }!
+        let reproducibility = Reproducibility.All
+            .first { $0.name == self.reproducibilityPopUp.selectedTitle }!
         let area = Area.All.first { $0.name == self.areaPopUp.selectedTitle }!
+
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
             title: self.titleTextField.stringValue,
@@ -106,10 +108,8 @@ final class RadarViewController: ViewController {
     // MARK: - Private Methods
 
     @IBAction private func submitRadar(_ sender: Any) {
-        for field in self.validatables {
-            if !field.isValid {
-                return
-            }
+        for field in self.validatables where !field.isValid {
+            return
         }
 
         guard let (username, password) = Keychain.get(.radar) else {

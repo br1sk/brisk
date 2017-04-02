@@ -2,7 +2,7 @@ test_dependencies:
 	pod install
 
 lint_dependencies:
-	curl --location https://github.com/realm/SwiftLint/releases/download/0.16.1/SwiftLint.pkg --output SwiftLint.pkg
+	curl --location https://github.com/realm/SwiftLint/releases/download/0.17.0/SwiftLint.pkg --output SwiftLint.pkg
 	sudo installer -pkg SwiftLint.pkg -target /
 
 test:
