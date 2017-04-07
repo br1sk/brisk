@@ -636,7 +636,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
@@ -650,7 +649,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
@@ -664,7 +662,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
@@ -680,7 +677,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BriskTests/Resources/Info.plist;
