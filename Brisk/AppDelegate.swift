@@ -10,6 +10,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         StoryboardRouter.reloadTopWindowController()
         self.setupDockIcon()
         self.setupStatusItem()
+        GlobalHotKey.register()
     }
 
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
