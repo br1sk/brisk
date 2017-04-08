@@ -5,7 +5,8 @@ struct GlobalHotKey {
     // ⌃⌥⌘-SPACE
     static func register() {
         // Register event handler
-        var eventSpec = EventTypeSpec(eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyReleased))
+        var eventSpec = EventTypeSpec(eventClass: OSType(kEventClassKeyboard),
+                                      eventKind: UInt32(kEventHotKeyReleased))
         InstallEventHandler(GetApplicationEventTarget(), { _ in
             return GlobalHotKey.hotKeyTriggered()
         }, 1, &eventSpec, nil, nil)
