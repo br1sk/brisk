@@ -38,6 +38,7 @@
 		C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */; };
 		C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */; };
 		C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */; };
+		E8D9E1C51E98636300D392B7 /* GlobalHotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadingWindowController.swift; sourceTree = "<group>"; };
 		C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRadarPreferencesViewController.swift; sourceTree = "<group>"; };
 		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHotKey.swift; sourceTree = "<group>"; };
 		F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 				C2839A221D14F5CC00D240C4 /* Resources */,
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C219CBD91D1736EB002F89FC /* Application.swift */,
+				E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */,
 				C27F3B711D8B239B00EA3B7D /* Constants.swift */,
 				C20DDC131D1652C20086D304 /* Keychain.swift */,
 				C20DDC171D16771A0086D304 /* StoryboardRouter.swift */,
@@ -511,6 +514,7 @@
 				C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */,
 				C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */,
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
+				E8D9E1C51E98636300D392B7 /* GlobalHotKey.swift in Sources */,
 				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
 				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
