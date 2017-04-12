@@ -1,6 +1,6 @@
 # Brisk
 
-<img src=".github/AppIcon.png" width=128/>
+<img src=".github/AppIcon.png" alt="App Icon" width=128/>
 
 Brisk is a macOS app for filing [Radars](http://radar.apple.com) and
 optionally crossposting them to [Open Radar](http://www.openradar.me/).
