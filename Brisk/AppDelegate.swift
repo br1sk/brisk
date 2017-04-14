@@ -62,7 +62,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func setupStatusItem() {
-        let image = NSImage(named: "bug")!
+        let image = NSImage(named: "StatusItemIcon")!
         self.statusItem = NSStatusItem.create(image: image, menu: self.statusMenu)
     }
 
