@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Brisk.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C28001F01D148AB800569A72"
+               BuildableName = "BriskUITests.xctest"
+               BlueprintName = "BriskUITests"
+               ReferencedContainer = "container:Brisk.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
