@@ -24,6 +24,8 @@ struct BugTrackers: OptionSet {
     static let swiftJIRA = BugTrackers(rawValue: 4)
 }
 
+private let kCloseKeyCodes: [UInt16] = [36, 53]
+
 private struct Storyboard {
     static let name = "Main"
     static let identifier = "trackersSelector"
@@ -42,11 +44,31 @@ final class TrackersSelectorViewController: NSViewController {
         didSet { self.updateToggles() }
     }
 
+    private var monitor: Any?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateToggles()
+
+        self.monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] event in
+            if kCloseKeyCodes.contains(event.keyCode) {
+                self?.close(sender: nil)
+                return nil
+            }
+
+            return event
+        }
     }
 
+    deinit {
+        if let monitor = self.monitor {
+            NSEvent.removeMonitor(monitor)
+        }
+    }
+
+    /// Create an instance of TrackersSelectorViewController from the default location / Storyboard.
+    ///
+    /// - parameter trackers: The trackers that will be shown enabled when the window is presented.
     static func instantiate(withEnabledTrackers trackers: BugTrackers) -> TrackersSelectorViewController {
         let storyboard = NSStoryboard(name: Storyboard.name, bundle: nil)
         let controller = storyboard.instantiateController(withIdentifier: Storyboard.identifier)
@@ -57,9 +79,9 @@ final class TrackersSelectorViewController: NSViewController {
 
     // MARK: - Button Actions
 
-    @IBAction private func close(sender: Any) {
+    @IBAction private func close(sender: Any?) {
         self.onSave?(self.enabledTrackers)
-        self.dismissViewController(self)
+        self.dismiss(sender)
     }
 
     @IBAction private func toggleDidChange(sender: Any) {
