@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		265CA0861EA35E9A0094F94D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0831EA35E9A0094F94D /* Button.swift */; };
+		265CA0871EA35E9A0094F94D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0841EA35E9A0094F94D /* View.swift */; };
+		265CA0881EA35E9A0094F94D /* PopUpButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0851EA35E9A0094F94D /* PopUpButtonCell.swift */; };
+		265CA08A1EA35ED40094F94D /* NSColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0891EA35ED40094F94D /* NSColor+Extension.swift */; };
+		265CA08C1EA35F140094F94D /* DarkWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA08B1EA35F140094F94D /* DarkWindowController.swift */; };
+		265CA08E1EA3601F0094F94D /* MinimalistTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */; };
+		265CA0901EA37B2B0094F94D /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA08F1EA37B2B0094F94D /* BadgeView.swift */; };
+		265CA0921EA37E820094F94D /* TrackersSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0911EA37E820094F94D /* TrackersSelectorViewController.swift */; };
 		BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0018868F17477C7D609957AD /* Pods_BriskTests.framework */; };
 		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
@@ -60,6 +68,14 @@
 
 /* Begin PBXFileReference section */
 		0018868F17477C7D609957AD /* Pods_BriskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BriskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		265CA0831EA35E9A0094F94D /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		265CA0841EA35E9A0094F94D /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		265CA0851EA35E9A0094F94D /* PopUpButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpButtonCell.swift; sourceTree = "<group>"; };
+		265CA0891EA35ED40094F94D /* NSColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+Extension.swift"; sourceTree = "<group>"; };
+		265CA08B1EA35F140094F94D /* DarkWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkWindowController.swift; sourceTree = "<group>"; };
+		265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalistTextField.swift; sourceTree = "<group>"; };
+		265CA08F1EA37B2B0094F94D /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		265CA0911EA37E820094F94D /* TrackersSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackersSelectorViewController.swift; sourceTree = "<group>"; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +157,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		265CA0821EA35E610094F94D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				265CA08F1EA37B2B0094F94D /* BadgeView.swift */,
+				265CA0831EA35E9A0094F94D /* Button.swift */,
+				265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */,
+				265CA0851EA35E9A0094F94D /* PopUpButtonCell.swift */,
+				265CA0841EA35E9A0094F94D /* View.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C255C4401DAB79C100383D0A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +215,7 @@
 				C2839A1E1D14F59400D240C4 /* Extensions */,
 				C2839A201D14F5A900D240C4 /* Models */,
 				C2839A221D14F5CC00D240C4 /* Resources */,
+				265CA0821EA35E610094F94D /* Views */,
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C219CBD91D1736EB002F89FC /* Application.swift */,
 				E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */,
@@ -220,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				C2839A271D14FE8B00D240C4 /* Data+Extension.swift */,
+				265CA0891EA35ED40094F94D /* NSColor+Extension.swift */,
 				C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */,
 				C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */,
 				C20DDC151D1673670086D304 /* NSStoryboard+Extension.swift */,
@@ -247,9 +277,11 @@
 				C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */,
 				C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */,
 				C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */,
+				265CA08B1EA35F140094F94D /* DarkWindowController.swift */,
 				C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */,
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
+				265CA0911EA37E820094F94D /* TrackersSelectorViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -504,10 +536,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265CA0871EA35E9A0094F94D /* View.swift in Sources */,
 				C219CBDA1D1736EB002F89FC /* Application.swift in Sources */,
+				265CA08A1EA35ED40094F94D /* NSColor+Extension.swift in Sources */,
 				C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */,
 				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
 				C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */,
+				265CA08C1EA35F140094F94D /* DarkWindowController.swift in Sources */,
 				C2042B531D17397900DEF594 /* ViewController.swift in Sources */,
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
 				C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */,
@@ -518,8 +553,11 @@
 				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
 				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
+				265CA0901EA37B2B0094F94D /* BadgeView.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
+				265CA0861EA35E9A0094F94D /* Button.swift in Sources */,
 				C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */,
+				265CA08E1EA3601F0094F94D /* MinimalistTextField.swift in Sources */,
 				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
 				C2839A151D14F29B00D240C4 /* Validatable.swift in Sources */,
 				C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */,
@@ -527,6 +565,8 @@
 				C2839A191D14F2CF00D240C4 /* NSTextField+Extension.swift in Sources */,
 				C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */,
 				C2839A171D14F2B100D240C4 /* NSTextView+Extension.swift in Sources */,
+				265CA0881EA35E9A0094F94D /* PopUpButtonCell.swift in Sources */,
+				265CA0921EA37E820094F94D /* TrackersSelectorViewController.swift in Sources */,
 				C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
