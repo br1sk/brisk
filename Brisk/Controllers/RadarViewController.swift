@@ -2,11 +2,11 @@ import AppKit
 import Sonar
 
 final class RadarViewController: ViewController {
-    @IBOutlet fileprivate var actualTextView: NSTextView!
-    @IBOutlet fileprivate var descriptionTextView: NSTextView!
-    @IBOutlet fileprivate var expectedTextView: NSTextView!
-    @IBOutlet fileprivate var notesTextView: NSTextView!
-    @IBOutlet fileprivate var stepsTextView: NSTextView!
+    @IBOutlet fileprivate var actualTextView: NSTextField!
+    @IBOutlet fileprivate var descriptionTextView: NSTextField!
+    @IBOutlet fileprivate var expectedTextView: NSTextField!
+    @IBOutlet fileprivate var notesTextView: NSTextField!
+    @IBOutlet fileprivate var stepsTextView: NSTextField!
     @IBOutlet private var areaPopUp: NSPopUpButton!
     @IBOutlet private var classificationPopUp: NSPopUpButton!
     @IBOutlet private var configurationTextField: NSTextField!
@@ -17,7 +17,12 @@ final class RadarViewController: ViewController {
     @IBOutlet private var titleTextField: NSTextField!
     @IBOutlet private var versionTextField: NSTextField!
     @IBOutlet private var addAttachmentButton: NSButton!
-    @IBOutlet private var attachmentTextField: NSTextField!
+    @IBOutlet private var attachmentBadge: BadgeView!
+    @IBOutlet private var trackersBadge: BadgeView!
+
+    private var trackers: BugTrackers = [.appleRadar] {
+        didSet { self.trackersBadge.number = self.trackers.count }
+    }
 
     private var attachments: [Attachment] = [] {
         didSet {
@@ -25,9 +30,8 @@ final class RadarViewController: ViewController {
                 self.document?.updateChangeCount(.changeDone)
             }
 
-            let attachment = self.attachments.first
-            self.addAttachmentButton.isEnabled = attachment == nil
-            self.attachmentTextField.stringValue = attachment?.filename ?? "No Attachment"
+            self.addAttachmentButton.isEnabled = self.attachments.isEmpty
+            self.attachmentBadge.number = self.attachments.count
         }
     }
 
@@ -59,7 +63,6 @@ final class RadarViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setupTextViewDelegates()
         self.areaPopUp.setItems(titles: Area.All.map { $0.name })
         self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
@@ -75,13 +78,13 @@ final class RadarViewController: ViewController {
         }
 
         self.titleTextField.stringValue = radar.title
-        self.descriptionTextView.string = radar.description
-        self.stepsTextView.string = radar.steps
-        self.expectedTextView.string = radar.expected
-        self.actualTextView.string = radar.actual
+        self.descriptionTextView.stringValue = radar.description
+        self.stepsTextView.stringValue = radar.steps
+        self.expectedTextView.stringValue = radar.expected
+        self.actualTextView.stringValue = radar.actual
         self.configurationTextField.stringValue = radar.configuration
         self.versionTextField.stringValue = radar.version
-        self.notesTextView.string = radar.notes
+        self.notesTextView.stringValue = radar.notes
         self.attachments = radar.attachments
 
         self.enableSubmitIfValid()
@@ -139,8 +142,13 @@ final class RadarViewController: ViewController {
         { [weak self] result in
             switch result {
                 case .success(let radarID):
-                    guard let (_, token) = Keychain.get(.openRadar) else {
+                    if self?.trackers.contains(.openRadar) != true {
                         return completion(true)
+                    }
+
+                    guard let (_, token) = Keychain.get(.openRadar) else {
+                        self?.showError(message: "Go to Preferences > Open Radar to set an openradar token")
+                        return completion(false)
                     }
 
                     radar.ID = radarID
@@ -163,6 +171,12 @@ final class RadarViewController: ViewController {
                     completion(false)
             }
         }
+    }
+
+    @IBAction private func showTrackers(_ sender: NSButton) {
+        let controller = TrackersSelectorViewController.instantiate(withEnabledTrackers: self.trackers)
+        controller.onSave = { trackers in self.trackers = trackers }
+        self.presentViewControllerAsSheet(controller)
     }
 
     @IBAction private func productChanged(_ sender: NSPopUpButton) {
@@ -244,34 +258,15 @@ final class RadarViewController: ViewController {
     }
 }
 
-extension RadarViewController: NSTextViewDelegate {
-    private var textViews: [NSTextView] {
-        return [
-            self.actualTextView,
-            self.descriptionTextView,
-            self.expectedTextView,
-            self.notesTextView,
-            self.stepsTextView,
-        ]
-    }
+extension RadarViewController: NSTextFieldDelegate {
 
     override func controlTextDidChange(_ obj: Notification) {
         self.document?.updateChangeCount(.changeDone)
         self.textChanged()
     }
 
-    func textDidChange(_ notification: Notification) {
-        self.textChanged()
-    }
-
     private func textChanged() {
         self.enableSubmitIfValid()
         self.updateTitleFromDocument()
-    }
-
-    fileprivate func setupTextViewDelegates() {
-        for textView in self.textViews {
-            textView.delegate = self
-        }
     }
 }

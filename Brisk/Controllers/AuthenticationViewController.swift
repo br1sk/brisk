@@ -3,7 +3,7 @@ import AppKit
 final class AuthenticationViewController: ViewController {
     @IBOutlet private var loginButton: NSButton!
     @IBOutlet private var appleIDTextField: NSTextField!
-    @IBOutlet private var passwordTextField: NSSecureTextField!
+    @IBOutlet private var passwordTextField: NSTextField!
 
     private var validatables: [Validatable] {
         return [
