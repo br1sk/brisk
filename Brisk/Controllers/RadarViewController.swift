@@ -2,20 +2,20 @@ import AppKit
 import Sonar
 
 final class RadarViewController: ViewController {
-    @IBOutlet fileprivate var actualTextView: NSTextField!
-    @IBOutlet fileprivate var descriptionTextView: NSTextField!
-    @IBOutlet fileprivate var expectedTextView: NSTextField!
-    @IBOutlet fileprivate var notesTextView: NSTextField!
-    @IBOutlet fileprivate var stepsTextView: NSTextField!
+    @IBOutlet fileprivate var actualTextView: NSTextView!
+    @IBOutlet fileprivate var descriptionTextView: NSTextView!
+    @IBOutlet fileprivate var expectedTextView: NSTextView!
+    @IBOutlet fileprivate var notesTextView: NSTextView!
+    @IBOutlet fileprivate var stepsTextView: NSTextView!
     @IBOutlet private var areaPopUp: NSPopUpButton!
     @IBOutlet private var classificationPopUp: NSPopUpButton!
-    @IBOutlet private var configurationTextField: NSTextField!
+    @IBOutlet private var configurationTextField: NSTextView!
     @IBOutlet private var productPopUp: NSPopUpButton!
     @IBOutlet private var progressIndicator: NSProgressIndicator!
     @IBOutlet private var reproducibilityPopUp: NSPopUpButton!
     @IBOutlet private var submitButton: NSButton!
-    @IBOutlet private var titleTextField: NSTextField!
-    @IBOutlet private var versionTextField: NSTextField!
+    @IBOutlet private var titleTextField: NSTextView!
+    @IBOutlet private var versionTextField: NSTextView!
     @IBOutlet private var addAttachmentButton: NSButton!
     @IBOutlet private var attachmentBadge: BadgeView!
     @IBOutlet private var trackersBadge: BadgeView!
@@ -63,6 +63,7 @@ final class RadarViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupTextViewDelegates()
         self.areaPopUp.setItems(titles: Area.All.map { $0.name })
         self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
@@ -77,14 +78,14 @@ final class RadarViewController: ViewController {
             self.areaPopUp.selectItem(withTitle: area.name)
         }
 
-        self.titleTextField.stringValue = radar.title
-        self.descriptionTextView.stringValue = radar.description
-        self.stepsTextView.stringValue = radar.steps
-        self.expectedTextView.stringValue = radar.expected
-        self.actualTextView.stringValue = radar.actual
-        self.configurationTextField.stringValue = radar.configuration
-        self.versionTextField.stringValue = radar.version
-        self.notesTextView.stringValue = radar.notes
+        self.titleTextField.string = radar.title
+        self.descriptionTextView.string = radar.description
+        self.stepsTextView.string = radar.steps
+        self.expectedTextView.string = radar.expected
+        self.actualTextView.string = radar.actual
+        self.configurationTextField.string = radar.configuration
+        self.versionTextField.string = radar.version
+        self.notesTextView.string = radar.notes
         self.attachments = radar.attachments
 
         self.enableSubmitIfValid()
@@ -256,9 +257,19 @@ final class RadarViewController: ViewController {
         self.document?.displayName = newTitle
         self.windowController?.synchronizeWindowTitleWithDocumentName()
     }
+
+    private func setupTextViewDelegates() {
+        self.validatables
+            .flatMap { $0 as? NSTextView }
+            .forEach { $0.delegate = self }
+    }
 }
 
-extension RadarViewController: NSTextFieldDelegate {
+extension RadarViewController: NSTextViewDelegate {
+
+    func textDidChange(_ notification: Notification) {
+        self.textChanged()
+    }
 
     override func controlTextDidChange(_ obj: Notification) {
         self.document?.updateChangeCount(.changeDone)

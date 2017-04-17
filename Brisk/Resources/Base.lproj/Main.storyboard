@@ -2115,15 +2115,23 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="actualTextView" destination="9us-Fi-dD0" id="0WZ-RY-Vuv"/>
                         <outlet property="addAttachmentButton" destination="pdW-5v-o68" id="qiJ-b6-VFj"/>
                         <outlet property="areaPopUp" destination="ssq-vr-48f" id="nKr-eH-axy"/>
                         <outlet property="attachmentBadge" destination="JdV-j4-qWJ" id="5AF-hu-DC0"/>
                         <outlet property="classificationPopUp" destination="GDJ-wk-Q0s" id="M88-St-syF"/>
+                        <outlet property="configurationTextField" destination="z5p-9E-SRu" id="csr-so-tKM"/>
+                        <outlet property="descriptionTextView" destination="ulk-mD-gbx" id="fqS-5b-iHS"/>
+                        <outlet property="expectedTextView" destination="DeG-36-apm" id="Qfb-0j-Xii"/>
+                        <outlet property="notesTextView" destination="PY3-bO-lCK" id="iNo-lB-Puw"/>
                         <outlet property="productPopUp" destination="ffR-8g-boe" id="5hl-ey-VbK"/>
                         <outlet property="progressIndicator" destination="Yf8-nI-pwq" id="D1t-4g-lDF"/>
                         <outlet property="reproducibilityPopUp" destination="Kzb-jJ-lJb" id="kaQ-D9-8uY"/>
+                        <outlet property="stepsTextView" destination="vx6-hr-7TD" id="pVv-Sc-mL5"/>
                         <outlet property="submitButton" destination="Mhr-Hu-0WW" id="RwY-Js-9fU"/>
+                        <outlet property="titleTextField" destination="XkS-81-CTE" id="1cS-aM-0gu"/>
                         <outlet property="trackersBadge" destination="ayF-3f-QdE" id="1QO-eP-W2Z"/>
+                        <outlet property="versionTextField" destination="GSY-LE-5K3" id="Hrt-4A-X9j"/>
                     </connections>
                 </viewController>
                 <customObject id="lpg-vF-FcM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
