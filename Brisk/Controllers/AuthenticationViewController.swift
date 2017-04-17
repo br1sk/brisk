@@ -2,8 +2,8 @@ import AppKit
 
 final class AuthenticationViewController: ViewController {
     @IBOutlet private var loginButton: NSButton!
-    @IBOutlet private var appleIDTextField: NSTextField!
-    @IBOutlet private var passwordTextField: NSTextField!
+    @IBOutlet private var appleIDTextField: NSTextView!
+    @IBOutlet private var passwordTextField: NSTextView!
 
     private var validatables: [Validatable] {
         return [
@@ -14,8 +14,8 @@ final class AuthenticationViewController: ViewController {
 
     var userDidLogin: (() -> Void)?
 
-    override func viewWillAppear() {
-        super.viewWillAppear()
+    override func viewDidAppear() {
+        super.viewDidAppear()
         self.appleIDTextField.becomeFirstResponder()
     }
 
@@ -27,12 +27,6 @@ final class AuthenticationViewController: ViewController {
         Keychain.set(username: username, password: password, forKey: .radar)
         StoryboardRouter.reloadTopWindowController()
         NSDocumentController.shared().newDocument(self)
-    }
-
-    private func enableInterface(enable: Bool) {
-        self.loginButton.isEnabled = enable
-        self.appleIDTextField.isEnabled = enable
-        self.passwordTextField.isEnabled = enable
     }
 
     fileprivate func enableLoginIfValid() {

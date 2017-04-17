@@ -16,6 +16,7 @@
 		265CA08E1EA3601F0094F94D /* MinimalistTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */; };
 		265CA0901EA37B2B0094F94D /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA08F1EA37B2B0094F94D /* BadgeView.swift */; };
 		265CA0921EA37E820094F94D /* TrackersSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA0911EA37E820094F94D /* TrackersSelectorViewController.swift */; };
+		2681A7651EA44EE900C8C298 /* MinimalistTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681A7641EA44EE900C8C298 /* MinimalistTextView.swift */; };
 		BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0018868F17477C7D609957AD /* Pods_BriskTests.framework */; };
 		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
@@ -76,6 +77,7 @@
 		265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalistTextField.swift; sourceTree = "<group>"; };
 		265CA08F1EA37B2B0094F94D /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		265CA0911EA37E820094F94D /* TrackersSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackersSelectorViewController.swift; sourceTree = "<group>"; };
+		2681A7641EA44EE900C8C298 /* MinimalistTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalistTextView.swift; sourceTree = "<group>"; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				265CA08F1EA37B2B0094F94D /* BadgeView.swift */,
 				265CA0831EA35E9A0094F94D /* Button.swift */,
 				265CA08D1EA3601F0094F94D /* MinimalistTextField.swift */,
+				2681A7641EA44EE900C8C298 /* MinimalistTextView.swift */,
 				265CA0851EA35E9A0094F94D /* PopUpButtonCell.swift */,
 				265CA0841EA35E9A0094F94D /* View.swift */,
 			);
@@ -542,6 +545,7 @@
 				C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */,
 				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
 				C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */,
+				2681A7651EA44EE900C8C298 /* MinimalistTextView.swift in Sources */,
 				265CA08C1EA35F140094F94D /* DarkWindowController.swift in Sources */,
 				C2042B531D17397900DEF594 /* ViewController.swift in Sources */,
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
@@ -684,6 +688,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /;
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -698,6 +703,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /;
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

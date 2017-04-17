@@ -747,118 +747,140 @@
             <objects>
                 <viewController title="Apple Radar" showSeguePresentationStyle="single" id="lz5-Zo-LSI" customClass="AuthenticationViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="E2C-wm-a1h">
-                        <rect key="frame" x="0.0" y="0.0" width="291" height="182"/>
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="204"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="S6Q-Zp-ky6" userLabel="Container" customClass="View" customModule="Brisk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="291" height="182"/>
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="204"/>
                                 <subviews>
-                                    <stackView distribution="fillEqually" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-hp-hn9">
-                                        <rect key="frame" x="45" y="73" width="200" height="59"/>
-                                        <subviews>
-                                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="onp-at-4gG">
-                                                <rect key="frame" x="0.0" y="33.5" width="200" height="25.5"/>
-                                                <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ui4-I1-gdT">
-                                                        <rect key="frame" x="0.0" y="8.5" width="15" height="17"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - User Icon" id="yuK-mz-MwO"/>
-                                                    </imageView>
-                                                    <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoV-ZZ-aSn" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                        <rect key="frame" x="21" y="6.5" width="181" height="19"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="steve@apple.com" usesSingleLineMode="YES" id="ocZ-hH-uGu">
-                                                            <font key="font" metaFont="systemLight" size="15"/>
-                                                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </textFieldCell>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                                <color key="value" red="0.15294117647058825" green="0.25882352941176467" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                                <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="lz5-Zo-LSI" id="Hi0-Im-gIm"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="iI1-1p-xLX"/>
-                                                </constraints>
-                                                <visibilityPriorities>
-                                                    <integer value="1000"/>
-                                                    <integer value="1000"/>
-                                                </visibilityPriorities>
-                                                <customSpacing>
-                                                    <real value="3.4028234663852886e+38"/>
-                                                    <real value="3.4028234663852886e+38"/>
-                                                </customSpacing>
-                                            </stackView>
-                                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p52-6v-26f">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="25.5"/>
-                                                <subviews>
-                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fAD-F2-KS6">
-                                                        <rect key="frame" x="0.0" y="8.5" width="16" height="17"/>
-                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - Password Icon" id="xaa-J5-skZ"/>
-                                                    </imageView>
-                                                    <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfw-1f-Z6I" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                        <rect key="frame" x="22" y="6.5" width="180" height="19"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Password" usesSingleLineMode="YES" id="8l8-DW-Uiv" customClass="NSSecureTextFieldCell">
-                                                            <font key="font" metaFont="systemLight" size="15"/>
-                                                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </textFieldCell>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                                <color key="value" red="0.15294117647058825" green="0.25882352941176467" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                                <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="lz5-Zo-LSI" id="v39-Lc-YQr"/>
-                                                        </connections>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="jHo-JP-Qcr"/>
-                                                </constraints>
-                                                <visibilityPriorities>
-                                                    <integer value="1000"/>
-                                                    <integer value="1000"/>
-                                                </visibilityPriorities>
-                                                <customSpacing>
-                                                    <real value="3.4028234663852886e+38"/>
-                                                    <real value="3.4028234663852886e+38"/>
-                                                </customSpacing>
-                                            </stackView>
-                                        </subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ui4-I1-gdT">
+                                        <rect key="frame" x="60" y="139" width="15" height="18"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - User Icon" id="yuK-mz-MwO"/>
+                                    </imageView>
+                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBp-bK-cnY" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="132" width="177" height="25"/>
+                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="MmG-fw-qjE">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="HDH-xw-VoJ" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="minSize" width="177" height="25"/>
+                                                    <size key="maxSize" width="463" height="10000000"/>
+                                                    <attributedString key="textStorage">
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                            <color key="value" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="steve@apple.com"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </clipView>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="62y-gp-WFV"/>
+                                            <constraint firstAttribute="width" constant="177" id="7Oz-EX-bhh"/>
+                                            <constraint firstAttribute="height" constant="25" id="8a9-67-XAY"/>
                                         </constraints>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="ZZ0-6Y-9HH">
+                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Tok-u5-dhn">
+                                            <rect key="frame" x="161" y="0.0" width="16" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QWo-UP-4g9">
+                                        <rect key="frame" x="60" y="104" width="16" height="18"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - Password Icon" id="LiA-xo-UvB"/>
+                                    </imageView>
+                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg7-ZO-X77" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                        <rect key="frame" x="57" y="97" width="177" height="25"/>
+                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="UMU-u1-rwd">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView drawsBackground="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="9SY-up-hlF" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="minSize" width="177" height="25"/>
+                                                    <size key="maxSize" width="463" height="10000000"/>
+                                                    <attributedString key="textStorage">
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                            <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                            <color key="value" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </clipView>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="4o4-2Z-rCA"/>
+                                            <constraint firstAttribute="width" constant="177" id="92t-64-U6J"/>
+                                        </constraints>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="qJH-aR-XQT">
+                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="JUi-vB-VK9">
+                                            <rect key="frame" x="161" y="0.0" width="16" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="3a1-2o-kUI">
                                         <rect key="frame" x="134" y="25" width="23" height="23"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Login Next" imagePosition="only" alignment="center" alternateImage="Login Next Highlighted" enabled="NO" inset="2" id="khe-My-e9J">
@@ -871,10 +893,17 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4ra-hp-hn9" firstAttribute="top" secondItem="S6Q-Zp-ky6" secondAttribute="top" constant="50" id="2Uc-Oz-oje"/>
-                                    <constraint firstItem="4ra-hp-hn9" firstAttribute="centerX" secondItem="S6Q-Zp-ky6" secondAttribute="centerX" id="djO-GM-Zk6"/>
-                                    <constraint firstItem="3a1-2o-kUI" firstAttribute="top" secondItem="4ra-hp-hn9" secondAttribute="bottom" constant="25" id="hVh-8P-MLH"/>
+                                    <constraint firstItem="QWo-UP-4g9" firstAttribute="top" secondItem="Eg7-ZO-X77" secondAttribute="top" id="18P-Jk-atL"/>
+                                    <constraint firstItem="Ui4-I1-gdT" firstAttribute="top" secondItem="lBp-bK-cnY" secondAttribute="top" id="7rz-d5-JAF"/>
+                                    <constraint firstItem="lBp-bK-cnY" firstAttribute="top" secondItem="S6Q-Zp-ky6" secondAttribute="top" constant="47" id="8s1-vR-4sf"/>
+                                    <constraint firstItem="lBp-bK-cnY" firstAttribute="centerX" secondItem="S6Q-Zp-ky6" secondAttribute="centerX" id="NFe-qx-oaW"/>
+                                    <constraint firstItem="Ui4-I1-gdT" firstAttribute="bottom" secondItem="lBp-bK-cnY" secondAttribute="bottom" constant="-7" id="VTz-6U-jyi"/>
+                                    <constraint firstItem="QWo-UP-4g9" firstAttribute="leading" secondItem="Eg7-ZO-X77" secondAttribute="leading" constant="3" id="X8W-Ad-ZvO"/>
+                                    <constraint firstItem="Eg7-ZO-X77" firstAttribute="centerX" secondItem="S6Q-Zp-ky6" secondAttribute="centerX" id="eKu-zT-obN"/>
                                     <constraint firstItem="3a1-2o-kUI" firstAttribute="centerX" secondItem="S6Q-Zp-ky6" secondAttribute="centerX" id="nfL-ww-kXX"/>
+                                    <constraint firstItem="Eg7-ZO-X77" firstAttribute="top" secondItem="lBp-bK-cnY" secondAttribute="bottom" constant="10" id="pAC-89-ruN"/>
+                                    <constraint firstItem="QWo-UP-4g9" firstAttribute="bottom" secondItem="Eg7-ZO-X77" secondAttribute="bottom" constant="-7" id="pqj-7G-Bst"/>
+                                    <constraint firstItem="Ui4-I1-gdT" firstAttribute="leading" secondItem="lBp-bK-cnY" secondAttribute="leading" constant="3" id="t2e-HD-2v2"/>
                                     <constraint firstAttribute="bottom" secondItem="3a1-2o-kUI" secondAttribute="bottom" constant="25" id="xuu-Yk-jR9"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -892,14 +921,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="appleIDTextField" destination="DoV-ZZ-aSn" id="d8g-5g-4du"/>
-                        <outlet property="loginButton" destination="3a1-2o-kUI" id="VxI-u6-VJh"/>
-                        <outlet property="passwordTextField" destination="Tfw-1f-Z6I" id="2L6-Fp-HTy"/>
+                        <outlet property="appleIDTextField" destination="HDH-xw-VoJ" id="9A1-fC-xcP"/>
+                        <outlet property="loginButton" destination="3a1-2o-kUI" id="uLT-8L-XjA"/>
                     </connections>
                 </viewController>
                 <customObject id="BX4-aV-sVl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="562"/>
+            <point key="canvasLocation" x="817.5" y="521"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="PjS-oh-kSn">
