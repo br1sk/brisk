@@ -16,6 +16,10 @@ final class AuthenticationViewController: ViewController {
 
     override func viewDidAppear() {
         super.viewDidAppear()
+        self.validatables
+            .flatMap { $0 as? NSTextView }
+            .forEach { $0.delegate = self }
+
         self.appleIDTextField.becomeFirstResponder()
     }
 
@@ -38,8 +42,8 @@ final class AuthenticationViewController: ViewController {
     }
 }
 
-extension AuthenticationViewController {
-    override func controlTextDidChange(_: Notification) {
+extension AuthenticationViewController: NSTextViewDelegate {
+    func textDidChange(_ notification: Notification) {
         self.enableLoginIfValid()
     }
 }

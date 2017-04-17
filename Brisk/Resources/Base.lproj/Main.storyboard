@@ -747,18 +747,18 @@
             <objects>
                 <viewController title="Apple Radar" showSeguePresentationStyle="single" id="lz5-Zo-LSI" customClass="AuthenticationViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="E2C-wm-a1h">
-                        <rect key="frame" x="0.0" y="0.0" width="291" height="204"/>
+                        <rect key="frame" x="0.0" y="0.0" width="291" height="178"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="S6Q-Zp-ky6" userLabel="Container" customClass="View" customModule="Brisk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="291" height="204"/>
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="178"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ui4-I1-gdT">
-                                        <rect key="frame" x="60" y="139" width="15" height="18"/>
+                                        <rect key="frame" x="60" y="113" width="15" height="18"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - User Icon" id="yuK-mz-MwO"/>
                                     </imageView>
                                     <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBp-bK-cnY" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="132" width="177" height="25"/>
+                                        <rect key="frame" x="57" y="106" width="177" height="25"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="MmG-fw-qjE">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -785,13 +785,13 @@
                                                             <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                            <color key="value" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.31764705882352939" green="0.65098039215686276" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.54246668442294255" green="0.56859935406337392" blue="0.63148328993055558" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
@@ -818,16 +818,16 @@
                                         </scroller>
                                     </scrollView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QWo-UP-4g9">
-                                        <rect key="frame" x="60" y="104" width="16" height="18"/>
+                                        <rect key="frame" x="60" y="78" width="16" height="18"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="Login - Password Icon" id="LiA-xo-UvB"/>
                                     </imageView>
                                     <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg7-ZO-X77" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="97" width="177" height="25"/>
+                                        <rect key="frame" x="57" y="71" width="177" height="25"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="UMU-u1-rwd">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView drawsBackground="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="9SY-up-hlF" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView drawsBackground="NO" importsGraphics="NO" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="9SY-up-hlF" customClass="MinimalistSecureTextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="177" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -849,13 +849,13 @@
                                                             <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                            <color key="value" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.31764705882352939" green="0.65098039215686276" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.54246668442294255" green="0.56859935406337392" blue="0.63148328993055558" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
@@ -923,11 +923,12 @@
                     <connections>
                         <outlet property="appleIDTextField" destination="HDH-xw-VoJ" id="9A1-fC-xcP"/>
                         <outlet property="loginButton" destination="3a1-2o-kUI" id="uLT-8L-XjA"/>
+                        <outlet property="passwordTextField" destination="9SY-up-hlF" id="D5f-LV-jfY"/>
                     </connections>
                 </viewController>
                 <customObject id="BX4-aV-sVl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="521"/>
+            <point key="canvasLocation" x="817.5" y="508"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="PjS-oh-kSn">
@@ -1133,20 +1134,20 @@
             <objects>
                 <viewController id="g7d-nA-KZB" customClass="RadarViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Edl-zp-7Gc">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="404"/>
+                        <rect key="frame" x="0.0" y="0.0" width="731" height="445"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="MTm-px-qNS" userLabel="Top" customClass="View" customModule="Brisk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="294" width="800" height="110"/>
+                                <rect key="frame" x="0.0" y="335" width="731" height="110"/>
                                 <subviews>
                                     <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Yf8-nI-pwq">
-                                        <rect key="frame" x="0.0" y="101" width="800" height="20"/>
+                                        <rect key="frame" x="0.0" y="101" width="731" height="20"/>
                                     </progressIndicator>
                                     <stackView distribution="fillEqually" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qw-1Z-vGi">
-                                        <rect key="frame" x="0.0" y="0.0" width="800" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="731" height="110"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUe-su-q0K">
-                                                <rect key="frame" x="20" y="49" width="760" height="31"/>
+                                                <rect key="frame" x="20" y="49" width="590" height="31"/>
                                                 <subviews>
                                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="tGh-Yw-9gI">
                                                         <rect key="frame" x="0.0" y="2.5" width="250" height="26"/>
@@ -1259,31 +1260,61 @@
                                                             <constraint firstItem="mv8-hT-Vq7" firstAttribute="top" secondItem="FBx-kW-zTU" secondAttribute="top" id="teR-PT-f11"/>
                                                         </constraints>
                                                     </customView>
-                                                    <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-1K-yPN" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                        <rect key="frame" x="538" y="6" width="224" height="19"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Version" usesSingleLineMode="YES" id="S6r-hV-4bt">
-                                                            <font key="font" metaFont="systemLight" size="15"/>
-                                                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </textFieldCell>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                                <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                                <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="g7d-nA-KZB" id="jf0-kf-wzV"/>
-                                                        </connections>
-                                                    </textField>
+                                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8a-n4-osE" userLabel="Version" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                        <rect key="frame" x="540" y="0.5" width="50" height="30"/>
+                                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vNE-Sf-H24">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="z5p-9E-SRu" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                                    <rect key="frame" x="-0.5" y="0.0" width="50.5" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="minSize" width="50" height="30"/>
+                                                                    <size key="maxSize" width="661.5" height="10000000"/>
+                                                                    <attributedString key="textStorage">
+                                                                        <fragment content=" ">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                            <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                            <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Title"/>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </clipView>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" placeholder="YES" id="LrS-EI-Rug"/>
+                                                        </constraints>
+                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="cdL-oY-3MD">
+                                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Dkg-eY-da0">
+                                                            <rect key="frame" x="34" y="0.0" width="16" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                    </scrollView>
                                                 </subviews>
                                                 <visibilityPriorities>
                                                     <integer value="1000"/>
@@ -1297,7 +1328,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHf-yg-3Ed">
-                                                <rect key="frame" x="20" y="10" width="760" height="31"/>
+                                                <rect key="frame" x="20" y="10" width="590" height="31"/>
                                                 <subviews>
                                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="c0w-CE-bYS">
                                                         <rect key="frame" x="0.0" y="2.5" width="250" height="26"/>
@@ -1407,31 +1438,61 @@
                                                             <constraint firstAttribute="bottom" secondItem="x9Q-Tw-7wf" secondAttribute="bottom" id="zJi-P7-u6M"/>
                                                         </constraints>
                                                     </customView>
-                                                    <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf4-oV-GBX" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                        <rect key="frame" x="538" y="6" width="224" height="19"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Configuration" usesSingleLineMode="YES" id="EIz-4h-Uu2">
-                                                            <font key="font" metaFont="systemLight" size="15"/>
-                                                            <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </textFieldCell>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                                <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                                <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="g7d-nA-KZB" id="iAZ-hf-yDE"/>
-                                                        </connections>
-                                                    </textField>
+                                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-HJ-zxj" userLabel="Configuration" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                        <rect key="frame" x="540" y="0.5" width="50" height="30"/>
+                                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="XqM-rc-a9H">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="GSY-LE-5K3" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                                    <rect key="frame" x="-0.5" y="0.0" width="50.5" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <size key="minSize" width="50" height="30"/>
+                                                                    <size key="maxSize" width="661.5" height="10000000"/>
+                                                                    <attributedString key="textStorage">
+                                                                        <fragment content=" ">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                            <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                            <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                            <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                            <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Configuration"/>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </clipView>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" placeholder="YES" id="CTi-NF-f5G"/>
+                                                        </constraints>
+                                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="ygc-rh-20J">
+                                                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="sud-6e-df2">
+                                                            <rect key="frame" x="34" y="0.0" width="16" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </scroller>
+                                                    </scrollView>
                                                 </subviews>
                                                 <visibilityPriorities>
                                                     <integer value="1000"/>
@@ -1459,7 +1520,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="JJd-Gn-VH9" userLabel="Separator" customClass="View" customModule="Brisk" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="800" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="731" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="eoN-Ak-87M"/>
                                         </constraints>
@@ -1490,161 +1551,360 @@
                                 </userDefinedRuntimeAttributes>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="p1X-9z-9zB" userLabel="Bottom" customClass="View" customModule="Brisk" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="800" height="294"/>
+                                <rect key="frame" x="0.0" y="0.0" width="731" height="335"/>
                                 <subviews>
-                                    <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSM-Dp-xoI">
-                                        <rect key="frame" x="35" y="80" width="730" height="189"/>
+                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="15" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSM-Dp-xoI">
+                                        <rect key="frame" x="35" y="80" width="661" height="230"/>
                                         <subviews>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6G-Hu-9Vj" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="170" width="734" height="19"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Title" usesSingleLineMode="YES" id="tol-Ne-X3C">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="uLm-2f-jWM"/>
-                                                </connections>
-                                            </textField>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpc-fl-JVL" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="136" width="734" height="19"/>
-                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Description" id="h8e-Ou-h86">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="WXc-pb-Y2y"/>
-                                                </connections>
-                                            </textField>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asH-Gk-yjz" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="102" width="734" height="19"/>
-                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Steps" id="1n4-5a-E3c">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="cXF-rs-0Hz"/>
-                                                </connections>
-                                            </textField>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-cx-vLc" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="68" width="734" height="19"/>
-                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Expected" id="2nC-zs-Dof">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="RIh-bk-gAm"/>
-                                                </connections>
-                                            </textField>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1S-xh-CSL" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="34" width="734" height="19"/>
-                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Actual" id="7zU-Jk-noF">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="SqO-7h-6sm"/>
-                                                </connections>
-                                            </textField>
-                                            <textField focusRingType="none" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2A-L6-dJk" customClass="MinimalistTextField" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="-2" y="0.0" width="734" height="19"/>
-                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Notes" id="tLn-ik-VuZ">
-                                                    <font key="font" metaFont="systemLight" size="15"/>
-                                                    <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </textFieldCell>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                        <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
-                                                        <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
-                                                        <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="g7d-nA-KZB" id="CS6-4O-Wnt"/>
-                                                </connections>
-                                            </textField>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwt-0m-6Dt" userLabel="Title" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="200" width="661" height="30"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="hPl-ew-pHu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="XkS-81-CTE" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="30"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="usesSingleLineMode" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Title"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" placeholder="YES" id="EdS-up-B4i"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="OT3-rK-e6t">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qOt-hZ-Ak3">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IU4-nh-zJ2" userLabel="Description" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="160" width="661" height="25"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="p26-cn-prP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="ulk-mD-gbx" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="25"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Description"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" placeholder="YES" id="xDr-NV-MyO"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="KmI-NU-80T">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="3lq-Gh-jqu">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                            <scrollView horizontalHuggingPriority="1000" verticalHuggingPriority="1000" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqm-Ky-656" userLabel="Steps" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="120" width="661" height="25"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="ewt-T8-81E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="vx6-hr-7TD" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="25"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Steps"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" placeholder="YES" id="8JQ-E9-Sb5"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="lha-2W-KnY">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="E2E-O7-w1b">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzY-XD-fKV" userLabel="Expected" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="80" width="661" height="25"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="zTI-eW-OFf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="DeG-36-apm" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="25"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Expected"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" placeholder="YES" id="5qP-6R-Pah"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="iNJ-DB-9bs">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="BDT-9x-d2D">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXa-nF-E6c" userLabel="Actual" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="40" width="661" height="25"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="B1V-nb-li7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="9us-Fi-dD0" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="25"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Actual"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" placeholder="YES" id="jOO-YA-TMF"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="c2P-UD-ubw">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="jwC-Lk-Inl">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8X-zz-wra" userLabel="Notes" customClass="MinimalistTextScrollView" customModule="Brisk" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="2lX-PW-rCU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="661" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" textCompletion="NO" spellingCorrection="YES" id="PY3-bO-lCK" customClass="MinimalistTextView" customModule="Brisk" customModuleProvider="target">
+                                                            <rect key="frame" x="-0.5" y="0.0" width="661.5" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="661" height="25"/>
+                                                            <size key="maxSize" width="661.5" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content=" ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.94117647059999998" green="0.94061249489999998" blue="0.95070815090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="leftMargin">
+                                                                    <integer key="value" value="90"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderIsTitle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" red="0.21960784310000001" green="0.2274509804" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineSelectedColor">
+                                                                    <color key="value" red="0.14901961389999999" green="0.60784316059999999" blue="0.8627451062" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                    <color key="value" red="0.3921568627" green="0.41960784309999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderSelectedColor">
+                                                                    <color key="value" red="0.81231379510000001" green="0.84410256149999996" blue="0.87788856029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Notes"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.1529411765" green="0.25882352939999997" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </clipView>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" placeholder="YES" id="xbJ-yX-xAI"/>
+                                                </constraints>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="NVC-6F-YhK">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="gMJ-uz-5L5">
+                                                    <rect key="frame" x="645" y="0.0" width="16" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
@@ -1664,10 +1924,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="u3T-EW-XiC" userLabel="Toolbar">
-                                        <rect key="frame" x="35" y="0.0" width="730" height="60"/>
+                                        <rect key="frame" x="35" y="0.0" width="661" height="60"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhr-Hu-0WW" customClass="Button" customModule="Brisk" customModuleProvider="target">
-                                                <rect key="frame" x="630" y="11" width="100" height="38"/>
+                                                <rect key="frame" x="561" y="11" width="100" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="Jqq-iG-eau"/>
                                                     <constraint firstAttribute="width" constant="100" id="jVt-90-A4Z"/>
@@ -1692,7 +1952,7 @@
                                                 </connections>
                                             </button>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="pQc-sc-cIh" userLabel="Attachment">
-                                                <rect key="frame" x="565" y="5" width="50" height="50"/>
+                                                <rect key="frame" x="496" y="5" width="50" height="50"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pdW-5v-o68" userLabel="Attachment">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1752,7 +2012,7 @@
                                                 </constraints>
                                             </customView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="GKV-S1-3Dv" userLabel="Radars">
-                                                <rect key="frame" x="515" y="5" width="50" height="50"/>
+                                                <rect key="frame" x="446" y="5" width="50" height="50"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J8x-Xa-UjQ" userLabel="Radars">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1855,28 +2115,20 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="actualTextView" destination="e1S-xh-CSL" id="A8d-7n-SKe"/>
                         <outlet property="addAttachmentButton" destination="pdW-5v-o68" id="qiJ-b6-VFj"/>
                         <outlet property="areaPopUp" destination="ssq-vr-48f" id="nKr-eH-axy"/>
                         <outlet property="attachmentBadge" destination="JdV-j4-qWJ" id="5AF-hu-DC0"/>
                         <outlet property="classificationPopUp" destination="GDJ-wk-Q0s" id="M88-St-syF"/>
-                        <outlet property="configurationTextField" destination="rf4-oV-GBX" id="80n-nV-gZe"/>
-                        <outlet property="descriptionTextView" destination="cpc-fl-JVL" id="H8h-7B-R1z"/>
-                        <outlet property="expectedTextView" destination="ti5-cx-vLc" id="mIq-x9-xJ2"/>
-                        <outlet property="notesTextView" destination="w2A-L6-dJk" id="vFb-MM-bkm"/>
                         <outlet property="productPopUp" destination="ffR-8g-boe" id="5hl-ey-VbK"/>
                         <outlet property="progressIndicator" destination="Yf8-nI-pwq" id="D1t-4g-lDF"/>
                         <outlet property="reproducibilityPopUp" destination="Kzb-jJ-lJb" id="kaQ-D9-8uY"/>
-                        <outlet property="stepsTextView" destination="asH-Gk-yjz" id="pgd-H0-xX1"/>
                         <outlet property="submitButton" destination="Mhr-Hu-0WW" id="RwY-Js-9fU"/>
-                        <outlet property="titleTextField" destination="I6G-Hu-9Vj" id="cbm-ZO-0rk"/>
                         <outlet property="trackersBadge" destination="ayF-3f-QdE" id="1QO-eP-W2Z"/>
-                        <outlet property="versionTextField" destination="QFL-1K-yPN" id="vmo-Iy-aij"/>
                     </connections>
                 </viewController>
                 <customObject id="lpg-vF-FcM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="870"/>
+            <point key="canvasLocation" x="74" y="920"/>
         </scene>
         <!--Trackers Selector View Controller-->
         <scene sceneID="zNu-Bj-Gg4">

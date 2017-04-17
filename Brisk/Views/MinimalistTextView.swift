@@ -10,27 +10,26 @@ final class MinimalistTextScrollView: NSScrollView {
 
         return editor.intrinsicContentSize
     }
-
 }
 
 @IBDesignable
-final class MinimalistTextView: NSTextView {
+class MinimalistTextView: NSTextView {
 
     // MARK: - Inspectable values
 
     /// The title that will be shown on the top-left of the field.
     @IBInspectable public var placeholder: String = "" {
-        didSet { self.placeholderLabel.stringValue = self.placeholder }
+        didSet { self.setNeedsDisplay(self.bounds) }
     }
 
     /// The textview will stop growing after this value is reached.
-    @IBInspectable var maxHeight: CGFloat = 80.0
+    @IBInspectable var maxHeight: CGFloat = 75.0
 
     /// This property forces the field to be single-lined (return will focus next field).
     @IBInspectable var usesSingleLineMode: Bool = false
 
     /// The space between the left edge and the text container.
-    @IBInspectable var leftMargin: CGFloat = 80.0
+    @IBInspectable var leftMargin: CGFloat = 0.0
 
     /// A boolean that defines the placeholder behavior (title won't dissapear even when text is not empty).
     @IBInspectable var placeholderIsTitle: Bool = false
@@ -40,27 +39,26 @@ final class MinimalistTextView: NSTextView {
 
     /// Defines the color for the bottom line when the field is not selected.
     @IBInspectable var lineColor: NSColor = .moon {
-        didSet { self.setCurrentStateColors(isFirstResponder: self.isFirstResponder) }
+        didSet { self.setLineColor(isFirstResponder: self.isFirstResponder) }
     }
 
     /// Defines the color for the bottom line when the field is selected.
     @IBInspectable var lineSelectedColor: NSColor = .steel {
-        didSet { self.setCurrentStateColors(isFirstResponder: self.isFirstResponder) }
+        didSet { self.setLineColor(isFirstResponder: self.isFirstResponder) }
     }
 
     /// Defines the color for the placeholder text when the field is selected.
     @IBInspectable var placeholderColor: NSColor = .moon {
-        didSet { self.setCurrentStateColors(isFirstResponder: self.isFirstResponder) }
+        didSet { self.setLineColor(isFirstResponder: self.isFirstResponder) }
     }
 
     /// Defines the color for the placeholder text when the field is not selected.
     @IBInspectable var placeholderSelectedColor: NSColor = .moon {
-        didSet { self.setCurrentStateColors(isFirstResponder: self.isFirstResponder) }
+        didSet { self.setLineColor(isFirstResponder: self.isFirstResponder) }
     }
 
     // MARK: - Private methods & Properties
 
-    private var placeholderLabel = NSTextField(labelWithString: "")
     private var line = View(frame: .zero)
     private var isFirstResponder: Bool {
         return self.window?.firstResponder == self
@@ -73,9 +71,8 @@ final class MinimalistTextView: NSTextView {
         )
     }
 
-    private func setCurrentStateColors(isFirstResponder: Bool) {
-        let (line, placeholder) = self.colors(whenStateIsSelected: isFirstResponder)
-        self.placeholderLabel.textColor = placeholder
+    private func setLineColor(isFirstResponder: Bool) {
+        let (line, _) = self.colors(whenStateIsSelected: isFirstResponder)
         self.line.backgroundColor = line
     }
 
@@ -96,21 +93,26 @@ final class MinimalistTextView: NSTextView {
 
     }
 
-    private func setupPlaceholderLabel() {
-        let leftMargin: CGFloat = self.placeholderIsTitle ? 0 : self.leftMargin + 5
-        let top = NSLayoutConstraint(item: self.placeholderLabel, attribute: .top, relatedBy: .equal,
-                                     toItem: self, attribute: .top, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: self.placeholderLabel, attribute: .left, relatedBy: .equal,
-                                      toItem: self, attribute: .left, multiplier: 1, constant: leftMargin)
-
-        self.enclosingScrollView?.addSubview(self.placeholderLabel)
-        self.enclosingScrollView?.addConstraints([top, left])
-
-        self.placeholderLabel.font = self.font
-        self.placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
-    }
-
     // MARK: - TextFieldView override
+
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
+
+        if self.placeholderIsTitle || self.string?.isEmpty != false, let font = self.font {
+            let (_, placholder) = self.colors(whenStateIsSelected: self.isFirstResponder)
+            let contentView = self.enclosingScrollView?.contentView
+            let title = self.placeholder as NSString
+            let attributes: [String: Any] = [
+                NSFontAttributeName: font,
+                NSForegroundColorAttributeName: placholder
+            ]
+
+            var textRect = dirtyRect
+            textRect.origin.y = contentView?.documentVisibleRect.origin.y ?? 0.0
+            textRect.origin.x = (self.placeholderIsTitle ? 0 : self.leftMargin) + 5
+            title.draw(in: textRect, withAttributes: attributes)
+        }
+    }
 
     override var textContainerOrigin: NSPoint {
         let origin = super.textContainerOrigin
@@ -140,25 +142,23 @@ final class MinimalistTextView: NSTextView {
         }
 
         self.setupLineView()
-        self.setCurrentStateColors(isFirstResponder: self.isFirstResponder)
-        self.setupPlaceholderLabel()
+        self.setLineColor(isFirstResponder: self.isFirstResponder)
     }
 
     override func becomeFirstResponder() -> Bool {
-        self.setCurrentStateColors(isFirstResponder: true)
+        self.setLineColor(isFirstResponder: true)
         self.insertionPointColor = self.textColor ?? .moon
         return super.becomeFirstResponder()
     }
 
     override func resignFirstResponder() -> Bool {
-        self.setCurrentStateColors(isFirstResponder: false)
+        self.setLineColor(isFirstResponder: false)
+        self.setNeedsDisplay(self.bounds)
         return super.resignFirstResponder()
     }
 
     override func didChangeText() {
         super.didChangeText()
-
-        self.placeholderLabel.isHidden = !self.placeholderIsTitle && self.string?.isEmpty != true
         self.enclosingScrollView?.invalidateIntrinsicContentSize()
     }
 
