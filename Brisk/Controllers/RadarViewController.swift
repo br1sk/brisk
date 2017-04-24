@@ -132,7 +132,7 @@ final class RadarViewController: ViewController {
             }
         }
 
-        let appleRadar = Sonar(service: .AppleRadar(appleID: username, password: password))
+        let appleRadar = Sonar(service: .appleRadar(appleID: username, password: password))
         appleRadar.loginThenCreate(
             radar: radar,
             getTwoFactorCode: { [weak self] closure in self?.askForTwoFactorCode(closure: closure) })
@@ -144,7 +144,7 @@ final class RadarViewController: ViewController {
                     }
 
                     radar.ID = radarID
-                    let openRadar = Sonar(service: .OpenRadar(token: token))
+                    let openRadar = Sonar(service: .openRadar(token: token))
                     openRadar.loginThenCreate(
                         radar: radar, getTwoFactorCode: { closure in
                             assertionFailure("Didn't handle Open Radar two factor")
