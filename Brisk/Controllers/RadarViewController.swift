@@ -60,7 +60,7 @@ final class RadarViewController: ViewController {
         super.viewDidLoad()
 
         self.setupTextViewDelegates()
-        self.areaPopUp.setItems(titles: Area.All.map { $0.name })
+        self.areaPopUp.setItems(titles: Area.AlliOSAreas.map { $0.name })
         self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
         self.productPopUp.set(items: Product.All, getTitle: { $0.name }, getGroup: { $0.category })
@@ -92,7 +92,7 @@ final class RadarViewController: ViewController {
         let classification = Classification.All.first { $0.name == self.classificationPopUp.selectedTitle }!
         let reproducibility = Reproducibility.All
             .first { $0.name == self.reproducibilityPopUp.selectedTitle }!
-        let area = Area.All.first { $0.name == self.areaPopUp.selectedTitle }!
+        let area = Area.AlliOSAreas.first { $0.name == self.areaPopUp.selectedTitle }!
 
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
