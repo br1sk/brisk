@@ -49,8 +49,8 @@ extension Radar {
             ?? Classification.All.first!
         let reproducibility = Reproducibility.All.first { $0.appleIdentifier == reproducibilityID }
             ?? Reproducibility.All.first!
-        let area = Area.AlliOSAreas.first { $0.appleIdentifier == areaID } ?? Area.AlliOSAreas.first!
         let product = Product.All.first { $0.appleIdentifier == productID } ?? Product.All.first!
+        let area = Area.areas(for: product).first { $0.appleIdentifier == areaID }
 
         self.init(classification: classification, product: product, reproducibility: reproducibility,
                      title: title, description: description, steps: steps, expected: expected, actual: actual,

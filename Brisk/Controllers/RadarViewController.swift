@@ -60,16 +60,19 @@ final class RadarViewController: ViewController {
         super.viewDidLoad()
 
         self.setupTextViewDelegates()
-        self.areaPopUp.setItems(titles: Area.AlliOSAreas.map { $0.name })
         self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
         self.productPopUp.set(items: Product.All, getTitle: { $0.name }, getGroup: { $0.category })
+
+        let product = Product.All.first { $0.name == self.productPopUp.selectedTitle }!
+        self.updateAreas(with: product)
     }
 
     func restore(_ radar: Radar) {
         self.classificationPopUp.selectItem(withTitle: radar.classification.name)
         self.reproducibilityPopUp.selectItem(withTitle: radar.reproducibility.name)
         self.productPopUp.selectItem(withTitle: radar.product.name)
+        self.updateAreas(with: radar.product)
         if let area = radar.area {
             self.areaPopUp.selectItem(withTitle: area.name)
         }
@@ -92,7 +95,7 @@ final class RadarViewController: ViewController {
         let classification = Classification.All.first { $0.name == self.classificationPopUp.selectedTitle }!
         let reproducibility = Reproducibility.All
             .first { $0.name == self.reproducibilityPopUp.selectedTitle }!
-        let area = Area.AlliOSAreas.first { $0.name == self.areaPopUp.selectedTitle }!
+        let area = Area.areas(for: product).first { $0.name == self.areaPopUp.selectedTitle }!
 
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
@@ -167,7 +170,7 @@ final class RadarViewController: ViewController {
 
     @IBAction private func productChanged(_ sender: NSPopUpButton) {
         let product = Product.All.first { $0.name == sender.selectedTitle }!
-        self.areaPopUp.isEnabled = product.appleIdentifier == Product.iOS.appleIdentifier
+        self.updateAreas(with: product)
     }
 
     @IBAction private func addAttachment(_ sender: NSButton) {
@@ -191,6 +194,12 @@ final class RadarViewController: ViewController {
                 alert.beginSheetModal(for: window, completionHandler: nil)
             }
         }
+    }
+
+    private func updateAreas(with product: Product) {
+        let areaNames = Area.areas(for: product).map { $0.name }
+        self.areaPopUp.setItems(titles: areaNames)
+        self.areaPopUp.isEnabled = !areaNames.isEmpty
     }
 
     private func showError(message: String) {
