@@ -13,11 +13,12 @@ final class RadarSerializationTests: XCTestCase {
     func testSerializingRadar() {
         let attachment = Attachment(filename: "foo.png", mimeType: "image/png",
                                     data: Data(base64Encoded: "")!)
+        let area = Area.areas(for: Product.iOS).first!
         let radar = Radar(
             classification: .Security, product: .iOS, reproducibility: .Always, title: "title",
             description: "description", steps: "steps", expected: "expected", actual: "actual",
             configuration: "config", version: "version", notes: "notes", attachments: [attachment],
-            area: Area(appleIdentifier: 1, name: "foo"), applicationID: "456", userID: "123"
+            area: area, applicationID: "456", userID: "123"
         )
 
         let json = try! radar.toData().toJSONDictionary() as NSDictionary?
