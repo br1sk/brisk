@@ -5,11 +5,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet private var statusMenu: NSMenu!
     private var statusItem: NSStatusItem?
 
-    func applicationDidFinishLaunching(_ notification: Notification) {
+    func applicationWillFinishLaunching(_ notification: Notification) {
         self.registerDefaults()
-        StoryboardRouter.reloadTopWindowController()
         self.setupDockIcon()
         self.setupStatusItem()
+    }
+
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        StoryboardRouter.reloadTopWindowController()
         GlobalHotKey.register()
     }
 
