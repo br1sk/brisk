@@ -9,3 +9,7 @@ end
 target :BriskTests do
   pod "Sonar", :git => "https://github.com/br1sk/Sonar.git"
 end
+
+post_install do |installer|
+  installer.pods_project.root_object.attributes["LastUpgradeCheck"] = "9999"
+end
