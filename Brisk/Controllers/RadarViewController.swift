@@ -34,7 +34,6 @@ final class RadarViewController: ViewController {
     private var validatables: [Validatable] {
         return [
             self.actualTextView,
-            self.areaPopUp,
             self.classificationPopUp,
             self.configurationTextField,
             self.descriptionTextView,
@@ -95,7 +94,7 @@ final class RadarViewController: ViewController {
         let classification = Classification.All.first { $0.name == self.classificationPopUp.selectedTitle }!
         let reproducibility = Reproducibility.All
             .first { $0.name == self.reproducibilityPopUp.selectedTitle }!
-        let area = Area.areas(for: product).first { $0.name == self.areaPopUp.selectedTitle }!
+        let area = Area.areas(for: product).first { $0.name == self.areaPopUp.selectedTitle }
 
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
