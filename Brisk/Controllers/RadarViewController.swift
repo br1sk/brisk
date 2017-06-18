@@ -111,28 +111,18 @@ final class RadarViewController: ViewController {
 
     @IBAction private func submitRadar(_ sender: Any) {
         for field in self.validatables where !field.isValid {
-            return
+            assertionFailure("Shouldn't be able to submit with invalid fields")
+            return self.showError(message: "Validation failed")
         }
 
         guard let (username, password) = Keychain.get(.radar) else {
+            assertionFailure("Shouldn't be able to submit a radar without credentials")
             return self.showError(message: "Submitting radar without username/password")
         }
 
         var radar = self.currentRadar()
         self.submitButton.isEnabled = false
         self.progressIndicator.startAnimation(self)
-
-        let completion: (Bool) -> Void = { [weak self] success in
-            self?.progressIndicator.stopAnimation(self)
-            self?.submitButton.isEnabled = true
-            if success {
-                if self?.document?.fileURL != nil {
-                    self?.document?.save(self)
-                }
-
-                self?.view.window?.close()
-            }
-        }
 
         let appleRadar = Sonar(service: .appleRadar(appleID: username, password: password))
         appleRadar.loginThenCreate(
@@ -142,7 +132,8 @@ final class RadarViewController: ViewController {
             switch result {
                 case .success(let radarID):
                     guard let (_, token) = Keychain.get(.openRadar) else {
-                        return completion(true)
+                        self?.submitRadarCompletion(success: true)
+                        return
                     }
 
                     radar.ID = radarID
@@ -151,18 +142,18 @@ final class RadarViewController: ViewController {
                         radar: radar, getTwoFactorCode: { closure in
                             assertionFailure("Didn't handle Open Radar two factor")
                             closure(nil)
-                    }) { result in
+                    }) { [weak self] result in
                         switch result {
                             case .success:
-                                completion(true)
+                                self?.submitRadarCompletion(success: true)
                             case .failure(let error):
                                 self?.showError(message: error.message)
-                                completion(false)
+                                self?.submitRadarCompletion(success: false)
                         }
                     }
                 case .failure(let error):
                     self?.showError(message: error.message)
-                    completion(false)
+                    self?.submitRadarCompletion(success: false)
             }
         }
     }
@@ -192,6 +183,19 @@ final class RadarViewController: ViewController {
                 let alert = NSAlert(error: error)
                 alert.beginSheetModal(for: window, completionHandler: nil)
             }
+        }
+    }
+
+    private func submitRadarCompletion(success: Bool) {
+        self.progressIndicator.stopAnimation(self)
+        self.submitButton.isEnabled = true
+
+        if success {
+            if self.document?.fileURL != nil {
+                self.document?.save(self)
+            }
+
+            self.view.window?.close()
         }
     }
 
