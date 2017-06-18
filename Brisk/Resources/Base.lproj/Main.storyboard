@@ -1397,9 +1397,9 @@ DQ
                                     <action selector="addAttachment:" target="HUy-04-wVn" id="vDZ-jT-1YF"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
-                                <rect key="frame" x="249" y="23" width="96" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No Attachment" id="C9t-RF-qkI">
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
+                                <rect key="frame" x="246" y="23" width="338" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="No Attachment" id="C9t-RF-qkI">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1414,6 +1414,7 @@ DQ
                             <constraint firstItem="w1D-nw-4Gs" firstAttribute="baseline" secondItem="tzm-FL-SCJ" secondAttribute="baseline" id="6Ny-Pl-Gdz"/>
                             <constraint firstItem="slV-6o-OdD" firstAttribute="baseline" secondItem="l3V-hh-I5h" secondAttribute="baseline" id="6zg-Qf-jWU"/>
                             <constraint firstItem="Ot3-1l-AkT" firstAttribute="trailing" secondItem="87y-BM-XPm" secondAttribute="trailing" id="8CO-Gt-tmD"/>
+                            <constraint firstItem="OHe-Ov-n1g" firstAttribute="leading" secondItem="nzj-cZ-RzB" secondAttribute="trailing" constant="8" symbolic="YES" id="8sw-fx-ZD9"/>
                             <constraint firstItem="Ws1-0o-O0p" firstAttribute="leading" secondItem="5dM-wd-a3b" secondAttribute="trailing" constant="8" id="AuI-G6-tHH"/>
                             <constraint firstItem="416-1P-0H2" firstAttribute="leading" secondItem="lwO-Mw-YFg" secondAttribute="trailing" constant="8" id="Ay5-9E-BS5"/>
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="BUr-2h-w3H"/>
@@ -1439,7 +1440,7 @@ DQ
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="leading" secondItem="slV-6o-OdD" secondAttribute="trailing" constant="8" id="b4Y-Gx-oAF"/>
                             <constraint firstItem="EfJ-B0-TXm" firstAttribute="leading" secondItem="OHe-Ov-n1g" secondAttribute="trailing" constant="8" id="bLn-Ix-cVH"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="top" secondItem="OBM-6V-JDI" secondAttribute="top" constant="20" id="bgL-zm-mS0"/>
-                            <constraint firstItem="nzj-cZ-RzB" firstAttribute="leading" secondItem="jeH-OT-VUN" secondAttribute="trailing" constant="11" id="fMY-wC-gSK"/>
+                            <constraint firstItem="nzj-cZ-RzB" firstAttribute="leading" secondItem="jeH-OT-VUN" secondAttribute="trailing" constant="8" symbolic="YES" id="fMY-wC-gSK"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="fQn-ru-RqY"/>
                             <constraint firstItem="6TN-hx-g1I" firstAttribute="top" secondItem="StP-3g-DTl" secondAttribute="bottom" constant="62" id="ffC-tg-aMC"/>
                             <constraint firstItem="Wsr-Nw-FTS" firstAttribute="top" secondItem="6TN-hx-g1I" secondAttribute="top" id="geR-58-b8b"/>
