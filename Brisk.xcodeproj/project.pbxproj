@@ -31,6 +31,7 @@
 		C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */; };
 		C2839A241D14FC7000D240C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A231D14FC7000D240C4 /* Result.swift */; };
 		C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2839A271D14FE8B00D240C4 /* Data+Extension.swift */; };
+		C2C042271EF6F781008BFC88 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C042261EF6F781008BFC88 /* TextView.swift */; };
 		C2C360171D172A9A00217D22 /* AppleRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */; };
 		C2C360191D172DB400217D22 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C360181D172DB400217D22 /* TabViewController.swift */; };
 		C2D0B2071DAB6D0E005E804F /* radar.json in Resources */ = {isa = PBXBuildFile; fileRef = C2D0B2061DAB6D0E005E804F /* radar.json */; };
@@ -91,6 +92,7 @@
 		C2839A1A1D14F2E100D240C4 /* NSPopUpButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Extension.swift"; sourceTree = "<group>"; };
 		C2839A231D14FC7000D240C4 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C2839A271D14FE8B00D240C4 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		C2C042261EF6F781008BFC88 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		C2C360161D172A9A00217D22 /* AppleRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleRadarPreferencesViewController.swift; sourceTree = "<group>"; };
 		C2C360181D172DB400217D22 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		C2D0B2061DAB6D0E005E804F /* radar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = radar.json; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				C2839A1E1D14F59400D240C4 /* Extensions */,
 				C2839A201D14F5A900D240C4 /* Models */,
 				C2839A221D14F5CC00D240C4 /* Resources */,
+				C2C042251EF6F781008BFC88 /* Views */,
 				C28001D81D148AB800569A72 /* AppDelegate.swift */,
 				C219CBD91D1736EB002F89FC /* Application.swift */,
 				E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */,
@@ -263,6 +266,14 @@
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C2C042251EF6F781008BFC88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2C042261EF6F781008BFC88 /* TextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C4CC83B6A8A6286F3AF47B9F /* Frameworks */ = {
@@ -518,6 +529,7 @@
 				C2C360191D172DB400217D22 /* TabViewController.swift in Sources */,
 				C20DDC141D1652C20086D304 /* Keychain.swift in Sources */,
 				C28001D91D148AB800569A72 /* AppDelegate.swift in Sources */,
+				C2C042271EF6F781008BFC88 /* TextView.swift in Sources */,
 				C28399CC1D148CDC00D240C4 /* RadarViewController.swift in Sources */,
 				C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */,
 				C20DDC181D16771A0086D304 /* StoryboardRouter.swift in Sources */,
