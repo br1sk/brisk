@@ -16,3 +16,7 @@
 
 - Middle truncate long attachment names
   [change](https://github.com/br1sk/brisk/pull/69)
+
+- Remove ruler support from text views
+  [issue](https://github.com/br1sk/brisk/issues/27)
+  [change](https://github.com/br1sk/brisk/pull/70)
