@@ -26,3 +26,6 @@
 
 - Remove App Transport Security exceptions
   [change](https://github.com/br1sk/brisk/pull/73)
+
+- Use Radar icon in Preferences
+  [change](https://github.com/br1sk/brisk/pull/74)

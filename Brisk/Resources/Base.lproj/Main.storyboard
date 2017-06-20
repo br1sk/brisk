@@ -857,7 +857,7 @@ DQ
                 <tabViewController showSeguePresentationStyle="single" tabStyle="toolbar" id="BhG-02-uGX" customClass="TabViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem image="NSPreferencesGeneral" id="7Lx-JD-9GH"/>
-                        <tabViewItem id="EDE-TC-H6U"/>
+                        <tabViewItem image="radar" id="EDE-TC-H6U"/>
                         <tabViewItem id="Mzz-Pe-pef"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
@@ -1493,6 +1493,7 @@ DQ
     </scenes>
     <resources>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="radar" width="180" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XTz-8q-MhS"/>
