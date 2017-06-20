@@ -23,3 +23,6 @@
 
 - Remove unnecessary fields from `Info.plist`
   [change](https://github.com/br1sk/brisk/pull/72)
+
+- Remove App Transport Security exceptions
+  [change](https://github.com/br1sk/brisk/pull/73)
