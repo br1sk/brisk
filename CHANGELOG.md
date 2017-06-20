@@ -20,3 +20,6 @@
 - Remove ruler support from text views
   [issue](https://github.com/br1sk/brisk/issues/27)
   [change](https://github.com/br1sk/brisk/pull/70)
+
+- Remove unnecessary fields from `Info.plist`
+  [change](https://github.com/br1sk/brisk/pull/72)
