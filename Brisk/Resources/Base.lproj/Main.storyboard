@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G18a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13122.17"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -662,6 +662,12 @@
                                 <action selector="newDocument:" target="Ady-hI-5gd" id="tGo-Dd-NyP"/>
                             </connections>
                         </menuItem>
+                        <menuItem title="File a Duplicate..." id="k6b-vU-sEg" userLabel="File a Duplicate">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="dupeRadar:" target="Ady-hI-5gd" id="Fi8-7A-Bau"/>
+                            </connections>
+                        </menuItem>
                         <menuItem isSeparatorItem="YES" id="C9k-Lz-Ugo"/>
                         <menuItem title="About Brisk" id="pxB-gx-pau">
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -731,7 +737,7 @@
                     <window key="window" title="Login to Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Vt6-OZ-YUe">
                         <windowStyleMask key="styleMask" titled="YES"/>
                         <rect key="contentRect" x="196" y="240" width="291" height="143"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                     </window>
                     <connections>
                         <segue destination="rP9-PH-ZAn" kind="relationship" relationship="window.shadowedContentViewController" id="sfO-Yu-PgS"/>
@@ -739,7 +745,89 @@
                 </windowController>
                 <customObject id="V1V-Kn-EDo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="250"/>
+            <point key="canvasLocation" x="677" y="240"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="4rA-Px-Nyn">
+            <objects>
+                <windowController storyboardIdentifier="FileDuplicate" id="o0q-rk-kcK" sceneMemberID="viewController">
+                    <window key="window" title="File a Duplicate" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="nFG-Vb-AAv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="464" width="480" height="168"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                    </window>
+                    <connections>
+                        <segue destination="KNY-ZK-X19" kind="relationship" relationship="window.shadowedContentViewController" id="5mU-PV-KPq"/>
+                    </connections>
+                </windowController>
+                <customObject id="Iyi-xi-0pe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="241"/>
+        </scene>
+        <!--FileADuplicate-->
+        <scene sceneID="32n-Yd-Ho4">
+            <objects>
+                <viewController title="FileADuplicate" id="KNY-ZK-X19" customClass="FileADuplicateViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="oAu-QZ-ewj">
+                        <rect key="frame" x="0.0" y="0.0" width="322" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U04-c3-peY">
+                                <rect key="frame" x="18" y="54" width="128" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OpenRadar Number:" id="zRi-ba-f2I">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-p2-yAn">
+                                <rect key="frame" x="152" y="49" width="150" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="F8w-Es-1pJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oA-q3-T8g">
+                                <rect key="frame" x="233" y="13" width="75" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="push" title="Fetch" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NRZ-iE-zeR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="fetchData:" target="KNY-ZK-X19" id="Xp9-Bl-Gmb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS5-sA-fJC">
+                                <rect key="frame" x="151" y="13" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g9I-mq-o8h">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeSheet:" target="EVc-iz-txZ" id="ma5-dh-wiV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="radarTextField" destination="GfT-p2-yAn" id="9Yq-dF-Mze"/>
+                    </connections>
+                </viewController>
+                <customObject id="EVc-iz-txZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="540.5"/>
         </scene>
         <!--Apple Radar-->
         <scene sceneID="mXt-1n-xGP">
@@ -831,7 +919,7 @@ DQ
                 </viewController>
                 <customObject id="Vzg-3m-G7u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="534.5"/>
+            <point key="canvasLocation" x="676.5" y="524.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="PjS-oh-kSn">
@@ -1104,7 +1192,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WH8-h7-UQ2" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WH8-h7-UQ2" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1130,7 +1218,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="NFX-5c-vMY" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="NFX-5c-vMY" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1156,7 +1244,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Y7a-Qh-n0G" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Y7a-Qh-n0G" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1182,7 +1270,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="uI0-Jp-4xg" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="uI0-Jp-4xg" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1208,7 +1296,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SKw-6e-Fyl" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SKw-6e-Fyl" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1397,7 +1485,7 @@ DQ
                                     <action selector="addAttachment:" target="HUy-04-wVn" id="vDZ-jT-1YF"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
                                 <rect key="frame" x="246" y="23" width="338" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="No Attachment" id="C9t-RF-qkI">
                                     <font key="font" metaFont="system"/>
@@ -1405,6 +1493,17 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIj-PA-Xau">
+                                <rect key="frame" x="15" y="379" width="96" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Load Dupe" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bed-m1-pLj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dupeRadar:" target="3eD-Z8-0kh" id="swm-z0-00s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="A2T-ef-XlO" firstAttribute="trailing" secondItem="6TN-hx-g1I" secondAttribute="trailing" id="0TQ-8A-cL1"/>
@@ -1493,7 +1592,7 @@ DQ
     </scenes>
     <resources>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
-        <image name="radar" width="180" height="180"/>
+        <image name="radar" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XTz-8q-MhS"/>
