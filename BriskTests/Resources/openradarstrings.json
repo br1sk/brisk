@@ -1,0 +1,4 @@
+{
+    "regular": "Summary:\r\nfoo\n\nbar\nbaz\n\r\n\r\nSteps to Reproduce:\r\n1. foo\n2. bar\n\r\n\r\nExpected Results:\r\nfoo\n\r\n\r\nActual Results:\r\nbar\n\r\n\r\nVersion:\r\nXcode 9.0\r\n\r\nNotes:\r\n\r\nsome notes\r\nConfiguration:\r\nsome config",
+    "long": "Summary:\r\nfoo\n\nbar\nbaz\n\nqux\n\nfoo\nbar\n\nbaz\n\nqux\r\n\r\nSteps to Reproduce:\r\nfoo\r\n\r\nExpected Results:\r\nbar\r\n\r\nActual Results:\r\nbaz\r\n\r\nVersion:\r\nfoo\r\n\r\nNotes:"
+}

@@ -1,4 +1,4 @@
-@testable import Brisk
+import Brisk
 import Sonar
 import XCTest
 

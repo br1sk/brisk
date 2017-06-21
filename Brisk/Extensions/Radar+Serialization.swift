@@ -1,6 +1,6 @@
 import Sonar
 
-extension Radar {
+public extension Radar {
     func toData() throws -> Data {
         var JSON: [String: Any] = [
             "title": self.title,
@@ -24,7 +24,7 @@ extension Radar {
         return try JSONSerialization.data(withJSONObject: JSON, options: [])
     }
 
-    init?(json: [String: Any]) {
+    public init?(json: [String: Any]) {
         guard let title = json["title"] as? String,
             let description = json["description"] as? String,
             let classificationID = json["classification_id"] as? Int,

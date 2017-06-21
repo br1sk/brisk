@@ -70,6 +70,11 @@
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Duplicate Radar" keyEquivalent="N" id="ei8-CZ-Vn9">
+                                            <connections>
+                                                <segue destination="D64-kD-tcp" kind="show" id="whm-ym-k0Q"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                             <connections>
                                                 <action selector="openDocument:" target="Ady-hI-5gd" id="bVn-NM-KNZ"/>
@@ -662,6 +667,11 @@
                                 <action selector="newDocument:" target="Ady-hI-5gd" id="tGo-Dd-NyP"/>
                             </connections>
                         </menuItem>
+                        <menuItem title="Duplicate Radar" keyEquivalent="N" id="7bU-cP-0CW">
+                            <connections>
+                                <segue destination="D64-kD-tcp" kind="show" id="NMT-lH-mGs"/>
+                            </connections>
+                        </menuItem>
                         <menuItem isSeparatorItem="YES" id="C9k-Lz-Ugo"/>
                         <menuItem title="About Brisk" id="pxB-gx-pau">
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -687,6 +697,11 @@
                         <menuItem title="New Radar" keyEquivalent="n" id="crX-en-X1E">
                             <connections>
                                 <action selector="newDocument:" target="Ady-hI-5gd" id="OCq-y4-VD9"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Duplicate Radar" keyEquivalent="N" id="flG-Vy-mbB">
+                            <connections>
+                                <segue destination="D64-kD-tcp" kind="show" id="y0R-3a-mT6"/>
                             </connections>
                         </menuItem>
                         <menuItem isSeparatorItem="YES" id="VV1-qI-Dps"/>
@@ -831,7 +846,7 @@ DQ
                 </viewController>
                 <customObject id="Vzg-3m-G7u" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="534.5"/>
+            <point key="canvasLocation" x="818" y="535"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="PjS-oh-kSn">
@@ -1490,12 +1505,97 @@ DQ
             </objects>
             <point key="canvasLocation" x="74.5" y="946.5"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="2Dq-t1-K7p">
+            <objects>
+                <customObject id="CQg-FY-SsY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController storyboardIdentifier="Duplicate" showSeguePresentationStyle="single" id="D64-kD-tcp" sceneMemberID="viewController">
+                    <window key="window" title="Duplicate Radar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Bsl-hp-bzl">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="195" y="240" width="300" height="111"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                    </window>
+                    <connections>
+                        <segue destination="Xni-wx-69z" kind="relationship" relationship="window.shadowedContentViewController" id="f7D-zp-r9L"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="1177" y="266"/>
+        </scene>
+        <!--File Duplicate View Controller-->
+        <scene sceneID="J0Z-qc-GNk">
+            <objects>
+                <customObject id="bD7-G1-deH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Xni-wx-69z" customClass="FileDuplicateViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="j8R-xG-DDr">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfU-h5-WcA">
+                                <rect key="frame" x="84" y="49" width="196" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="6pe-UU-vnv">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="Xni-wx-69z" id="Bcg-WF-ATB"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLe-VI-Kfh">
+                                <rect key="frame" x="18" y="52" width="60" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Radar ID:" id="aMo-Ie-IPB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-To-ztj">
+                                <rect key="frame" x="203" y="13" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="Search" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IMQ-JU-197">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="searchForOpenRadar:" target="Xni-wx-69z" id="cWF-eu-uIA"/>
+                                </connections>
+                            </button>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="xEZ-9q-9Dh">
+                                <rect key="frame" x="185" y="23" width="16" height="16"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vLe-VI-Kfh" firstAttribute="baseline" secondItem="cfU-h5-WcA" secondAttribute="baseline" id="1AM-Cg-fnc"/>
+                            <constraint firstItem="k2R-To-ztj" firstAttribute="leading" secondItem="xEZ-9q-9Dh" secondAttribute="trailing" constant="8" id="6PQ-nS-OqS"/>
+                            <constraint firstItem="vLe-VI-Kfh" firstAttribute="leading" secondItem="j8R-xG-DDr" secondAttribute="leading" constant="20" id="ECf-bl-N9U"/>
+                            <constraint firstItem="cfU-h5-WcA" firstAttribute="top" secondItem="j8R-xG-DDr" secondAttribute="top" constant="20" id="Ilw-S5-nx3"/>
+                            <constraint firstAttribute="bottom" secondItem="k2R-To-ztj" secondAttribute="bottom" constant="20" id="KAD-qP-Eej"/>
+                            <constraint firstItem="cfU-h5-WcA" firstAttribute="leading" secondItem="vLe-VI-Kfh" secondAttribute="trailing" constant="8" id="KM1-oR-asm"/>
+                            <constraint firstItem="k2R-To-ztj" firstAttribute="trailing" secondItem="cfU-h5-WcA" secondAttribute="trailing" id="Rtj-sn-ueq"/>
+                            <constraint firstItem="xEZ-9q-9Dh" firstAttribute="centerY" secondItem="k2R-To-ztj" secondAttribute="centerY" id="Sbz-tf-29o"/>
+                            <constraint firstAttribute="trailing" secondItem="cfU-h5-WcA" secondAttribute="trailing" constant="20" id="bC3-Hj-QMf"/>
+                            <constraint firstItem="k2R-To-ztj" firstAttribute="top" secondItem="cfU-h5-WcA" secondAttribute="bottom" constant="8" id="kTP-ct-Z23"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressIndicator" destination="xEZ-9q-9Dh" id="hYx-xn-C3a"/>
+                        <outlet property="radarIDTextField" destination="cfU-h5-WcA" id="1pj-RB-6cW"/>
+                        <outlet property="searchButton" destination="k2R-To-ztj" id="dwj-gP-4L7"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1177" y="519"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
-        <image name="radar" width="180" height="180"/>
+        <image name="radar" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XTz-8q-MhS"/>
+        <segue reference="y0R-3a-mT6"/>
     </inferredMetricsTieBreakers>
 </document>

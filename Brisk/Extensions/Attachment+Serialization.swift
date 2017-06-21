@@ -1,6 +1,6 @@
 import Sonar
 
-extension Attachment {
+public extension Attachment {
     func toJSON() -> [String: Any] {
         return [
             "filename": self.filename,
@@ -25,7 +25,7 @@ extension Attachment {
         self.init(filename: filename, mimeType: mimeType, data: data)
     }
 
-    init(filename: String, mimeType: String, data: Data) {
+    public init(filename: String, mimeType: String, data: Data) {
         self.filename = filename
         self.mimeType = mimeType
         self.data = data
