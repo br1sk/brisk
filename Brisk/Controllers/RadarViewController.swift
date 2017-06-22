@@ -112,7 +112,7 @@ final class RadarViewController: ViewController {
     @IBAction private func dupeRadar(_ sender: Any) {
 
         let dupeSheet = NSStoryboard.main.instantiateWindowController(identifier: "FileDuplicate")
-        view.window?.beginSheet(dupeSheet.window!, completionHandler: { (response) in
+        view.window?.beginSheet(dupeSheet.window!, completionHandler: { _ in
             let dupeController = dupeSheet.contentViewController as! FileADuplicateViewController
             guard let radarID = Int(dupeController.radarID) else {
                 print("No radar ID set")

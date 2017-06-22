@@ -1,5 +1,5 @@
-import Foundation
 import AppKit
+import Foundation
 
 final class FileADuplicateViewController: ViewController {
     @IBOutlet private var radarTextField: NSTextField!
@@ -9,9 +9,7 @@ final class FileADuplicateViewController: ViewController {
     }
 
     public var radarID: String {
-        get {
-            return radarTextField.stringValue
-        }
+        return radarTextField.stringValue
     }
 
     @IBAction private func fetchData(_ sender: Any) {
