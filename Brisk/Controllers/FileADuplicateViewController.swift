@@ -22,7 +22,7 @@ final class FileADuplicateViewController: ViewController {
         closeSheetWithReturnCode(NSModalResponseStop)
     }
 
-    private func closeSheetWithReturnCode(_ returnCode: NSApplication.ModalResponse) {
+    private func closeSheetWithReturnCode(_ returnCode: NSModalResponse) {
         view.window?.sheetParent?.endSheet(view.window!, returnCode: returnCode)
         StoryboardRouter.reloadTopWindowController()
     }
