@@ -35,3 +35,7 @@
 
 - Use Radar icon in Preferences
   [change](https://github.com/br1sk/brisk/pull/74)
+
+- Focus existing windows when reopening documents
+  [issue](https://github.com/br1sk/brisk/issues/48)
+  [change](https://github.com/br1sk/brisk/issues/80)

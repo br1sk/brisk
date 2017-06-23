@@ -35,7 +35,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
         for filename in filenames {
             let url = URL(fileURLWithPath: filename)
-            if let document = NSDocumentController.shared().makeRadarDocument(withContentsOf: url) {
+
+            if let openDocument = NSDocumentController.shared().document(for: url) {
+                openDocument.showWindows()
+            } else if let document = NSDocumentController.shared().makeRadarDocument(withContentsOf: url) {
                 NSDocumentController.shared().addDocument(document)
                 document.showWindows()
             }
