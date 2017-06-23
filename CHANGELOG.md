@@ -6,6 +6,10 @@
   [issue](https://github.com/br1sk/brisk/issues/52)
   [change](https://github.com/br1sk/brisk/pull/78)
 
+- Add UI for duping radars from OpenRadar
+  [issue](https://github.com/br1sk/brisk/issues/14)
+  [change](https://github.com/br1sk/brisk/pull/75)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change

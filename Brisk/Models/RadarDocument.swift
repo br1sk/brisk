@@ -5,7 +5,7 @@ private struct DocumentError: Error {}
 
 final class RadarDocument: NSDocument {
     override func makeWindowControllers() {
-        self.createWindowController(radar: nil)
+        self.makeWindowControllers(for: nil)
     }
 
     override func data(ofType typeName: String) throws -> Data {
@@ -19,13 +19,13 @@ final class RadarDocument: NSDocument {
 
     override func read(from data: Data, ofType typeName: String) throws {
         if let json = data.toJSONDictionary(), let radar = Radar(json: json) {
-            self.createWindowController(radar: radar)
+            self.makeWindowControllers(for: radar)
         } else {
             throw DocumentError()
         }
     }
 
-    private func createWindowController(radar: Radar?) {
+    func makeWindowControllers(for radar: Radar?) {
         let windowController = NSStoryboard.main.instantiateWindowController(identifier: "Radar")
         if let radar = radar {
             let viewController = windowController.contentViewController as! RadarViewController

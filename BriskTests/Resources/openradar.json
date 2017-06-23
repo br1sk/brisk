@@ -1,0 +1,16 @@
+{
+    "result": {
+        "classification": "Other Bug",
+        "description": "Summary:\r\nfoo\n\nbar\nbaz\n\r\n\r\nSteps to Reproduce:\r\n1. foo\n2. bar\n\r\n\r\nExpected Results:\r\nfoo\n\r\n\r\nActual Results:\r\nbar\n\r\n\r\nVersion:\r\nXcode 9.0\r\n\r\nNotes:\r\n\r\nsome notes\n",
+        "id": 123456,
+        "number": "1234",
+        "originated": "19-Jun-2017 21:22",
+        "product": "Developer Tools",
+        "product_version": "Xcode 9.0",
+        "reproducible": "Always",
+        "resolved": "",
+        "status": "Open",
+        "title": "Some title",
+        "user": "foo@bar.com"
+    }
+}

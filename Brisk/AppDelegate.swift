@@ -30,13 +30,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
-        let documentController = NSDocumentController.shared()
-        let type = "com.brisk.radar"
-
         for filename in filenames {
             let url = URL(fileURLWithPath: filename)
-            if let document = try? documentController.makeDocument(withContentsOf: url, ofType: type) {
-                documentController.addDocument(document)
+            if let document = NSDocumentController.shared().makeRadarDocument(withContentsOf: url) {
+                NSDocumentController.shared().addDocument(document)
                 document.showWindows()
             }
         }
