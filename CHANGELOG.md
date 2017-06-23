@@ -10,6 +10,10 @@
   [issue](https://github.com/br1sk/brisk/issues/14)
   [change](https://github.com/br1sk/brisk/pull/75)
 
+- Respond to rdar:// URLs
+  [issue](https://github.com/br1sk/brisk/issues/77)
+  [change](https://github.com/br1sk/brisk/pull/79)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change
