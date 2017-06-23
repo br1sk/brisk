@@ -7,6 +7,11 @@ final class FileDuplicateViewController: ViewController {
     @IBOutlet private var radarIDTextField: NSTextField!
     @IBOutlet private var searchButton: NSButton!
 
+    func searchForOpenRadar(text: String) {
+        self.radarIDTextField.stringValue = text
+        self.searchForOpenRadar(self.searchButton)
+    }
+
     @IBAction private func searchForOpenRadar(_ sender: NSButton) {
         let setLoading: (Bool) -> Void = { [weak self] loading in
             self?.progressIndicator.isLoading = loading

@@ -3,12 +3,15 @@ import AppKit
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet private var statusMenu: NSMenu!
+    @IBOutlet private var dupeRadarMenuItem: NSMenuItem!
+
     private var statusItem: NSStatusItem?
 
     func applicationWillFinishLaunching(_ notification: Notification) {
         self.registerDefaults()
         self.setupDockIcon()
         self.setupStatusItem()
+        self.registerRadarURLs()
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
@@ -69,5 +72,30 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func cleanupStatusItem() {
         self.statusItem?.remove()
         self.statusItem = nil
+    }
+
+    private func registerRadarURLs() {
+        let eventManager = NSAppleEventManager.shared()
+        let selector = #selector(self.handleGetURLEvent(event:withReplyEvent:))
+        eventManager.setEventHandler(self, andSelector: selector,
+                                     forEventClass: AEEventClass(kInternetEventClass),
+                                     andEventID: AEEventID(kAEGetURL))
+    }
+
+    @objc
+    private func handleGetURLEvent(event: NSAppleEventDescriptor, withReplyEvent: NSAppleEventDescriptor) {
+        let radarLink = event.paramDescriptor(forKeyword: keyDirectObject)?.stringValue
+        if let radarID = radarLink.flatMap(radarID(from:)) {
+            _ = self.dupeRadarMenuItem.target!.perform(self.dupeRadarMenuItem.action!)
+            let viewController = NSApp.windows
+                .flatMap { $0.contentViewController as? FileDuplicateViewController }
+                .first!
+            viewController.searchForOpenRadar(text: radarID)
+        } else {
+            let alert = NSAlert()
+            alert.messageText = "Invalid Radar ID"
+            alert.informativeText = radarLink ?? ""
+            alert.runModal()
+        }
     }
 }

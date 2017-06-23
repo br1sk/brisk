@@ -656,6 +656,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Brisk" customModuleProvider="target">
                     <connections>
+                        <outlet property="dupeRadarMenuItem" destination="ei8-CZ-Vn9" id="5IR-Uw-JHd"/>
                         <outlet property="statusMenu" destination="ELE-Es-Vzl" id="OoV-hJ-uLb"/>
                     </connections>
                 </customObject>
