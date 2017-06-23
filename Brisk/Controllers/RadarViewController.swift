@@ -109,6 +109,31 @@ final class RadarViewController: ViewController {
 
     // MARK: - Private Methods
 
+    @IBAction private func dupeRadar(_ sender: Any) {
+
+        let dupeSheet = NSStoryboard.main.instantiateWindowController(identifier: "FileDuplicate")
+        view.window?.beginSheet(dupeSheet.window!, completionHandler: { _ in
+            let dupeController = dupeSheet.contentViewController as! FileADuplicateViewController
+            guard let radarID = Int(dupeController.radarID) else {
+                print("No radar ID set")
+                return
+            }
+            print("Fetching OpenRadar rdar://\(radarID)")
+            // Token is not needed to fetch data
+            let openRadar = Sonar(service: .openRadar(token: ""))
+            openRadar.fetch(radarID: radarID, closure: { [weak self] result in
+                switch result {
+                case .success(let radar):
+                    print("Fetched Radar: \(radar)")
+                    self?.restore(radar)
+
+                case .failure(let error):
+                    self?.showError(message: error.message)
+                }
+            })
+        })
+    }
+
     @IBAction private func submitRadar(_ sender: Any) {
         for field in self.validatables where !field.isValid {
             assertionFailure("Shouldn't be able to submit with invalid fields")

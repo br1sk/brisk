@@ -4,21 +4,22 @@ PODS:
     - Alamofire (~> 4.4.0)
 
 DEPENDENCIES:
-  - Sonar (from `https://github.com/br1sk/Sonar.git`)
+  - Sonar (from `https://github.com/PSPDFKit-labs/Sonar.git`, branch `peter/fileadupe`)
 
 EXTERNAL SOURCES:
   Sonar:
-    :git: https://github.com/br1sk/Sonar.git
+    :branch: peter/fileadupe
+    :git: https://github.com/PSPDFKit-labs/Sonar.git
 
 CHECKOUT OPTIONS:
   Sonar:
-    :commit: 97607c59a704f7642d23a2150f512d481d18150b
-    :git: https://github.com/br1sk/Sonar.git
+    :commit: 963b1c38410c15dfdf0405177ca4fc763daaee0d
+    :git: https://github.com/PSPDFKit-labs/Sonar.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Sonar: edb54e18872e0d23052f60e453edef60ba4ac5fa
 
-PODFILE CHECKSUM: 67f68afd595f0a203395b0afbf8a3fd5506b2262
+PODFILE CHECKSUM: '07849100d634af23dd823aba9d524d3872ce9797'
 
 COCOAPODS: 1.2.1

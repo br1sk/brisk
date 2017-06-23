@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		7869DA631EFAEDFA007C1365 /* FileADuplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869DA621EFAEDFA007C1365 /* FileADuplicateViewController.swift */; };
 		BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0018868F17477C7D609957AD /* Pods_BriskTests.framework */; };
 		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		0018868F17477C7D609957AD /* Pods_BriskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BriskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
+		7869DA621EFAEDFA007C1365 /* FileADuplicateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileADuplicateViewController.swift; sourceTree = "<group>"; };
 		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
 		C2042B521D17397900DEF594 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
+				7869DA621EFAEDFA007C1365 /* FileADuplicateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
 				C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */,
 				C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */,
+				7869DA631EFAEDFA007C1365 /* FileADuplicateViewController.swift in Sources */,
 				C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */,
 				C2839A241D14FC7000D240C4 /* Result.swift in Sources */,
 				E8D9E1C51E98636300D392B7 /* GlobalHotKey.swift in Sources */,

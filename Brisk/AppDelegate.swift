@@ -29,6 +29,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         return false
     }
 
+    @IBAction private func dupeRadar(_ sender: Any) {
+        // Opens a window and relays the action to the handler there.
+        NSDocumentController.shared().newDocument(self)
+        NSApp.sendAction(#selector(dupeRadar(_:)), to: nil, from: nil)
+    }
+
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
         let documentController = NSDocumentController.shared()
         let type = "com.brisk.radar"
