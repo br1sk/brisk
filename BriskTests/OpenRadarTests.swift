@@ -13,7 +13,7 @@ final class OpenRadarTests: XCTestCase {
         XCTAssertEqual(radar.product, .DeveloperTools)
         XCTAssertEqual(radar.reproducibility, .Always)
         XCTAssertEqual(radar.version, "Xcode 9.0")
-        XCTAssertEqual(radar.configuration, "Xcode 9.0")
+        XCTAssertEqual(radar.configuration, "")
         XCTAssertEqual(radar.title, "Some title")
         XCTAssertEqual(radar.description, "This is a duplicate of radar #1234\n\nfoo\n\nbar\nbaz\n")
         XCTAssertEqual(radar.steps, "1. foo\n2. bar")
