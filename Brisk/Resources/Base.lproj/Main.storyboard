@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -872,9 +872,9 @@ DQ
             <objects>
                 <tabViewController showSeguePresentationStyle="single" tabStyle="toolbar" id="BhG-02-uGX" customClass="TabViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem image="NSPreferencesGeneral" id="7Lx-JD-9GH"/>
-                        <tabViewItem image="radar" id="EDE-TC-H6U"/>
-                        <tabViewItem id="Mzz-Pe-pef"/>
+                        <tabViewItem label="General" image="NSPreferencesGeneral" id="7Lx-JD-9GH"/>
+                        <tabViewItem label="Apple Radar" image="radar" id="EDE-TC-H6U"/>
+                        <tabViewItem label="Open Radar" image="NSUser" id="Mzz-Pe-pef"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="EE6-pS-Eyp">
@@ -1593,6 +1593,7 @@ DQ
     </scenes>
     <resources>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="NSUser" width="32" height="32"/>
         <image name="radar" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
