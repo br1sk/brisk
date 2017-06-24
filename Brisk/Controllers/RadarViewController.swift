@@ -35,10 +35,8 @@ final class RadarViewController: ViewController {
         return [
             self.actualTextView,
             self.classificationPopUp,
-            self.configurationTextField,
             self.descriptionTextView,
             self.expectedTextView,
-            self.notesTextView,
             self.productPopUp,
             self.reproducibilityPopUp,
             self.stepsTextView,

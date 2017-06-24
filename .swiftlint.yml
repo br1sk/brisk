@@ -28,3 +28,13 @@ trailing_comma:
   mandatory_comma: true
 private_outlet:
   allow_private_set: true
+attributes:
+  always_on_line_above:
+    - "@discardableResult"
+    - "@IBDesignable"
+    - "@nonobjc"
+    - "@objc"
+  always_on_same_line:
+    - "@IBAction"
+    - "@IBInspectable"
+    - "@IBOutlet"

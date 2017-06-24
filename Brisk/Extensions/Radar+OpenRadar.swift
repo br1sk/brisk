@@ -44,8 +44,8 @@ public extension Radar {
             self.init(classification: classification, product: product, reproducibility: reproducibility,
                       title: title, description: updatedDescription, steps: openRadar.steps ?? " ",
                       expected: openRadar.expected ?? " ", actual: openRadar.actual ?? " ",
-                      configuration: openRadar.configuration ?? version, version: version,
-                      notes: openRadar.notes ?? " ", attachments: [], area: area ?? lastArea)
+                      configuration: openRadar.configuration ?? "", version: version,
+                      notes: openRadar.notes ?? "", attachments: [], area: area ?? lastArea)
 
         } catch is OpenRadarParsingError {
             let updatedDescription = summary(for: radarID, description: description)
@@ -53,7 +53,7 @@ public extension Radar {
 
             self.init(classification: classification, product: product, reproducibility: reproducibility,
                       title: title, description: updatedDescription, steps: " ", expected: " ", actual: " ",
-                      configuration: version, version: version, notes: " ", attachments: [], area: lastArea)
+                      configuration: "", version: version, notes: "", attachments: [], area: lastArea)
 
         } catch let error {
             assertionFailure("Got unexpected error type \(error)")

@@ -22,6 +22,10 @@
   [issue](https://github.com/br1sk/brisk/issues/15)
   [change](https://github.com/br1sk/brisk/pull/84)
 
+- Make Configuration and Notes optional
+  [issue](https://github.com/br1sk/brisk/issues/46)
+  [change](https://github.com/br1sk/brisk/pull/86)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change

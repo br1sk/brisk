@@ -1,6 +1,6 @@
 import AppKit
 
-final class TextView: NSTextView {
+class TextView: NSTextView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
