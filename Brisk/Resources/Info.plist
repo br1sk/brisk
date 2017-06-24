@@ -11,6 +11,8 @@
 			<array>
 				<string>brisk</string>
 			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>AppIcon</string>
 			<key>CFBundleTypeName</key>
 			<string>RadarDocument</string>
 			<key>CFBundleTypeRole</key>
