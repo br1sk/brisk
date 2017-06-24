@@ -51,3 +51,6 @@
 - Focus existing windows when reopening documents
   [issue](https://github.com/br1sk/brisk/issues/48)
   [change](https://github.com/br1sk/brisk/issues/80)
+
+- Only update window title on title text change
+  [change](https://github.com/br1sk/brisk/pull/87)

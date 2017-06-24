@@ -248,8 +248,12 @@ final class RadarViewController: ViewController {
     }
 
     fileprivate func updateTitleFromDocument() {
-        let newTitle = self.titleTextField.stringValue
-        self.document?.displayName = newTitle
+        let title = self.titleTextField.stringValue
+        if title.isEmpty {
+            return
+        }
+
+        self.document?.displayName = title
         self.windowController?.synchronizeWindowTitleWithDocumentName()
     }
 }
