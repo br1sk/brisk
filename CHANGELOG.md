@@ -18,6 +18,10 @@
   [issue](https://github.com/br1sk/brisk/issues/47)
   [change](https://github.com/br1sk/brisk/pull/83)
 
+- Use User icon for Open Radar preferences
+  [issue](https://github.com/br1sk/brisk/issues/15)
+  [change](https://github.com/br1sk/brisk/pull/84)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change
