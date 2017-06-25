@@ -17,7 +17,6 @@
 		C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC191D167D5F0086D304 /* RadarDocument.swift */; };
 		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
 		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
-		C21DAA151EFF0D290016E8AA /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21DAA141EFF0D290016E8AA /* PlaceholderTextView.swift */; };
 		C23ED5061EFA14E1006988BA /* FileDuplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5041EFA1174006988BA /* FileDuplicateViewController.swift */; };
 		C23ED5081EFA1FD1006988BA /* NSDocumentController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5071EFA1FD1006988BA /* NSDocumentController+Extension.swift */; };
 		C23ED50A1EFA2362006988BA /* NSProgressIndicator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5091EFA2362006988BA /* NSProgressIndicator+Extension.swift */; };
@@ -86,7 +85,6 @@
 		C20DDC191D167D5F0086D304 /* RadarDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarDocument.swift; sourceTree = "<group>"; };
 		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
 		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		C21DAA141EFF0D290016E8AA /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		C23ED5041EFA1174006988BA /* FileDuplicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDuplicateViewController.swift; sourceTree = "<group>"; };
 		C23ED5071EFA1FD1006988BA /* NSDocumentController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDocumentController+Extension.swift"; sourceTree = "<group>"; };
 		C23ED5091EFA2362006988BA /* NSProgressIndicator+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSProgressIndicator+Extension.swift"; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 		C2C042251EF6F781008BFC88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C21DAA141EFF0D290016E8AA /* PlaceholderTextView.swift */,
 				C2C042261EF6F781008BFC88 /* TextView.swift */,
 			);
 			path = Views;
@@ -568,7 +565,6 @@
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
 				C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */,
 				C23ED5081EFA1FD1006988BA /* NSDocumentController+Extension.swift in Sources */,
-				C21DAA151EFF0D290016E8AA /* PlaceholderTextView.swift in Sources */,
 				C20DDC161D1673670086D304 /* NSStoryboard+Extension.swift in Sources */,
 				C2839A281D14FE8B00D240C4 /* Data+Extension.swift in Sources */,
 				C23ED5061EFA14E1006988BA /* FileDuplicateViewController.swift in Sources */,

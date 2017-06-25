@@ -1,6 +1,15 @@
 import AppKit
 
-class TextView: NSTextView {
+final class TextView: NSTextView {
+    @IBInspectable var placeholderString: String?
+
+    // Show a placeholder using the private API from NSTextView
+    // https://stackoverflow.com/a/43028577/902968
+    @objc
+    private var placeholderAttributedString: NSAttributedString? {
+        return self.placeholderString.map(NSAttributedString.init)
+    }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
