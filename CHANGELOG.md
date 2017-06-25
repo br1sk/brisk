@@ -26,6 +26,9 @@
   [issue](https://github.com/br1sk/brisk/issues/46)
   [change](https://github.com/br1sk/brisk/pull/86)
 
+- Mark duplicate radars as dirty documents
+  [change](https://github.com/br1sk/brisk/pull/88)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change

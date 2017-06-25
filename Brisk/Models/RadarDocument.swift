@@ -27,11 +27,11 @@ final class RadarDocument: NSDocument {
 
     func makeWindowControllers(for radar: Radar?) {
         let windowController = NSStoryboard.main.instantiateWindowController(identifier: "Radar")
+        self.addWindowController(windowController)
+
         if let radar = radar {
             let viewController = windowController.contentViewController as! RadarViewController
             viewController.restore(radar)
         }
-
-        self.addWindowController(windowController)
     }
 }
