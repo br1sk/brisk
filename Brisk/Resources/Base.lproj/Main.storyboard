@@ -23,6 +23,12 @@
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Check for Updates..." id="WiD-NK-JiW">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="aD1-op-laG" id="Sfz-0b-nwq"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
@@ -660,6 +666,7 @@
                         <outlet property="statusMenu" destination="ELE-Es-Vzl" id="OoV-hJ-uLb"/>
                     </connections>
                 </customObject>
+                <customObject id="aD1-op-laG" customClass="SUUpdater"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <menu id="ELE-Es-Vzl">
                     <items>
@@ -680,6 +687,12 @@
                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="UQW-Bj-qL7"/>
                             </connections>
                         </menuItem>
+                        <menuItem title="Check for Updates..." id="RoB-Zu-bsO">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="checkForUpdates:" target="aD1-op-laG" id="EUO-6Q-JE9"/>
+                            </connections>
+                        </menuItem>
                         <menuItem title="Preferences..." keyEquivalent="," id="g2w-EJ-Nx0">
                             <connections>
                                 <segue destination="zOe-Vb-W6F" kind="show" id="zV1-KQ-gay"/>
@@ -693,7 +706,7 @@
                         </menuItem>
                     </items>
                 </menu>
-                <menu id="O10-D1-aVG">
+                <menu id="O10-D1-aVG" userLabel="Dock Menu">
                     <items>
                         <menuItem title="New Radar" keyEquivalent="n" id="crX-en-X1E">
                             <connections>
@@ -710,6 +723,12 @@
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="XBl-jo-LIw"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Check for Updates..." id="AOk-pR-8jG">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="checkForUpdates:" target="aD1-op-laG" id="7Yr-UF-cee"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Preferences..." keyEquivalent="," id="e9S-wH-JNq">

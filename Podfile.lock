@@ -2,9 +2,11 @@ PODS:
   - Alamofire (4.4.0)
   - Sonar (0.0.1):
     - Alamofire (~> 4.4.0)
+  - Sparkle (1.17.0)
 
 DEPENDENCIES:
   - Sonar (from `https://github.com/br1sk/Sonar.git`)
+  - Sparkle
 
 EXTERNAL SOURCES:
   Sonar:
@@ -18,7 +20,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Sonar: edb54e18872e0d23052f60e453edef60ba4ac5fa
+  Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
 
-PODFILE CHECKSUM: 67f68afd595f0a203395b0afbf8a3fd5506b2262
+PODFILE CHECKSUM: 047ef46a51dbabde0daf90ad244205e82fadb5c2
 
 COCOAPODS: 1.2.1
