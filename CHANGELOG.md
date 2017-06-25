@@ -2,6 +2,16 @@
 
 ## Enhancements
 
+- None.
+
+## Bug Fixes
+
+- None.
+
+# 1.0.0
+
+## Enhancements
+
 - Make tab in text views jump between fields
   [issue](https://github.com/br1sk/brisk/issues/52)
   [change](https://github.com/br1sk/brisk/pull/78)
