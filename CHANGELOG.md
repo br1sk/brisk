@@ -36,6 +36,9 @@
 - Combine `PlaceholderTextView` and `TextView`
   [change](https://github.com/br1sk/brisk/pull/90)
 
+- Make text view font size the normal system size
+  [change](https://github.com/br1sk/brisk/pull/92)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change

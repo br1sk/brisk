@@ -13,7 +13,7 @@ final class TextView: NSTextView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        self.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize())
+        self.font = NSFont.systemFont(ofSize: NSFont.systemFontSize())
     }
 
     override func doCommand(by selector: Selector) {
