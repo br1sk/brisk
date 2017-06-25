@@ -66,6 +66,10 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>Brisk.Application</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/br1sk/brisk/master/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>

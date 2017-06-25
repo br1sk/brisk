@@ -17,6 +17,7 @@
 		C20DDC1A1D167D5F0086D304 /* RadarDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC191D167D5F0086D304 /* RadarDocument.swift */; };
 		C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */; };
 		C219CBDA1D1736EB002F89FC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219CBD91D1736EB002F89FC /* Application.swift */; };
+		C21DAA171F00433C0016E8AA /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C21DAA161F00433C0016E8AA /* dsa_pub.pem */; };
 		C23ED5061EFA14E1006988BA /* FileDuplicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5041EFA1174006988BA /* FileDuplicateViewController.swift */; };
 		C23ED5081EFA1FD1006988BA /* NSDocumentController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5071EFA1FD1006988BA /* NSDocumentController+Extension.swift */; };
 		C23ED50A1EFA2362006988BA /* NSProgressIndicator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ED5091EFA2362006988BA /* NSProgressIndicator+Extension.swift */; };
@@ -85,6 +86,7 @@
 		C20DDC191D167D5F0086D304 /* RadarDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadarDocument.swift; sourceTree = "<group>"; };
 		C219CBD71D173602002F89FC /* NSStatusItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSStatusItem+Extension.swift"; sourceTree = "<group>"; };
 		C219CBD91D1736EB002F89FC /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C21DAA161F00433C0016E8AA /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C23ED5041EFA1174006988BA /* FileDuplicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDuplicateViewController.swift; sourceTree = "<group>"; };
 		C23ED5071EFA1FD1006988BA /* NSDocumentController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDocumentController+Extension.swift"; sourceTree = "<group>"; };
 		C23ED5091EFA2362006988BA /* NSProgressIndicator+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSProgressIndicator+Extension.swift"; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				C28001DC1D148AB800569A72 /* Assets.xcassets */,
+				C21DAA161F00433C0016E8AA /* dsa_pub.pem */,
 				C28001E11D148AB800569A72 /* Info.plist */,
 				C28001DE1D148AB800569A72 /* Main.storyboard */,
 			);
@@ -435,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28001DD1D148AB800569A72 /* Assets.xcassets in Resources */,
+				C21DAA171F00433C0016E8AA /* dsa_pub.pem in Resources */,
 				C28001E01D148AB800569A72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
