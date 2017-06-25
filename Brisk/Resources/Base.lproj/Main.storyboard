@@ -1127,6 +1127,9 @@ DQ
                                                     <size key="minSize" width="570" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Provide a detailed summary of your report"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1153,6 +1156,9 @@ DQ
                                                     <size key="minSize" width="570" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Provide step-by-step instructions of how to reproduce the problem (if possible)"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1179,6 +1185,9 @@ DQ
                                                     <size key="minSize" width="570" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Describe what you expected to happen after completing the steps above"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1205,6 +1214,9 @@ DQ
                                                     <size key="minSize" width="570" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Describe what actually happened after completing the steps above"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1232,7 +1244,7 @@ DQ
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="optional"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderString" value="Provide any additional information, such as references to related problems or workarounds"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textView>
                                             </subviews>
@@ -1424,6 +1436,14 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tso-uy-kbf">
+                                <rect key="frame" x="60" y="86" width="47" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="optional" id="1Zz-E2-eUe">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="A2T-ef-XlO" firstAttribute="trailing" secondItem="6TN-hx-g1I" secondAttribute="trailing" id="0TQ-8A-cL1"/>
@@ -1442,6 +1462,7 @@ DQ
                             <constraint firstItem="jeH-OT-VUN" firstAttribute="leading" secondItem="SKw-6e-Fyl" secondAttribute="leading" id="D8s-eW-I8D"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="width" secondItem="w1D-nw-4Gs" secondAttribute="width" id="DI9-Pq-sFP"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="leading" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" constant="8" id="FAL-1x-Z3K"/>
+                            <constraint firstItem="tso-uy-kbf" firstAttribute="trailing" secondItem="Snb-fM-qhI" secondAttribute="trailing" id="FuG-Ob-bky"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="baseline" secondItem="bkT-Mr-Eu5" secondAttribute="baseline" id="HTL-3D-geU"/>
                             <constraint firstItem="l3V-hh-I5h" firstAttribute="baseline" secondItem="DnJ-2X-9qh" secondAttribute="baseline" id="J13-CA-cGh"/>
                             <constraint firstAttribute="trailing" secondItem="w1D-nw-4Gs" secondAttribute="trailing" constant="20" id="JCH-69-HmN"/>
@@ -1453,6 +1474,7 @@ DQ
                             <constraint firstItem="OHe-Ov-n1g" firstAttribute="centerY" secondItem="EfJ-B0-TXm" secondAttribute="centerY" id="RVn-FP-BBM"/>
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="baseline" secondItem="waP-Aq-0Oq" secondAttribute="baseline" id="Sra-iI-Riv"/>
                             <constraint firstItem="xl3-yf-7kD" firstAttribute="trailing" secondItem="A2T-ef-XlO" secondAttribute="trailing" id="SzL-lo-o7p"/>
+                            <constraint firstItem="tso-uy-kbf" firstAttribute="top" secondItem="Snb-fM-qhI" secondAttribute="bottom" constant="2" id="WjR-4c-pgR"/>
                             <constraint firstItem="X7m-L6-qiF" firstAttribute="width" secondItem="Ws1-0o-O0p" secondAttribute="width" id="XmE-Pi-c0s"/>
                             <constraint firstItem="EfJ-B0-TXm" firstAttribute="top" secondItem="416-1P-0H2" secondAttribute="bottom" constant="8" id="Yzj-BA-LTb"/>
                             <constraint firstItem="416-1P-0H2" firstAttribute="top" secondItem="QUk-rv-IAw" secondAttribute="bottom" constant="8" id="aV2-G8-MYD"/>

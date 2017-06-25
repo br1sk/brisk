@@ -39,6 +39,10 @@
 - Make text view font size the normal system size
   [change](https://github.com/br1sk/brisk/pull/92)
 
+- Add hint text for text views
+  [issue](https://github.com/br1sk/brisk/issues/54)
+  [change](https://github.com/br1sk/brisk/issues/93)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change
