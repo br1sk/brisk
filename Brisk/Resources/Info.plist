@@ -58,8 +58,6 @@
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
@@ -68,6 +66,10 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>Brisk.Application</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/br1sk/brisk/master/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
