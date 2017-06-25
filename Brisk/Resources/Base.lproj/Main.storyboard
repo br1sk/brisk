@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -875,6 +875,7 @@ DQ
                         <tabViewItem label="General" image="NSPreferencesGeneral" id="7Lx-JD-9GH"/>
                         <tabViewItem label="Apple Radar" image="radar" id="EDE-TC-H6U"/>
                         <tabViewItem label="Open Radar" image="NSUser" id="Mzz-Pe-pef"/>
+                        <tabViewItem label="Twitter" id="Nsv-PH-JQ6"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="EE6-pS-Eyp">
@@ -890,6 +891,7 @@ DQ
                         <segue destination="9Nh-eM-d2p" kind="relationship" relationship="tabItems" id="xB5-jB-jeT"/>
                         <segue destination="UrK-pc-2Bl" kind="relationship" relationship="tabItems" id="x6C-aZ-3qE"/>
                         <segue destination="A5r-df-S82" kind="relationship" relationship="tabItems" id="1kW-06-Wow"/>
+                        <segue destination="mM1-5v-BGS" kind="relationship" relationship="tabItems" id="Zkg-YQ-Dew"/>
                     </connections>
                 </tabViewController>
                 <customObject id="yNi-dS-dcP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -989,6 +991,93 @@ DQ
                 <userDefaultsController representsSharedInstance="YES" id="o1V-1w-axy"/>
             </objects>
             <point key="canvasLocation" x="1630" y="958.5"/>
+        </scene>
+        <!--Twitter-->
+        <scene sceneID="FDu-cN-KMe">
+            <objects>
+                <viewController title="Twitter" id="mM1-5v-BGS" customClass="TwitterViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="12k-o6-Hnv">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="163"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Vrj-1H-EyP">
+                                <rect key="frame" x="179" y="103" width="154" height="18"/>
+                                <buttonCell key="cell" type="check" title="Disable for duplicates" bezelStyle="regularSquare" imagePosition="left" enabled="NO" state="on" inset="2" id="3Ac-5I-9Lk">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="disableDuplicatesChangedWithSender:" target="mM1-5v-BGS" id="Jsb-LP-Z0f"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="aGw-YD-oRa">
+                                <rect key="frame" x="159" y="127" width="163" height="18"/>
+                                <buttonCell key="cell" type="check" title="Tweet when filing radar" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nLs-wP-SR5">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleTwitterWithSender:" target="mM1-5v-BGS" id="Woj-M8-YIe"/>
+                                </connections>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25G-bQ-U74">
+                                <rect key="frame" x="140" y="20" width="200" height="60"/>
+                                <clipView key="contentView" id="osC-yz-sko">
+                                    <rect key="frame" x="1" y="1" width="198" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="1mf-EI-EKt">
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="198" height="58"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content="The quick brown fox jumps over the lazy dog.">
+                                                    <attributes>
+                                                        <font key="NSFont" size="13" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AHV-Og-2qZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="UYA-NV-ljE"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="xIv-do-omJ">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="Jua-xU-vIw">
+                                    <rect key="frame" x="183" y="1" width="16" height="58"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="25G-bQ-U74" firstAttribute="centerX" secondItem="12k-o6-Hnv" secondAttribute="centerX" id="0WT-E8-JQI"/>
+                            <constraint firstItem="aGw-YD-oRa" firstAttribute="top" secondItem="12k-o6-Hnv" secondAttribute="top" constant="20" id="AXh-2x-RrC"/>
+                            <constraint firstItem="Vrj-1H-EyP" firstAttribute="top" secondItem="aGw-YD-oRa" secondAttribute="bottom" constant="10" id="DxS-nd-vbL"/>
+                            <constraint firstAttribute="bottom" secondItem="25G-bQ-U74" secondAttribute="bottom" constant="20" id="GLb-ID-4GX"/>
+                            <constraint firstItem="aGw-YD-oRa" firstAttribute="centerX" secondItem="12k-o6-Hnv" secondAttribute="centerX" id="kKa-LU-trF"/>
+                            <constraint firstItem="Vrj-1H-EyP" firstAttribute="leading" secondItem="aGw-YD-oRa" secondAttribute="leading" constant="20" id="uQR-8N-i8N"/>
+                            <constraint firstItem="25G-bQ-U74" firstAttribute="top" secondItem="Vrj-1H-EyP" secondAttribute="bottom" constant="25" id="x0z-Oe-TdM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="disableDuplicatesCheckBox" destination="Vrj-1H-EyP" id="PfQ-hn-vb1"/>
+                        <outlet property="formatTextView" destination="1mf-EI-EKt" id="9uS-Id-AwR"/>
+                        <outlet property="twitterEnabledCheckBox" destination="aGw-YD-oRa" id="jmF-RH-lhO"/>
+                    </connections>
+                </viewController>
+                <customObject id="sb4-fR-kF8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="1396.5"/>
         </scene>
         <!--Open Radar-->
         <scene sceneID="UJb-pK-qqg">
@@ -1600,7 +1689,7 @@ DQ
         <image name="radar" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XTz-8q-MhS"/>
         <segue reference="y0R-3a-mT6"/>
+        <segue reference="XTz-8q-MhS"/>
     </inferredMetricsTieBreakers>
 </document>

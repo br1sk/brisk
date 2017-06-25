@@ -1,4 +1,5 @@
 import AppKit
+import Sonar
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,6 +18,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         StoryboardRouter.reloadTopWindowController()
         GlobalHotKey.register()
+        Radar.shortDescriptionFormat = UserDefaults.standard.string(forKey: Defaults.twitterFormat)
     }
 
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {

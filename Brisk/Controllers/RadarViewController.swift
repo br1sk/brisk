@@ -1,4 +1,6 @@
+import Accounts
 import AppKit
+import Social
 import Sonar
 
 final class RadarViewController: ViewController {
@@ -147,6 +149,12 @@ final class RadarViewController: ViewController {
                             case .failure(let error):
                                 self?.showError(message: error.message)
                                 self?.submitRadarCompletion(success: false)
+                        }
+                    }
+
+                    Sonar(service: .twitter).create(radar: radar) { result in
+                        if case .failure(let error) = result {
+                            self?.showError(message: error.message)
                         }
                     }
                 case .failure(let error):

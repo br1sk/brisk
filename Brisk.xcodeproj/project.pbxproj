@@ -53,6 +53,7 @@
 		C2D0B20B1DAB6F00005E804F /* Radar+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D0B20A1DAB6F00005E804F /* Radar+Serialization.swift */; };
 		C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */; };
 		C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */; };
+		D243D1F41EFF96B900DD867A /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D243D1F31EFF96B900DD867A /* TwitterViewController.swift */; };
 		E8D9E1C51E98636300D392B7 /* GlobalHotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +130,7 @@
 		C2E8AE971D168A9200A65DB0 /* CascadingWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadingWindowController.swift; sourceTree = "<group>"; };
 		C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRadarPreferencesViewController.swift; sourceTree = "<group>"; };
 		C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D243D1F31EFF96B900DD867A /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		E8D9E1C41E98636300D392B7 /* GlobalHotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHotKey.swift; sourceTree = "<group>"; };
 		F4A33BC64FC74AD0621A14C7 /* Pods-BriskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +296,7 @@
 				C2ED20571D172437002A54B0 /* OpenRadarPreferencesViewController.swift */,
 				C28399CB1D148CDC00D240C4 /* RadarViewController.swift */,
 				C2C360181D172DB400217D22 /* TabViewController.swift */,
+				D243D1F31EFF96B900DD867A /* TwitterViewController.swift */,
 				C2042B521D17397900DEF594 /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -504,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3E61C15B958FB16681C486D8 /* [CP] Copy Pods Resources */ = {
@@ -534,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */ = {
@@ -563,6 +566,7 @@
 				C2ED20581D172437002A54B0 /* OpenRadarPreferencesViewController.swift in Sources */,
 				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
 				C27DBF241EF8F071007666C3 /* Radar+OpenRadar.swift in Sources */,
+				D243D1F41EFF96B900DD867A /* TwitterViewController.swift in Sources */,
 				C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */,
 				C2042B531D17397900DEF594 /* ViewController.swift in Sources */,
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
