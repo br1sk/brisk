@@ -97,7 +97,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             let alert = NSAlert()
             alert.messageText = "Invalid Radar ID"
-            alert.informativeText = radarLink ?? ""
+            alert.informativeText = "The link '\(radarLink ?? "")' doesn't contain a valid radar ID"
             alert.runModal()
         }
     }
