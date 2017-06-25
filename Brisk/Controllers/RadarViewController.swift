@@ -16,7 +16,7 @@ final class RadarViewController: ViewController {
     @IBOutlet private var submitButton: NSButton!
     @IBOutlet private var titleTextField: NSTextField!
     @IBOutlet private var versionTextField: NSTextField!
-    @IBOutlet private var addAttachmentButton: NSButton!
+    @IBOutlet private var toggleAttachmentButton: NSButton!
     @IBOutlet private var attachmentTextField: NSTextField!
 
     private var attachments: [Attachment] = [] {
@@ -26,7 +26,7 @@ final class RadarViewController: ViewController {
             }
 
             let attachment = self.attachments.first
-            self.addAttachmentButton.isEnabled = attachment == nil
+            self.toggleAttachmentButton.title = attachment == nil ? "Add Attachment" : "Remove Attachment"
             self.attachmentTextField.stringValue = attachment?.filename ?? "No Attachment"
         }
     }
@@ -165,11 +165,21 @@ final class RadarViewController: ViewController {
         self.updateAreas(with: product)
     }
 
-    @IBAction private func addAttachment(_ sender: NSButton) {
-        guard let window = self.view.window else {
+    @IBAction private func toggleAttachment(_ sender: NSButton) {
+        if !self.attachments.isEmpty {
+            self.attachments = []
             return
         }
 
+        guard let window = self.view.window else {
+            assertionFailure("Adding attachment with no window")
+            return
+        }
+
+        self.addAttachment(to: window)
+    }
+
+    private func addAttachment(to window: NSWindow) {
         let panel = NSOpenPanel()
         panel.beginSheetModal(for: window) { [weak panel] response in
             guard response == NSFileHandlingPanelOKButton, let url = panel?.urls.first else {

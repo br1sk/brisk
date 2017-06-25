@@ -1413,7 +1413,7 @@ DQ
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addAttachment:" target="HUy-04-wVn" id="vDZ-jT-1YF"/>
+                                    <action selector="toggleAttachment:" target="HUy-04-wVn" id="BAJ-Lk-IxX"/>
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
@@ -1488,7 +1488,6 @@ DQ
                     </view>
                     <connections>
                         <outlet property="actualTextView" destination="uI0-Jp-4xg" id="bzD-50-xx6"/>
-                        <outlet property="addAttachmentButton" destination="jeH-OT-VUN" id="5D2-U2-Gjn"/>
                         <outlet property="areaPopUp" destination="X7m-L6-qiF" id="XY9-IN-VrL"/>
                         <outlet property="attachmentTextField" destination="nzj-cZ-RzB" id="XmX-T6-yJQ"/>
                         <outlet property="classificationPopUp" destination="DnJ-2X-9qh" id="m4n-EI-uF1"/>
@@ -1502,6 +1501,7 @@ DQ
                         <outlet property="stepsTextView" destination="NFX-5c-vMY" id="7jy-wZ-O4y"/>
                         <outlet property="submitButton" destination="EfJ-B0-TXm" id="Jqo-CF-Tta"/>
                         <outlet property="titleTextField" destination="waP-Aq-0Oq" id="0Ge-ln-dHN"/>
+                        <outlet property="toggleAttachmentButton" destination="jeH-OT-VUN" id="FrD-5p-Hay"/>
                         <outlet property="versionTextField" destination="w1D-nw-4Gs" id="oFq-lg-mZC"/>
                     </connections>
                 </viewController>

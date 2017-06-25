@@ -29,6 +29,10 @@
 - Mark duplicate radars as dirty documents
   [change](https://github.com/br1sk/brisk/pull/88)
 
+- Add ability to remove attachment
+  [issue](https://github.com/br1sk/brisk/issues/16)
+  [change](https://github.com/br1sk/brisk/pull/89)
+
 ## Bug Fixes
 
 - Typing emoji caused font to change
