@@ -9,6 +9,17 @@
 
 - None.
 
+# 1.0.1
+
+## Enhancements
+
+- Update invalid rdar:// URL error message
+  [change](https://github.com/br1sk/brisk/pull/95)
+
+## Bug Fixes
+
+- None.
+
 # 1.0.0
 
 ## Enhancements
