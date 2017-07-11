@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -1067,7 +1067,7 @@ DQ
             </objects>
             <point key="canvasLocation" x="1630" y="1226.5"/>
         </scene>
-        <!--New Radar-->
+        <!--Drop Delegate-->
         <scene sceneID="bIb-re-9Xr">
             <objects>
                 <viewController title="New Radar" id="HUy-04-wVn" customClass="RadarViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
@@ -1385,20 +1385,6 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
-                                <rect key="frame" x="608" y="13" width="83" height="32"/>
-                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="submitRadar:" target="HUy-04-wVn" id="fWV-fB-pIl"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-FL-SCJ">
                                 <rect key="frame" x="504" y="514" width="53" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version:" id="a9l-yF-hvb">
@@ -1434,6 +1420,12 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Wdf-dR-1TM" customClass="FileDroppableView" customModule="Brisk" customModuleProvider="target">
+                                <rect key="frame" x="114" y="0.0" width="570" height="50"/>
+                                <connections>
+                                    <outlet property="dropDelegate" destination="HUy-04-wVn" id="waN-U1-eEB"/>
+                                </connections>
+                            </customView>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-Ov-n1g">
                                 <rect key="frame" x="590" y="23" width="16" height="16"/>
                             </progressIndicator>
@@ -1455,6 +1447,20 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
+                                <rect key="frame" x="608" y="13" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="submitRadar:" target="HUy-04-wVn" id="fWV-fB-pIl"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tso-uy-kbf">
                                 <rect key="frame" x="60" y="86" width="47" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="optional" id="1Zz-E2-eUe">
@@ -1467,12 +1473,14 @@ DQ
                         <constraints>
                             <constraint firstItem="A2T-ef-XlO" firstAttribute="trailing" secondItem="6TN-hx-g1I" secondAttribute="trailing" id="0TQ-8A-cL1"/>
                             <constraint firstAttribute="bottom" secondItem="EfJ-B0-TXm" secondAttribute="bottom" constant="20" id="0fy-br-uAx"/>
+                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="trailing" secondItem="SKw-6e-Fyl" secondAttribute="trailing" id="0lf-Fa-8dh"/>
                             <constraint firstItem="6TN-hx-g1I" firstAttribute="trailing" secondItem="StP-3g-DTl" secondAttribute="trailing" id="36M-f8-Ygh"/>
                             <constraint firstItem="87y-BM-XPm" firstAttribute="leading" secondItem="DnJ-2X-9qh" secondAttribute="trailing" constant="8" id="4dL-pK-SgD"/>
                             <constraint firstItem="w1D-nw-4Gs" firstAttribute="baseline" secondItem="tzm-FL-SCJ" secondAttribute="baseline" id="6Ny-Pl-Gdz"/>
                             <constraint firstItem="slV-6o-OdD" firstAttribute="baseline" secondItem="l3V-hh-I5h" secondAttribute="baseline" id="6zg-Qf-jWU"/>
                             <constraint firstItem="Ot3-1l-AkT" firstAttribute="trailing" secondItem="87y-BM-XPm" secondAttribute="trailing" id="8CO-Gt-tmD"/>
                             <constraint firstItem="OHe-Ov-n1g" firstAttribute="leading" secondItem="nzj-cZ-RzB" secondAttribute="trailing" constant="8" symbolic="YES" id="8sw-fx-ZD9"/>
+                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="leading" secondItem="SKw-6e-Fyl" secondAttribute="leading" id="9ge-Jq-RJF"/>
                             <constraint firstItem="Ws1-0o-O0p" firstAttribute="leading" secondItem="5dM-wd-a3b" secondAttribute="trailing" constant="8" id="AuI-G6-tHH"/>
                             <constraint firstItem="416-1P-0H2" firstAttribute="leading" secondItem="lwO-Mw-YFg" secondAttribute="trailing" constant="8" id="Ay5-9E-BS5"/>
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="BUr-2h-w3H"/>
@@ -1513,8 +1521,10 @@ DQ
                             <constraint firstItem="l3V-hh-I5h" firstAttribute="width" secondItem="X7m-L6-qiF" secondAttribute="width" id="mdJ-ip-hJx"/>
                             <constraint firstItem="87y-BM-XPm" firstAttribute="baseline" secondItem="DnJ-2X-9qh" secondAttribute="baseline" id="pjO-bp-IdP"/>
                             <constraint firstItem="jeH-OT-VUN" firstAttribute="centerY" secondItem="EfJ-B0-TXm" secondAttribute="centerY" id="psv-xN-J2d"/>
+                            <constraint firstAttribute="bottom" secondItem="Wdf-dR-1TM" secondAttribute="bottom" id="qTs-8U-zeO"/>
                             <constraint firstAttribute="trailing" secondItem="416-1P-0H2" secondAttribute="trailing" constant="20" id="rEV-NQ-5TJ"/>
                             <constraint firstItem="Snb-fM-qhI" firstAttribute="trailing" secondItem="xl3-yf-7kD" secondAttribute="trailing" id="raX-we-DKR"/>
+                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="top" secondItem="SKw-6e-Fyl" secondAttribute="bottom" id="ruf-Dq-5pZ"/>
                             <constraint firstItem="StP-3g-DTl" firstAttribute="trailing" secondItem="lwO-Mw-YFg" secondAttribute="trailing" id="sFI-uR-53J"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="baseline" secondItem="slV-6o-OdD" secondAttribute="baseline" id="sok-A4-px3"/>
                             <constraint firstItem="Icu-Ch-hzl" firstAttribute="top" secondItem="Snb-fM-qhI" secondAttribute="top" id="tW5-rD-ED0"/>
