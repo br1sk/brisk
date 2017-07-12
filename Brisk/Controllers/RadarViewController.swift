@@ -273,16 +273,16 @@ final class RadarViewController: ViewController {
 }
 
 extension RadarViewController: FileDroppableViewDelegate {
-    func fileDroppableView(_ view:FileDroppableView, canReceiveFiles files:[String]) -> Bool {
+    func fileDroppableView(_ view: FileDroppableView, canReceiveFiles files: [String]) -> Bool {
         guard let file = files.first else {
             return false
         }
-        
+
         let url = URL(fileURLWithPath: file)
         return (try? Attachment(url: url)) != nil
     }
-    
-    func fileDroppableView(_ view:FileDroppableView, receivedDroppedFiles files:[String]) -> Bool {
+
+    func fileDroppableView(_ view: FileDroppableView, receivedDroppedFiles files: [String]) -> Bool {
         guard let file = files.first else {
             return false
         }
