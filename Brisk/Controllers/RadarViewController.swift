@@ -89,6 +89,7 @@ final class RadarViewController: ViewController {
         self.attachments = radar.attachments
 
         self.enableSubmitIfValid()
+        self.document?.updateChangeCount(.changeCleared)
     }
 
     func currentRadar() -> Radar {
@@ -207,7 +208,7 @@ final class RadarViewController: ViewController {
                 self.document?.save(self)
             }
 
-            self.view.window?.close()
+            self.document?.close()
         }
     }
 
