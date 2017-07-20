@@ -6,7 +6,8 @@
 
 ## Bug Fixes
 
-- None.
+- Don't register dup'd radars as dirty files
+  [change](https://github.com/br1sk/brisk/pull/103)
 
 # 1.0.1
 
