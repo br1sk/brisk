@@ -89,6 +89,7 @@ final class RadarViewController: ViewController {
         self.attachments = radar.attachments
 
         self.enableSubmitIfValid()
+        self.updateTitleFromDocument()
         self.document?.updateChangeCount(.changeCleared)
     }
 

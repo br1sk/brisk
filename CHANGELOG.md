@@ -9,6 +9,9 @@
 - Don't register dup'd radars as dirty files
   [change](https://github.com/br1sk/brisk/pull/103)
 
+- Update the title when restoring a radar
+  [change](https://github.com/br1sk/brisk/pull/104)
+
 # 1.0.1
 
 ## Enhancements
