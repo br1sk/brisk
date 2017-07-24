@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BA2CE444CBF0C961AEF74B3 /* Pods_Brisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88425AC44C8AB4389F2A583 /* Pods_Brisk.framework */; };
+		493890561F157F16008F9E94 /* FileDroppableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493890551F157F16008F9E94 /* FileDroppableView.swift */; };
 		BADCFD626E46B81044A115B2 /* Pods_BriskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0018868F17477C7D609957AD /* Pods_BriskTests.framework */; };
 		C2042B531D17397900DEF594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042B521D17397900DEF594 /* ViewController.swift */; };
 		C20DDC121D16496E0086D304 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20DDC111D16496E0086D304 /* AuthenticationViewController.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		0018868F17477C7D609957AD /* Pods_BriskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BriskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F9233FBE2D1D0D4ABF530C /* Pods-Brisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.debug.xcconfig"; sourceTree = "<group>"; };
+		493890551F157F16008F9E94 /* FileDroppableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDroppableView.swift; sourceTree = "<group>"; };
 		7DD69D9F6507E9D3006DC976 /* Pods-BriskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BriskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BriskTests/Pods-BriskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9002A6E26E9C2D617DFB9460 /* Pods-Brisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brisk/Pods-Brisk.release.xcconfig"; sourceTree = "<group>"; };
 		C2042B521D17397900DEF594 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C042261EF6F781008BFC88 /* TextView.swift */,
+				493890551F157F16008F9E94 /* FileDroppableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -505,7 +508,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3E61C15B958FB16681C486D8 /* [CP] Copy Pods Resources */ = {
@@ -535,7 +538,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CCDAF9227C8454928AD3CBF0 /* [CP] Copy Pods Resources */ = {
@@ -565,6 +568,7 @@
 				C2839A1B1D14F2E100D240C4 /* NSPopUpButton+Extension.swift in Sources */,
 				C27DBF241EF8F071007666C3 /* Radar+OpenRadar.swift in Sources */,
 				C219CBD81D173602002F89FC /* NSStatusItem+Extension.swift in Sources */,
+				493890561F157F16008F9E94 /* FileDroppableView.swift in Sources */,
 				C2042B531D17397900DEF594 /* ViewController.swift in Sources */,
 				C2E8AE981D168A9200A65DB0 /* CascadingWindowController.swift in Sources */,
 				C27F3B721D8B239B00EA3B7D /* Constants.swift in Sources */,

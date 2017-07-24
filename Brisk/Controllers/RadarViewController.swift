@@ -19,7 +19,7 @@ final class RadarViewController: ViewController {
     @IBOutlet private var toggleAttachmentButton: NSButton!
     @IBOutlet private var attachmentTextField: NSTextField!
 
-    private var attachments: [Attachment] = [] {
+    fileprivate var attachments: [Attachment] = [] {
         didSet {
             if oldValue != self.attachments {
                 self.document?.updateChangeCount(.changeDone)
@@ -271,6 +271,32 @@ final class RadarViewController: ViewController {
 
         self.document?.displayName = title
         self.windowController?.synchronizeWindowTitleWithDocumentName()
+    }
+}
+
+extension RadarViewController: FileDroppableViewDelegate {
+    func fileDroppableView(_ view: FileDroppableView, canReceiveFiles files: [String]) -> Bool {
+        guard let file = files.first else {
+            return false
+        }
+
+        let url = URL(fileURLWithPath: file)
+        return (try? Attachment(url: url)) != nil
+    }
+
+    func fileDroppableView(_ view: FileDroppableView, receivedDroppedFiles files: [String]) -> Bool {
+        guard let file = files.first else {
+            return false
+        }
+
+        let url = URL(fileURLWithPath: file)
+        do {
+            let attachment = try Attachment(url: url)
+            self.attachments = [attachment]
+            return true
+        } catch {
+            return false
+        }
     }
 }
 
