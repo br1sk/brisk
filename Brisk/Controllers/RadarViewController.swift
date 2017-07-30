@@ -66,10 +66,6 @@ final class RadarViewController: ViewController {
     }
 
     func restore(_ radar: Radar) {
-        if self.document?.fileURL == nil {
-            self.document?.updateChangeCount(.changeDone)
-        }
-
         self.classificationPopUp.selectItem(withTitle: radar.classification.name)
         self.reproducibilityPopUp.selectItem(withTitle: radar.reproducibility.name)
         self.productPopUp.selectItem(withTitle: radar.product.name)

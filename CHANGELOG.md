@@ -12,6 +12,9 @@
 - Update the title when restoring a radar
   [change](https://github.com/br1sk/brisk/pull/104)
 
+- Remove unnecessary change count +1
+  [change](https://github.com/br1sk/brisk/pull/108)
+
 # 1.0.1
 
 ## Enhancements
