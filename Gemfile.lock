@@ -52,6 +52,7 @@ GEM
     nanaimo (0.2.3)
     nap (1.1.0)
     netrc (0.7.8)
+    psych (2.2.4)
     ruby-macho (1.1.0)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
@@ -67,6 +68,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods (= 1.2.1)
+  psych
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
