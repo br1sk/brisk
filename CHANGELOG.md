@@ -10,6 +10,10 @@
   [issue](https://github.com/br1sk/brisk/issues/35)
   [change](https://github.com/br1sk/brisk/pull/109)
 
+- Default cross posting to false for duplicates
+  [issue](https://github.com/br1sk/brisk/issues/106)
+  [change](https://github.com/br1sk/brisk/issues/110)
+
 ## Bug Fixes
 
 - Don't register dup'd radars as dirty files
