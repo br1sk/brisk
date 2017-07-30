@@ -2,6 +2,16 @@
 
 ## Enhancements
 
+- None.
+
+## Bug Fixes
+
+- None.
+
+# 1.1.0
+
+## Enhancements
+
 - Add checkbox to control crossposting to open radar
   [issue](https://github.com/br1sk/brisk/issues/4)
   [change](https://github.com/br1sk/brisk/pull/107)
