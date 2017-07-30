@@ -18,6 +18,7 @@ final class RadarViewController: ViewController {
     @IBOutlet private var versionTextField: NSTextField!
     @IBOutlet private var toggleAttachmentButton: NSButton!
     @IBOutlet private var attachmentTextField: NSTextField!
+    @IBOutlet private var postToOpenRadarButton: NSButton!
 
     private var attachments: [Attachment] = [] {
         didSet {
@@ -63,6 +64,11 @@ final class RadarViewController: ViewController {
 
         let product = Product.All.first { $0.name == self.productPopUp.selectedTitle }!
         self.updateAreas(with: product)
+    }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.view.window?.delegate = self
     }
 
     func restore(_ radar: Radar) {
@@ -131,7 +137,9 @@ final class RadarViewController: ViewController {
         { [weak self] result in
             switch result {
                 case .success(let radarID):
-                    guard let (_, token) = Keychain.get(.openRadar) else {
+                    guard self?.postToOpenRadarButton.state == NSOnState,
+                        let (_, token) = Keychain.get(.openRadar) else
+                    {
                         self?.submitRadarCompletion(success: true)
                         return
                     }
@@ -251,6 +259,16 @@ final class RadarViewController: ViewController {
         field.becomeFirstResponder()
     }
 
+    fileprivate func updateOpenRadarButton() {
+        let canPostToOpenRadar = Keychain.get(.openRadar) != nil
+        self.postToOpenRadarButton.isEnabled = canPostToOpenRadar
+        self.postToOpenRadarButton.toolTip = canPostToOpenRadar ? nil : "Open Preferences to add an account"
+
+        if !canPostToOpenRadar {
+            self.postToOpenRadarButton.state = NSOffState
+        }
+    }
+
     fileprivate func enableSubmitIfValid() {
         let isValid = self.validatables.reduce(true) { valid, validatable in
             return valid && validatable.isValid
@@ -299,5 +317,11 @@ extension RadarViewController: NSTextViewDelegate {
         for textView in self.textViews {
             textView.delegate = self
         }
+    }
+}
+
+extension RadarViewController: NSWindowDelegate {
+    func windowDidBecomeKey(_ notification: Notification) {
+        self.updateOpenRadarButton()
     }
 }
