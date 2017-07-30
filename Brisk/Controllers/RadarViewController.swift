@@ -96,6 +96,7 @@ final class RadarViewController: ViewController {
 
         self.enableSubmitIfValid()
         self.updateTitleFromDocument()
+        self.postToOpenRadarButton.state = NSOffState
         self.document?.updateChangeCount(.changeCleared)
     }
 
