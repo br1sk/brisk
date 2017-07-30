@@ -6,6 +6,10 @@
   [issue](https://github.com/br1sk/brisk/issues/4)
   [change](https://github.com/br1sk/brisk/pull/107)
 
+- Add drag and drop attachment support 
+  [issue](https://github.com/br1sk/brisk/issues/35)
+  [change](https://github.com/br1sk/brisk/pull/109)
+
 ## Bug Fixes
 
 - Don't register dup'd radars as dirty files

@@ -19,6 +19,7 @@ final class RadarViewController: ViewController {
     @IBOutlet private var toggleAttachmentButton: NSButton!
     @IBOutlet private var attachmentTextField: NSTextField!
     @IBOutlet private var postToOpenRadarButton: NSButton!
+    @IBOutlet private var attachmentDroppableView: AttachmentDroppableView!
 
     private var attachments: [Attachment] = [] {
         didSet {
@@ -61,6 +62,9 @@ final class RadarViewController: ViewController {
         self.classificationPopUp.setItems(titles: Classification.All.map { $0.name })
         self.reproducibilityPopUp.setItems(titles: Reproducibility.All.map { $0.name })
         self.productPopUp.set(items: Product.All, getTitle: { $0.name }, getGroup: { $0.category })
+        self.attachmentDroppableView.droppedAttachment = { [weak self] attachments in
+            self?.attachments = [attachments]
+        }
 
         let product = Product.All.first { $0.name == self.productPopUp.selectedTitle }!
         self.updateAreas(with: product)
