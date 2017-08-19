@@ -6,7 +6,9 @@
 
 ## Bug Fixes
 
-- None.
+- Fix ambiguous layout when text fields are large
+  [issue](https://github.com/br1sk/brisk/issues/113)
+  [change](https://github.com/br1sk/brisk/pull/117)
 
 # 1.1.0
 
