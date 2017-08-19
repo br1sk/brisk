@@ -1486,7 +1486,7 @@ DQ
                             <constraint firstItem="Ws1-0o-O0p" firstAttribute="leading" secondItem="5dM-wd-a3b" secondAttribute="trailing" constant="8" id="AuI-G6-tHH"/>
                             <constraint firstItem="416-1P-0H2" firstAttribute="leading" secondItem="lwO-Mw-YFg" secondAttribute="trailing" constant="8" id="Ay5-9E-BS5"/>
                             <constraint firstItem="lwO-Mw-YFg" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="BUr-2h-w3H"/>
-                            <constraint firstItem="slV-6o-OdD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l3V-hh-I5h" secondAttribute="trailing" constant="8" id="Bsg-s2-5Xz"/>
+                            <constraint firstItem="slV-6o-OdD" firstAttribute="leading" secondItem="l3V-hh-I5h" secondAttribute="trailing" constant="8" id="Bsg-s2-5Xz"/>
                             <constraint firstItem="tzm-FL-SCJ" firstAttribute="trailing" secondItem="slV-6o-OdD" secondAttribute="trailing" id="CAT-gV-k3l"/>
                             <constraint firstItem="jeH-OT-VUN" firstAttribute="leading" secondItem="SKw-6e-Fyl" secondAttribute="leading" id="D8s-eW-I8D"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="width" secondItem="w1D-nw-4Gs" secondAttribute="width" id="DI9-Pq-sFP"/>
@@ -1532,6 +1532,7 @@ DQ
                             <constraint firstItem="Snb-fM-qhI" firstAttribute="trailing" secondItem="xl3-yf-7kD" secondAttribute="trailing" id="raX-we-DKR"/>
                             <constraint firstItem="StP-3g-DTl" firstAttribute="trailing" secondItem="lwO-Mw-YFg" secondAttribute="trailing" id="sFI-uR-53J"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="baseline" secondItem="slV-6o-OdD" secondAttribute="baseline" id="sok-A4-px3"/>
+                            <constraint firstItem="tzm-FL-SCJ" firstAttribute="leading" secondItem="X7m-L6-qiF" secondAttribute="trailing" constant="46" id="t5a-ei-oTF"/>
                             <constraint firstItem="Icu-Ch-hzl" firstAttribute="top" secondItem="Snb-fM-qhI" secondAttribute="top" id="tW5-rD-ED0"/>
                             <constraint firstItem="nzj-cZ-RzB" firstAttribute="baseline" secondItem="jeH-OT-VUN" secondAttribute="baseline" id="thE-rH-gD1"/>
                             <constraint firstItem="Ws1-0o-O0p" firstAttribute="baseline" secondItem="5dM-wd-a3b" secondAttribute="baseline" id="tjB-wv-XI9"/>
