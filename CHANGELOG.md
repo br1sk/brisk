@@ -10,6 +10,9 @@
   [issue](https://github.com/br1sk/brisk/issues/113)
   [change](https://github.com/br1sk/brisk/pull/117)
 
+- Fix ambiguous version field layout
+  [change](https://github.com/br1sk/brisk/pull/118)
+
 # 1.1.0
 
 ## Enhancements
