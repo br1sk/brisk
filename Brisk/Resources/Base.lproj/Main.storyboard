@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
@@ -1072,11 +1072,11 @@ DQ
             <objects>
                 <viewController title="New Radar" id="HUy-04-wVn" customClass="RadarViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="OBM-6V-JDI">
-                        <rect key="frame" x="0.0" y="0.0" width="705" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="705" height="552"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkT-Mr-Eu5">
-                                <rect key="frame" x="18" y="485" width="89" height="17"/>
+                                <rect key="frame" x="18" y="486" width="89" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Classification:" id="zZ9-d7-yhD">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1084,7 +1084,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ws1-0o-O0p">
-                                <rect key="frame" x="111" y="507" width="123" height="26"/>
+                                <rect key="frame" x="111" y="508" width="123" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="MbD-xn-w3T"/>
                                 </constraints>
@@ -1098,7 +1098,7 @@ DQ
                                 </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnJ-2X-9qh">
-                                <rect key="frame" x="111" y="478" width="123" height="26"/>
+                                <rect key="frame" x="111" y="479" width="123" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="AF6-sk-T5s">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1106,7 +1106,7 @@ DQ
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-nw-4Gs">
-                                <rect key="frame" x="563" y="511" width="122" height="22"/>
+                                <rect key="frame" x="563" y="512" width="122" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="dpq-9b-Imm"/>
                                 </constraints>
@@ -1120,7 +1120,7 @@ DQ
                                 </connections>
                             </textField>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="416-1P-0H2">
-                                <rect key="frame" x="113" y="49" width="572" height="412"/>
+                                <rect key="frame" x="113" y="50" width="572" height="412"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waP-Aq-0Oq">
                                         <rect key="frame" x="0.0" y="390" width="572" height="22"/>
@@ -1279,9 +1279,6 @@ DQ
                                         </scroller>
                                     </scrollView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="c9v-yv-l5N" firstAttribute="top" secondItem="waP-Aq-0Oq" secondAttribute="bottom" constant="8" id="mo1-dI-ZMj"/>
-                                </constraints>
                                 <visibilityPriorities>
                                     <real value="1000"/>
                                     <integer value="1000"/>
@@ -1300,7 +1297,7 @@ DQ
                                 </customSpacing>
                             </stackView>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-mq-FR4">
-                                <rect key="frame" x="563" y="482" width="122" height="22"/>
+                                <rect key="frame" x="563" y="483" width="122" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="Kdd-Ld-WJr"/>
                                 </constraints>
@@ -1314,7 +1311,7 @@ DQ
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87y-BM-XPm">
-                                <rect key="frame" x="237" y="485" width="99" height="17"/>
+                                <rect key="frame" x="237" y="486" width="99" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reproducibility:" id="xLs-Ck-jJa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1322,7 +1319,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3V-hh-I5h">
-                                <rect key="frame" x="340" y="478" width="123" height="26"/>
+                                <rect key="frame" x="340" y="479" width="123" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="vyo-qR-mfQ">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1330,7 +1327,7 @@ DQ
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5dM-wd-a3b">
-                                <rect key="frame" x="51" y="514" width="56" height="17"/>
+                                <rect key="frame" x="51" y="515" width="56" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Product:" id="jXg-iO-nvB">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1346,7 +1343,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-hx-g1I">
-                                <rect key="frame" x="64" y="336" width="43" height="17"/>
+                                <rect key="frame" x="64" y="337" width="43" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Steps:" id="g32-sT-sCW">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1354,7 +1351,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ot3-1l-AkT">
-                                <rect key="frame" x="300" y="514" width="36" height="17"/>
+                                <rect key="frame" x="300" y="515" width="36" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Area:" id="sIn-by-GtW">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1362,7 +1359,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X7m-L6-qiF">
-                                <rect key="frame" x="340" y="507" width="123" height="26"/>
+                                <rect key="frame" x="340" y="508" width="123" height="26"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="iCo-sd-g26">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -1370,7 +1367,7 @@ DQ
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2T-ef-XlO">
-                                <rect key="frame" x="42" y="258" width="65" height="17"/>
+                                <rect key="frame" x="42" y="259" width="65" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Expected:" id="2i6-oc-rnU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1378,14 +1375,14 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xl3-yf-7kD">
-                                <rect key="frame" x="61" y="180" width="46" height="17"/>
+                                <rect key="frame" x="61" y="181" width="46" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Actual:" id="A8a-D2-Dbw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-B0-TXm">
                                 <rect key="frame" x="608" y="13" width="83" height="32"/>
                                 <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3gP-J4-dT6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1400,7 +1397,7 @@ DQ
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-FL-SCJ">
-                                <rect key="frame" x="504" y="514" width="53" height="17"/>
+                                <rect key="frame" x="504" y="515" width="53" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version:" id="a9l-yF-hvb">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1408,7 +1405,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwO-Mw-YFg">
-                                <rect key="frame" x="72" y="442" width="35" height="17"/>
+                                <rect key="frame" x="72" y="443" width="35" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title:" id="eHb-oB-kae">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1416,7 +1413,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slV-6o-OdD">
-                                <rect key="frame" x="466" y="485" width="91" height="17"/>
+                                <rect key="frame" x="466" y="486" width="91" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Configuration:" id="Rj3-QX-7Pe">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1424,10 +1421,10 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="QUk-rv-IAw">
-                                <rect key="frame" x="20" y="467" width="665" height="5"/>
+                                <rect key="frame" x="20" y="468" width="665" height="5"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Snb-fM-qhI">
-                                <rect key="frame" x="63" y="102" width="44" height="17"/>
+                                <rect key="frame" x="63" y="103" width="44" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Notes:" id="uKk-2r-HH3">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1435,7 +1432,10 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Wdf-dR-1TM" customClass="AttachmentDroppableView" customModule="Brisk" customModuleProvider="target">
-                                <rect key="frame" x="114" y="0.0" width="492" height="50"/>
+                                <rect key="frame" x="113" y="0.0" width="493" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FLh-Qg-gt8"/>
+                                </constraints>
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jeH-OT-VUN">
                                 <rect key="frame" x="108" y="13" width="138" height="32"/>
@@ -1456,7 +1456,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tso-uy-kbf">
-                                <rect key="frame" x="60" y="86" width="47" height="14"/>
+                                <rect key="frame" x="60" y="87" width="47" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="optional" id="1Zz-E2-eUe">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1495,12 +1495,13 @@ DQ
                             <constraint firstItem="tso-uy-kbf" firstAttribute="trailing" secondItem="Snb-fM-qhI" secondAttribute="trailing" id="FuG-Ob-bky"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="baseline" secondItem="bkT-Mr-Eu5" secondAttribute="baseline" id="HTL-3D-geU"/>
                             <constraint firstItem="l3V-hh-I5h" firstAttribute="baseline" secondItem="DnJ-2X-9qh" secondAttribute="baseline" id="J13-CA-cGh"/>
-                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="top" secondItem="SKw-6e-Fyl" secondAttribute="bottom" id="J4l-6k-fs0"/>
                             <constraint firstAttribute="trailing" secondItem="w1D-nw-4Gs" secondAttribute="trailing" constant="20" id="JCH-69-HmN"/>
                             <constraint firstItem="X7m-L6-qiF" firstAttribute="baseline" secondItem="Ot3-1l-AkT" secondAttribute="baseline" id="K0Y-vA-FEx"/>
-                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="leading" secondItem="SKw-6e-Fyl" secondAttribute="leading" id="KJE-TI-bAP"/>
+                            <constraint firstItem="c9v-yv-l5N" firstAttribute="top" secondItem="StP-3g-DTl" secondAttribute="top" id="Kvx-DN-j7Q"/>
                             <constraint firstItem="tzm-FL-SCJ" firstAttribute="baseline" secondItem="X7m-L6-qiF" secondAttribute="baseline" id="LVr-O8-NLU"/>
+                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="leading" secondItem="416-1P-0H2" secondAttribute="leading" id="LiM-ap-6e4"/>
                             <constraint firstItem="QUk-rv-IAw" firstAttribute="leading" secondItem="bkT-Mr-Eu5" secondAttribute="leading" id="McH-c7-sIJ"/>
+                            <constraint firstItem="Wdf-dR-1TM" firstAttribute="top" secondItem="416-1P-0H2" secondAttribute="bottom" id="OdI-Wi-yOO"/>
                             <constraint firstItem="bkT-Mr-Eu5" firstAttribute="top" secondItem="5dM-wd-a3b" secondAttribute="bottom" constant="12" id="Per-1z-j8K"/>
                             <constraint firstItem="DnJ-2X-9qh" firstAttribute="width" secondItem="Ws1-0o-O0p" secondAttribute="width" id="QK2-Ex-Ou8"/>
                             <constraint firstItem="OHe-Ov-n1g" firstAttribute="centerY" secondItem="EfJ-B0-TXm" secondAttribute="centerY" id="RVn-FP-BBM"/>
@@ -1509,14 +1510,12 @@ DQ
                             <constraint firstItem="EfJ-B0-TXm" firstAttribute="leading" secondItem="Dn1-lF-Xzt" secondAttribute="trailing" constant="8" symbolic="YES" id="WZm-Pt-jKF"/>
                             <constraint firstItem="tso-uy-kbf" firstAttribute="top" secondItem="Snb-fM-qhI" secondAttribute="bottom" constant="2" id="WjR-4c-pgR"/>
                             <constraint firstItem="X7m-L6-qiF" firstAttribute="width" secondItem="Ws1-0o-O0p" secondAttribute="width" id="XmE-Pi-c0s"/>
-                            <constraint firstItem="EfJ-B0-TXm" firstAttribute="top" secondItem="416-1P-0H2" secondAttribute="bottom" constant="8" id="Yzj-BA-LTb"/>
                             <constraint firstItem="416-1P-0H2" firstAttribute="top" secondItem="QUk-rv-IAw" secondAttribute="bottom" constant="8" id="aV2-G8-MYD"/>
                             <constraint firstItem="hDj-mq-FR4" firstAttribute="leading" secondItem="slV-6o-OdD" secondAttribute="trailing" constant="8" id="b4Y-Gx-oAF"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="top" secondItem="OBM-6V-JDI" secondAttribute="top" constant="20" id="bgL-zm-mS0"/>
                             <constraint firstItem="nzj-cZ-RzB" firstAttribute="leading" secondItem="jeH-OT-VUN" secondAttribute="trailing" constant="8" symbolic="YES" id="fMY-wC-gSK"/>
                             <constraint firstItem="5dM-wd-a3b" firstAttribute="trailing" secondItem="bkT-Mr-Eu5" secondAttribute="trailing" id="fQn-ru-RqY"/>
                             <constraint firstItem="Dn1-lF-Xzt" firstAttribute="baseline" secondItem="nzj-cZ-RzB" secondAttribute="baseline" id="fY0-vf-Wav"/>
-                            <constraint firstItem="6TN-hx-g1I" firstAttribute="top" secondItem="StP-3g-DTl" secondAttribute="bottom" constant="62" id="ffC-tg-aMC"/>
                             <constraint firstItem="Wsr-Nw-FTS" firstAttribute="top" secondItem="6TN-hx-g1I" secondAttribute="top" id="geR-58-b8b"/>
                             <constraint firstItem="l3V-hh-I5h" firstAttribute="leading" secondItem="X7m-L6-qiF" secondAttribute="leading" id="gjH-8M-TUZ"/>
                             <constraint firstItem="bkT-Mr-Eu5" firstAttribute="leading" secondItem="OBM-6V-JDI" secondAttribute="leading" constant="20" id="gyU-66-kyS"/>
@@ -1540,7 +1539,6 @@ DQ
                             <constraint firstAttribute="trailing" secondItem="EfJ-B0-TXm" secondAttribute="trailing" constant="20" id="yKM-xf-SNs"/>
                             <constraint firstItem="QUk-rv-IAw" firstAttribute="trailing" secondItem="hDj-mq-FR4" secondAttribute="trailing" id="yeC-uz-3ii"/>
                             <constraint firstItem="Ot3-1l-AkT" firstAttribute="baseline" secondItem="Ws1-0o-O0p" secondAttribute="baseline" id="zMh-Ze-NRu"/>
-                            <constraint firstItem="StP-3g-DTl" firstAttribute="top" secondItem="lwO-Mw-YFg" secondAttribute="bottom" constant="10" id="zhZ-Zb-gBZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1566,7 +1564,7 @@ DQ
                 </viewController>
                 <customObject id="3eD-Z8-0kh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74.5" y="946.5"/>
+            <point key="canvasLocation" x="74.5" y="946"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="2Dq-t1-K7p">
