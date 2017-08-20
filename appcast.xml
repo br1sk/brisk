@@ -6,6 +6,13 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
+      <title>Version 1.1.1</title>
+      <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/br1sk/brisk/1.1.1/CHANGELOG.md</sparkle:releaseNotesLink>
+      <pubDate>Sun, 20 Aug 2017 15:26:28 -0700</pubDate>
+      <enclosure url="https://github.com/br1sk/brisk/releases/download/1.1.1/Brisk.app.tar.gz" sparkle:version="1.1.1" length="4972208" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCyF3jkqtVj7/B2hWuAmpzx6fxkIAIUbY8WT74AAa7X9APb/WbANqS+WkQ=" />
+    </item>
+    <item>
       <title>Version 1.1.0</title>
       <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://raw.githubusercontent.com/br1sk/brisk/master/CHANGELOG.md</sparkle:releaseNotesLink>
