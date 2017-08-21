@@ -2,8 +2,8 @@ To release Brisk there are a few steps you need to take:
 
 1. Update the Version and Build in the `Info.plist` to the version from
    the new release
-1. Create a new section in the `CHANGELOG.md`, and group everything that
-   was previously under `master` under the new version
+1. Change the `master` section in the `CHANGELOG.md` to match the new
+   release version. Don't add a new section for master changes yet
 1. Commit both those changes on master with the message `Bump version
    $VERSION`
 1. Tag the new commit with the version number of the release. Push the
@@ -24,16 +24,18 @@ To release Brisk there are a few steps you need to take:
 1. Upload `Brisk.app.tar.gz` to the release
 1. Save / create the release
 1. In the `appcast.xml`, duplicate the top item, and paste it above
-1. Change the title, enclosure url, `sparkle:version` to the new version
-1. Get the size of the new `Brisk.app.tar.gz` with `stat --printf="%s"
-   Brisk.app.tar.gz`. Replace `length` with that
+1. Change the title, enclosure url, `sparkle:version`,
+   `releaseNotesLink` url to the new version
+1. Get the size of the new `Brisk.app.tar.gz` with
+  `stat --printf="%s" Brisk.app.tar.gz`. Replace `length` with that
 1. Sign the release with `path/to/sparkle/sign_update Brisk.app.tar.gz
-   path/to/dsa_priv.pem`. Replace the `sparkle:dsaSignature`
-   with that.
-1. Update the `pubDate` with the output of `date +"%a, %d %b %G %H:%M:%S
-   %z"`
+   path/to/dsa_priv.pem`. Replace the `sparkle:dsaSignature` with that
+1. Update the `pubDate` with the output of
+  `date +"%a, %d %b %G %H:%M:%S %z"`
 1. Commit the appcast changes with the message `Update appcast for
    $VERSION`. Push the commit (note GitHub takes some time to propagate
    these changes)
+1. Add a new `master` section in the `CHANGELOG.md` for future changes
+   and commit it
 1. Submit a PR to update the Brisk formula in homebrew-cask
 1. Celebrate!
