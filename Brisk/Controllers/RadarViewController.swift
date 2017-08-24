@@ -73,6 +73,11 @@ final class RadarViewController: ViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.delegate = self
+
+        // Workaround for #30, #33 (filed as rdar://problem/34061891)
+        // Apparently, resizing the window makes the text views start redrawing
+        // themselves again
+        self.view.window.flatMap { $0.setContentSize($0.contentMinSize) }
     }
 
     func restore(_ radar: Radar) {
