@@ -6,7 +6,9 @@
 
 ## Bug Fixes
 
-- None.
+- Fix layout freezing issues
+  [issue](https://github.com/br1sk/brisk/issues/33)
+  [change](https://github.com/br1sk/brisk/pull/120)
 
 # 1.1.1
 
