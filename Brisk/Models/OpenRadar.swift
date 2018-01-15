@@ -34,8 +34,8 @@ public extension String {
         var lastSetter: ((inout OpenRadar, String) -> Void)?
 
         for component in components {
-            guard component.characters.last == ":",
-                let setter = sectionToSetter[String(component.characters.dropLast()).lowercased()] else
+            guard component.last == ":",
+                let setter = sectionToSetter[String(component.dropLast()).lowercased()] else
             {
                 parts.append(component)
                 continue
