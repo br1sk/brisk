@@ -404,13 +404,16 @@
 				TargetAttributes = {
 					C28001D41D148AB800569A72 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0920;
 					};
 					C28001E51D148AB800569A72 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0920;
 						TestTargetID = C28001D41D148AB800569A72;
 					};
 					C28001F01D148AB800569A72 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0920;
 						TestTargetID = C28001D41D148AB800569A72;
 					};
 				};
@@ -718,7 +721,8 @@
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -732,7 +736,8 @@
 				INFOPLIST_FILE = Brisk/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.Brisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -746,7 +751,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brisk.app/Contents/MacOS/Brisk";
 			};
 			name = Debug;
@@ -761,7 +767,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks' '@loader_path/../Frameworks'";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brisk.app/Contents/MacOS/Brisk";
 			};
 			name = Release;
@@ -773,7 +780,8 @@
 				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -784,7 +792,8 @@
 				INFOPLIST_FILE = BriskUITests/Resources/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brisk.BriskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -11,7 +11,7 @@ final class AttachmentDroppableView: NSView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.register(forDraggedTypes: [NSFilenamesPboardType])
+        self.registerForDraggedTypes([NSFilenamesPboardType])
     }
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {

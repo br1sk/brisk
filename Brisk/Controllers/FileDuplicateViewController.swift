@@ -41,7 +41,7 @@ final class FileDuplicateViewController: ViewController {
                 }
 
                 guard let radar = try? Radar(openRadar: json),
-                    let document = NSDocumentController.shared().makeRadarDocument() else
+                    let document = NSDocumentController.shared.makeRadarDocument() else
                 {
                     self?.showError(title: "Invalid OpenRadar",
                                     message: "OpenRadar is missing required fields")
@@ -49,7 +49,7 @@ final class FileDuplicateViewController: ViewController {
                 }
 
                 document.makeWindowControllers(for: radar)
-                NSDocumentController.shared().addDocument(document)
+                NSDocumentController.shared.addDocument(document)
                 document.showWindows()
 
                 self?.view.window?.windowController?.close()

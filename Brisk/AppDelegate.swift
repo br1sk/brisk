@@ -28,7 +28,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             return true
         }
 
-        NSDocumentController.shared().newDocument(self)
+        NSDocumentController.shared.newDocument(self)
         return false
     }
 
@@ -36,10 +36,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         for filename in filenames {
             let url = URL(fileURLWithPath: filename)
 
-            if let openDocument = NSDocumentController.shared().document(for: url) {
+            if let openDocument = NSDocumentController.shared.document(for: url) {
                 openDocument.showWindows()
-            } else if let document = NSDocumentController.shared().makeRadarDocument(withContentsOf: url) {
-                NSDocumentController.shared().addDocument(document)
+            } else if let document = NSDocumentController.shared.makeRadarDocument(withContentsOf: url) {
+                NSDocumentController.shared.addDocument(document)
                 document.showWindows()
             }
         }
@@ -68,7 +68,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func setupStatusItem() {
-        let image = NSImage(named: "StatusItemIcon")!
+        let image = NSImage(named: NSImage.Name(rawValue: "StatusItemIcon"))!
         self.statusItem = NSStatusItem.create(image: image, menu: self.statusMenu)
     }
 
