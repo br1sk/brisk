@@ -198,8 +198,7 @@ final class RadarViewController: ViewController {
     private func addAttachment(to window: NSWindow) {
         let panel = NSOpenPanel()
         panel.beginSheetModal(for: window) { [weak panel] response in
-            // TODO: swift4
-            guard response.rawValue == NSFileHandlingPanelOKButton, let url = panel?.urls.first else {
+            guard response == .OK, let url = panel?.urls.first else {
                 return
             }
 
@@ -256,8 +255,7 @@ final class RadarViewController: ViewController {
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 22))
         alert.accessoryView = field
         alert.beginSheetModal(for: window) { [weak self] response in
-            // TODO: swift4
-            if response == NSApplication.ModalResponse.alertFirstButtonReturn {
+            if response == .alertFirstButtonReturn {
                 if field.stringValue.isEmpty {
                     self?.askForTwoFactorCode(closure: closure)
                 } else {
