@@ -11,7 +11,7 @@ final class AttachmentDroppableView: NSView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.registerForDraggedTypes([NSFilenamesPboardType])
+        self.registerForDraggedTypes([makeFileURLType()])
     }
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
@@ -36,7 +36,7 @@ final class AttachmentDroppableView: NSView {
 
 fileprivate extension NSDraggingInfo {
     private var files: [String] {
-        return self.draggingPasteboard().propertyList(forType: NSFilenamesPboardType) as? [String] ?? []
+        return self.draggingPasteboard().propertyList(forType: makeFileURLType()) as? [String] ?? []
     }
 
     fileprivate func getAttachments() throws -> [Attachment] {
@@ -45,5 +45,13 @@ fileprivate extension NSDraggingInfo {
         }
 
         return try self.files.map { try Attachment(url: URL(fileURLWithPath: $0)) }
+    }
+}
+
+private func makeFileURLType() -> NSPasteboard.PasteboardType {
+    if #available(OSX 10.13, *) {
+        return NSPasteboard.PasteboardType.fileURL
+    } else {
+        return NSPasteboard.PasteboardType("public.file-url")
     }
 }
