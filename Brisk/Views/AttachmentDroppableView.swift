@@ -11,7 +11,7 @@ final class AttachmentDroppableView: NSView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.registerForDraggedTypes([makeFileURLType()])
+        self.registerForDraggedTypes([makeFileNameType()])
     }
 
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
@@ -35,8 +35,9 @@ final class AttachmentDroppableView: NSView {
 }
 
 fileprivate extension NSDraggingInfo {
-    private var files: [String] {
-        return self.draggingPasteboard().propertyList(forType: makeFileURLType()) as? [String] ?? []
+    private var files: [URL] {
+        let asStrings = self.draggingPasteboard().propertyList(forType: makeFileNameType()) as? [String] ?? []
+        return asStrings.map { URL(fileURLWithPath: $0) }
     }
 
     fileprivate func getAttachments() throws -> [Attachment] {
@@ -44,14 +45,11 @@ fileprivate extension NSDraggingInfo {
             throw AttachmentDropError.noAttachments
         }
 
-        return try self.files.map { try Attachment(url: URL(fileURLWithPath: $0)) }
+        return try self.files.map { try Attachment(url: $0) }
     }
 }
 
-private func makeFileURLType() -> NSPasteboard.PasteboardType {
-    if #available(OSX 10.13, *) {
-        return NSPasteboard.PasteboardType.fileURL
-    } else {
-        return NSPasteboard.PasteboardType("public.file-url")
-    }
+private func makeFileNameType() -> NSPasteboard.PasteboardType {
+    // in 10.13 there is more modern NSPasteboard.PasteboardType.fileURL or previously NSPasteboard.PasteboardType("public.file-url"), but so far couldn't find a way to read them from draggingPasteboard()
+    return NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")
 }
