@@ -115,10 +115,10 @@ final class RadarViewController: ViewController {
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
             title: self.titleTextField.stringValue,
-            description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
-            expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
+            description: self.descriptionTextView.string, steps: self.stepsTextView.string,
+            expected: self.expectedTextView.string, actual: self.actualTextView.string,
             configuration: self.configurationTextField.stringValue,
-            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue,
+            version: self.versionTextField.stringValue, notes: self.notesTextView.string,
             attachments: self.attachments, area: area
         )
     }
