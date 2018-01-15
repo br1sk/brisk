@@ -101,7 +101,7 @@ final class RadarViewController: ViewController {
 
         self.enableSubmitIfValid()
         self.updateTitleFromDocument()
-        self.postToOpenRadarButton.state = NSOffState
+        self.postToOpenRadarButton.state = .off
         self.document?.updateChangeCount(.changeCleared)
     }
 
@@ -147,7 +147,7 @@ final class RadarViewController: ViewController {
             closure: { [weak self] result in
                 switch result {
                 case .success(let radarID):
-                    guard self?.postToOpenRadarButton.state == NSOnState,
+                    guard self?.postToOpenRadarButton.state == .on,
                         let (_, token) = Keychain.get(.openRadar) else
                     {
                         self?.submitRadarCompletion(success: true)
@@ -198,6 +198,7 @@ final class RadarViewController: ViewController {
     private func addAttachment(to window: NSWindow) {
         let panel = NSOpenPanel()
         panel.beginSheetModal(for: window) { [weak panel] response in
+            // TODO: swift4
             guard response.rawValue == NSFileHandlingPanelOKButton, let url = panel?.urls.first else {
                 return
             }
@@ -255,6 +256,7 @@ final class RadarViewController: ViewController {
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 22))
         alert.accessoryView = field
         alert.beginSheetModal(for: window) { [weak self] response in
+            // TODO: swift4
             if response == NSApplication.ModalResponse.alertFirstButtonReturn {
                 if field.stringValue.isEmpty {
                     self?.askForTwoFactorCode(closure: closure)
@@ -275,7 +277,7 @@ final class RadarViewController: ViewController {
         self.postToOpenRadarButton.toolTip = canPostToOpenRadar ? nil : "Open Preferences to add an account"
 
         if !canPostToOpenRadar {
-            self.postToOpenRadarButton.state = NSOffState
+            self.postToOpenRadarButton.state = .off
         }
     }
 
