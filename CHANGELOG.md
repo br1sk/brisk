@@ -2,7 +2,7 @@
 
 ## Enhancements
 
-- None.
+- Update project to Swift 4.0 and Xcode 9.2
 
 ## Bug Fixes
 
