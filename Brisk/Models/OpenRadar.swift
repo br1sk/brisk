@@ -7,7 +7,7 @@ private let sectionToKeyPath: [String: WritableKeyPath<OpenRadar, String?>] = [
     "observed results": \.appendingToActual,
     "steps to reproduce": \.steps,
     "summary": \.description,
-    "version": \.version
+    "version": \.version,
 ]
 
 public struct OpenRadar {
@@ -20,8 +20,8 @@ public struct OpenRadar {
     public var steps: String?
     public var version: String?
     fileprivate var appendingToActual: String? {
-        get { return actual }
-        set { actual = appendOrReturn(actual, newValue) }
+        get { return self.actual }
+        set { self.actual = appendOrReturn(self.actual, newValue) }
     }
 
     fileprivate init() {}
