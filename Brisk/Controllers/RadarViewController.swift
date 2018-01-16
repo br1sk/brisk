@@ -143,9 +143,9 @@ final class RadarViewController: ViewController {
         let appleRadar = Sonar(service: .appleRadar(appleID: username, password: password))
         appleRadar.loginThenCreate(
             radar: radar,
-            getTwoFactorCode: { [weak self] closure in self?.askForTwoFactorCode(closure: closure) })
-        { [weak self] result in
-            switch result {
+            getTwoFactorCode: { [weak self] closure in self?.askForTwoFactorCode(closure: closure) },
+            closure: { [weak self] result in
+                switch result {
                 case .success(let radarID):
                     guard self?.postToOpenRadarButton.state == NSOnState,
                         let (_, token) = Keychain.get(.openRadar) else
@@ -160,20 +160,20 @@ final class RadarViewController: ViewController {
                         radar: radar, getTwoFactorCode: { closure in
                             assertionFailure("Didn't handle Open Radar two factor")
                             closure(nil)
-                    }) { [weak self] result in
+                    }, closure: { [weak self] result in
                         switch result {
-                            case .success:
-                                self?.submitRadarCompletion(success: true)
-                            case .failure(let error):
-                                self?.showError(message: error.message)
-                                self?.submitRadarCompletion(success: false)
+                        case .success:
+                            self?.submitRadarCompletion(success: true)
+                        case .failure(let error):
+                            self?.showError(message: error.message)
+                            self?.submitRadarCompletion(success: false)
                         }
-                    }
+                    })
                 case .failure(let error):
                     self?.showError(message: error.message)
                     self?.submitRadarCompletion(success: false)
-            }
-        }
+                }
+            })
     }
 
     @IBAction private func productChanged(_ sender: NSPopUpButton) {

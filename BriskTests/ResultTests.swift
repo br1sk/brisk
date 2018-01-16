@@ -16,10 +16,10 @@ final class ResultTests: XCTestCase {
     func testCreatingError() {
         let result = Result<String, TestError>(value: nil, failWith: TestError())
         switch result {
-            case .failure:
-                break
-            default:
-                XCTFail("Didn't create error")
+        case .failure:
+            break
+        default:
+            XCTFail("Didn't create error")
         }
     }
 }

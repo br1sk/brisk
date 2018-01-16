@@ -28,7 +28,7 @@ test: ensure_pods
 
 .PHONY: lint
 lint: ensure_swiftlint
-	swiftlint lint --strict 2> /dev/null
+	./swiftlint/swiftlint lint --strict 2> /dev/null
 
 # Internal commands
 
@@ -43,12 +43,16 @@ install_pods:
 
 .PHONY: ensure_swiftlint
 ensure_swiftlint:
-	diff <(swiftlint version) <(cat .swiftlint-version) > /dev/null || $(MAKE) install_swiftlint
+	diff <(./swiftlint/swiftlint version) <(cat .swiftlint-version) > /dev/null || $(MAKE) install_swiftlint
 
 .PHONY: install_swiftlint
 install_swiftlint:
-	curl --location https://github.com/realm/SwiftLint/releases/download/0.17.0/SwiftLint.pkg --output SwiftLint.pkg
-	sudo installer -pkg SwiftLint.pkg -target /
+	rm -rf swiftlint
+	mkdir swiftlint
+	curl --location --fail \
+		https://github.com/realm/SwiftLint/releases/download/"$(shell cat .swiftlint-version)"/portable_swiftlint.zip \
+		--output swiftlint/swiftlint.zip
+	unzip -d swiftlint swiftlint/swiftlint.zip > /dev/null
 
 .PHONY: ci
 ci:

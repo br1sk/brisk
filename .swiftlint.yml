@@ -5,6 +5,7 @@ included:
 disabled_rules:
   - force_cast
   - opening_brace
+  - prohibited_super_call
   - type_name
   - variable_name
 opt_in_rules:
