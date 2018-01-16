@@ -1,6 +1,6 @@
 import AppKit
 
-private let kMainStoryboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+private let kMainStoryboard = NSStoryboard(name: .init(rawValue: "Main"), bundle: nil)
 
 extension NSStoryboard {
     static var main: NSStoryboard {
