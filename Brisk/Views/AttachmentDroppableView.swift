@@ -50,6 +50,8 @@ fileprivate extension NSDraggingInfo {
 }
 
 private func makeFileNameType() -> NSPasteboard.PasteboardType {
-    // in 10.13 there is more modern NSPasteboard.PasteboardType.fileURL or previously NSPasteboard.PasteboardType("public.file-url"), but so far couldn't find a way to read them from draggingPasteboard()
+    // in 10.13 there is more modern NSPasteboard.PasteboardType.fileURL or previously
+    // NSPasteboard.PasteboardType("public.file-url"), but so far couldn't find a way
+    // to read them from draggingPasteboard()
     return NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")
 }

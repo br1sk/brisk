@@ -8,6 +8,6 @@ extension NSStoryboard {
     }
 
     func instantiateWindowController(identifier: String) -> NSWindowController {
-        return self.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: identifier)) as! NSWindowController
+        return self.instantiateController(withIdentifier: .init(rawValue: identifier)) as! NSWindowController
     }
 }
