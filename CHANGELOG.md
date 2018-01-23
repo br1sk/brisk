@@ -2,7 +2,8 @@
 
 ## Enhancements
 
-- None.
+- Update project to Swift 4.0 and Xcode 9.2
+  [change](https://github.com/br1sk/brisk/pull/126)
 
 ## Bug Fixes
 

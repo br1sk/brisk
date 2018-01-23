@@ -101,7 +101,7 @@ final class RadarViewController: ViewController {
 
         self.enableSubmitIfValid()
         self.updateTitleFromDocument()
-        self.postToOpenRadarButton.state = NSOffState
+        self.postToOpenRadarButton.state = .off
         self.document?.updateChangeCount(.changeCleared)
     }
 
@@ -115,10 +115,10 @@ final class RadarViewController: ViewController {
         return Radar(
             classification: classification, product: product, reproducibility: reproducibility,
             title: self.titleTextField.stringValue,
-            description: self.descriptionTextView.stringValue, steps: self.stepsTextView.stringValue,
-            expected: self.expectedTextView.stringValue, actual: self.actualTextView.stringValue,
+            description: self.descriptionTextView.string, steps: self.stepsTextView.string,
+            expected: self.expectedTextView.string, actual: self.actualTextView.string,
             configuration: self.configurationTextField.stringValue,
-            version: self.versionTextField.stringValue, notes: self.notesTextView.stringValue,
+            version: self.versionTextField.stringValue, notes: self.notesTextView.string,
             attachments: self.attachments, area: area
         )
     }
@@ -147,7 +147,7 @@ final class RadarViewController: ViewController {
             closure: { [weak self] result in
                 switch result {
                 case .success(let radarID):
-                    guard self?.postToOpenRadarButton.state == NSOnState,
+                    guard self?.postToOpenRadarButton.state == .on,
                         let (_, token) = Keychain.get(.openRadar) else
                     {
                         self?.submitRadarCompletion(success: true)
@@ -198,7 +198,7 @@ final class RadarViewController: ViewController {
     private func addAttachment(to window: NSWindow) {
         let panel = NSOpenPanel()
         panel.beginSheetModal(for: window) { [weak panel] response in
-            guard response == NSFileHandlingPanelOKButton, let url = panel?.urls.first else {
+            guard response == .OK, let url = panel?.urls.first else {
                 return
             }
 
@@ -255,7 +255,7 @@ final class RadarViewController: ViewController {
         let field = NSTextField(frame: NSRect(x: 0, y: 0, width: 100, height: 22))
         alert.accessoryView = field
         alert.beginSheetModal(for: window) { [weak self] response in
-            if response == NSAlertFirstButtonReturn {
+            if response == .alertFirstButtonReturn {
                 if field.stringValue.isEmpty {
                     self?.askForTwoFactorCode(closure: closure)
                 } else {
@@ -275,7 +275,7 @@ final class RadarViewController: ViewController {
         self.postToOpenRadarButton.toolTip = canPostToOpenRadar ? nil : "Open Preferences to add an account"
 
         if !canPostToOpenRadar {
-            self.postToOpenRadarButton.state = NSOffState
+            self.postToOpenRadarButton.state = .off
         }
     }
 

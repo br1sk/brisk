@@ -7,7 +7,7 @@ struct GlobalHotKey {
         // Register event handler
         var eventSpec = EventTypeSpec(eventClass: OSType(kEventClassKeyboard),
                                       eventKind: UInt32(kEventHotKeyReleased))
-        InstallEventHandler(GetApplicationEventTarget(), { _ in
+        InstallEventHandler(GetApplicationEventTarget(), { _, _, _  in
             return GlobalHotKey.hotKeyTriggered()
         }, 1, &eventSpec, nil, nil)
 
@@ -22,7 +22,7 @@ struct GlobalHotKey {
 
     // Create new document when hot key is triggered
     private static func hotKeyTriggered() -> OSStatus {
-        NSDocumentController.shared().newDocument(nil)
+        NSDocumentController.shared.newDocument(nil)
         return noErr
     }
 }

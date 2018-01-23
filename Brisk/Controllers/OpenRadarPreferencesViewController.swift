@@ -17,7 +17,7 @@ final class OpenRadarPreferencesViewController: ViewController {
     }
 
     @IBAction private func getAPIKey(_ sender: Any) {
-        NSWorkspace.shared().open(kAPIKeyURL)
+        NSWorkspace.shared.open(kAPIKeyURL)
     }
 
     fileprivate func saveCurrentToken() {

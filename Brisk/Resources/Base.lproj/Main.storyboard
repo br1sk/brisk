@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -750,6 +750,9 @@
                         <rect key="contentRect" x="196" y="239" width="705" height="549"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="705" height="549"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="OK4-W3-Mqc"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="HUy-04-wVn" kind="relationship" relationship="window.shadowedContentViewController" id="lMg-GW-mhv"/>
@@ -767,6 +770,9 @@
                         <windowStyleMask key="styleMask" titled="YES"/>
                         <rect key="contentRect" x="196" y="240" width="291" height="143"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="rNu-aq-ZAA" id="6Ps-Ug-mg4"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="rP9-PH-ZAn" kind="relationship" relationship="window.shadowedContentViewController" id="sfO-Yu-PgS"/>
@@ -873,10 +879,13 @@ DQ
             <objects>
                 <windowController showSeguePresentationStyle="single" id="zOe-Vb-W6F" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="hXh-7k-S94">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="zOe-Vb-W6F" id="Vo1-10-1R5"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="BhG-02-uGX" kind="relationship" relationship="window.shadowedContentViewController" id="W5X-xC-Jte"/>
@@ -906,6 +915,7 @@ DQ
                         </connections>
                     </tabView>
                     <connections>
+                        <outlet property="tabView" destination="EE6-pS-Eyp" id="szk-9O-eCf"/>
                         <segue destination="9Nh-eM-d2p" kind="relationship" relationship="tabItems" id="xB5-jB-jeT"/>
                         <segue destination="UrK-pc-2Bl" kind="relationship" relationship="tabItems" id="x6C-aZ-3qE"/>
                         <segue destination="A5r-df-S82" kind="relationship" relationship="tabItems" id="1kW-06-Wow"/>
@@ -1139,7 +1149,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WH8-h7-UQ2" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WH8-h7-UQ2" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1168,7 +1178,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="NFX-5c-vMY" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="NFX-5c-vMY" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1197,7 +1207,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Y7a-Qh-n0G" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Y7a-Qh-n0G" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1226,7 +1236,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="uI0-Jp-4xg" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="uI0-Jp-4xg" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1255,7 +1265,7 @@ DQ
                                             <rect key="frame" x="1" y="1" width="570" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SKw-6e-Fyl" customClass="TextView" customModule="Brisk" customModuleProvider="target">
+                                                <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SKw-6e-Fyl" customClass="TextView" customModule="Brisk" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1447,7 +1457,7 @@ DQ
                                     <action selector="toggleAttachment:" target="HUy-04-wVn" id="BAJ-Lk-IxX"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-cZ-RzB">
                                 <rect key="frame" x="245" y="23" width="191" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="No Attachment" id="C9t-RF-qkI">
                                     <font key="font" metaFont="system"/>
@@ -1455,7 +1465,7 @@ DQ
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tso-uy-kbf">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tso-uy-kbf">
                                 <rect key="frame" x="60" y="87" width="47" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="optional" id="1Zz-E2-eUe">
                                     <font key="font" metaFont="smallSystem"/>
@@ -1576,6 +1586,9 @@ DQ
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="195" y="240" width="300" height="111"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                        <connections>
+                            <outlet property="delegate" destination="D64-kD-tcp" id="ww2-CW-zNs"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="Xni-wx-69z" kind="relationship" relationship="window.shadowedContentViewController" id="f7D-zp-r9L"/>
@@ -1593,7 +1606,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="300" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfU-h5-WcA">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cfU-h5-WcA">
                                 <rect key="frame" x="84" y="49" width="196" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="6pe-UU-vnv">
                                     <font key="font" metaFont="system"/>
@@ -1604,7 +1617,7 @@ DQ
                                     <outlet property="delegate" destination="Xni-wx-69z" id="Bcg-WF-ATB"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLe-VI-Kfh">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vLe-VI-Kfh">
                                 <rect key="frame" x="18" y="52" width="60" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Radar ID:" id="aMo-Ie-IPB">
                                     <font key="font" metaFont="system"/>
@@ -1658,7 +1671,7 @@ DQ
         <image name="radar" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XTz-8q-MhS"/>
         <segue reference="y0R-3a-mT6"/>
+        <segue reference="XTz-8q-MhS"/>
     </inferredMetricsTieBreakers>
 </document>

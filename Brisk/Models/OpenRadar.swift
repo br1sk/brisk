@@ -1,18 +1,15 @@
-private let sectionToSetter: [String: (inout OpenRadar, String) -> Void] = [
-    "actual results": { $0.actual = appendOrReturn($0.actual, $1) },
-    "area": { $0.areaString = $1 },
-    "configuration": { $0.configuration = $1 },
-    "expected results": { $0.expected = $1 },
-    "notes": { $0.notes = $1 },
-    "observed results": { $0.actual = appendOrReturn($0.actual, $1) },
-    "steps to reproduce": { $0.steps = $1 },
-    "summary": { $0.description = $1 },
-    "version": { $0.version = $1 },
+private let sectionToKeyPath: [String: WritableKeyPath<OpenRadar, String?>] = [
+    "actual results": \.appendingToActual,
+    "area": \.areaString,
+    "configuration": \.configuration,
+    "expected results": \.expected,
+    "notes": \.notes,
+    "observed results": \.appendingToActual,
+    "steps to reproduce": \.steps,
+    "summary": \.description,
+    "version": \.version,
 ]
 
-#if swift(>=4.0)
-Change this to use keypaths instead
-#endif
 public struct OpenRadar {
     public var actual: String?
     public var areaString: String?
@@ -22,6 +19,10 @@ public struct OpenRadar {
     public var notes: String?
     public var steps: String?
     public var version: String?
+    fileprivate var appendingToActual: String? {
+        get { return self.actual }
+        set { self.actual = appendOrReturn(self.actual, newValue) }
+    }
 
     fileprivate init() {}
 }
@@ -31,28 +32,30 @@ public extension String {
         let components = self.components(separatedBy: "\r\n")
         var openRadar = OpenRadar()
         var parts = [String]()
-        var lastSetter: ((inout OpenRadar, String) -> Void)?
+        var lastKeypath: WritableKeyPath<OpenRadar, String?>?
 
         for component in components {
-            guard component.characters.last == ":",
-                let setter = sectionToSetter[String(component.characters.dropLast()).lowercased()] else
+            guard component.last == ":",
+                let keyPath = sectionToKeyPath[String(component.dropLast()).lowercased()] else
             {
                 parts.append(component)
                 continue
             }
 
-            if !parts.isEmpty && lastSetter == nil {
+            if !parts.isEmpty && lastKeypath == nil {
                 throw OpenRadarParsingError.invalidFormat
             }
 
-            lastSetter?(&openRadar, parts.joined(separator: "\r\n").strip())
+            if let lastKeypath = lastKeypath {
+                openRadar[keyPath: lastKeypath] = parts.joined(separator: "\r\n").strip()
+            }
             parts = []
-            lastSetter = setter
+            lastKeypath = keyPath
         }
 
-        if let setter = lastSetter {
+        if let keyPath = lastKeypath {
             if !parts.isEmpty {
-                setter(&openRadar, parts.joined(separator: "\r\n").strip())
+                openRadar[keyPath: keyPath] = parts.joined(separator: "\r\n").strip()
             }
         } else {
             throw OpenRadarParsingError.invalidFormat

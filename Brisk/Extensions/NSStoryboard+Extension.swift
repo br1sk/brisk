@@ -1,6 +1,6 @@
 import AppKit
 
-private let kMainStoryboard = NSStoryboard(name: "Main", bundle: nil)
+private let kMainStoryboard = NSStoryboard(name: .init(rawValue: "Main"), bundle: nil)
 
 extension NSStoryboard {
     static var main: NSStoryboard {
@@ -8,6 +8,6 @@ extension NSStoryboard {
     }
 
     func instantiateWindowController(identifier: String) -> NSWindowController {
-        return self.instantiateController(withIdentifier: identifier) as! NSWindowController
+        return self.instantiateController(withIdentifier: .init(rawValue: identifier)) as! NSWindowController
     }
 }
