@@ -22,7 +22,7 @@ final class AuthenticationViewController: ViewController {
     // MARK: - Private Methods
 
     @IBAction private func login(_ sender: Any) {
-        let username = self.appleIDTextField.stringValue
+        let username = self.appleIDTextField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = self.passwordTextField.stringValue
         Keychain.set(username: username, password: password, forKey: .radar)
         StoryboardRouter.reloadTopWindowController()
