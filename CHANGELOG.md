@@ -7,7 +7,9 @@
 
 ## Bug Fixes
 
-- None.
+- Remove whitespace from Apple ID login
+ +  [issue](https://github.com/br1sk/brisk/issues/133)
+ +  [change](https://github.com/br1sk/brisk/pull/134)
 
 # 1.1.2
 
