@@ -24,10 +24,4 @@ public extension Attachment {
 
         self.init(filename: filename, mimeType: mimeType, data: data)
     }
-
-    public init(filename: String, mimeType: String, data: Data) {
-        self.filename = filename
-        self.mimeType = mimeType
-        self.data = data
-    }
 }

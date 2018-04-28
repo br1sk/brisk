@@ -2,6 +2,9 @@
 
 ## Enhancements
 
+- Update project to Swift 4.1 and Xcode 9.3
+  [change](https://github.com/br1sk/brisk/pull/135)
+
 - Update project to Swift 4.0 and Xcode 9.2
   [change](https://github.com/br1sk/brisk/pull/126)
 

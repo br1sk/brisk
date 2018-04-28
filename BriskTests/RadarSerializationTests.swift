@@ -2,13 +2,6 @@ import Brisk
 import Sonar
 import XCTest
 
-private extension Area {
-    init(appleIdentifier: Int, name: String) {
-        self.appleIdentifier = appleIdentifier
-        self.name = name
-    }
-}
-
 final class RadarSerializationTests: XCTestCase {
     func testSerializingRadar() {
         let attachment = Attachment(filename: "foo.png", mimeType: "image/png",

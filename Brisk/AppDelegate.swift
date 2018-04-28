@@ -91,7 +91,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         if let radarID = radarLink.flatMap(radarID(from:)) {
             _ = self.dupeRadarMenuItem.target!.perform(self.dupeRadarMenuItem.action!)
             let viewController = NSApp.windows
-                .flatMap { $0.contentViewController as? FileDuplicateViewController }
+                .compactMap { $0.contentViewController as? FileDuplicateViewController }
                 .first!
             viewController.searchForOpenRadar(text: radarID)
         } else {

@@ -43,7 +43,7 @@ public extension Radar {
         let areaID = json["area_id"] as? Int
         let applicationID = json["application_id"] as? String
         let userID = json["user_id"] as? String
-        let attachments = (json["attachments"] as? [[String: Any]] ?? []).flatMap(Attachment.init)
+        let attachments = (json["attachments"] as? [[String: Any]] ?? []).compactMap(Attachment.init)
 
         let classification = Classification.All.first { $0.appleIdentifier == classificationID }
             ?? Classification.All.first!
