@@ -13,7 +13,9 @@
 - Update Sonar
   [issue 1](https://github.com/br1sk/brisk/issues/136)
   [issue 2](https://github.com/br1sk/brisk/issues/137)
-  [change](https://github.com/br1sk/brisk/pull/138)
+  [issue 3](https://github.com/br1sk/brisk/issues/137)
+  [change 1](https://github.com/br1sk/brisk/pull/138)
+  [change 2](https://github.com/br1sk/brisk/pull/140)
 
 - Remove whitespace from Apple ID login
   [issue](https://github.com/br1sk/brisk/issues/133)
