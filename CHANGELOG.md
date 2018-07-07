@@ -11,8 +11,8 @@
 ## Bug Fixes
 
 - Remove whitespace from Apple ID login
- +  [issue](https://github.com/br1sk/brisk/issues/133)
- +  [change](https://github.com/br1sk/brisk/pull/134)
+  [issue](https://github.com/br1sk/brisk/issues/133)
+  [change](https://github.com/br1sk/brisk/pull/134)
 
 # 1.1.2
 
@@ -49,7 +49,7 @@
   [issue](https://github.com/br1sk/brisk/issues/4)
   [change](https://github.com/br1sk/brisk/pull/107)
 
-- Add drag and drop attachment support 
+- Add drag and drop attachment support
   [issue](https://github.com/br1sk/brisk/issues/35)
   [change](https://github.com/br1sk/brisk/pull/109)
 
