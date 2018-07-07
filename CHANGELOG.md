@@ -1,3 +1,13 @@
+# master
+
+## Enhancements
+
+- None.
+
+## Bug Fixes
+
+- None.
+
 # 1.2.0
 
 ## Enhancements
