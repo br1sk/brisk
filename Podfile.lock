@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Sonar:
-    :commit: eccff834ccef886f450a33f8668f7649ca5f328e
+    :commit: dd81ef68e13efce7251a19be0bccd5cf780aeb0d
     :git: https://github.com/br1sk/Sonar.git
 
 SPEC CHECKSUMS:
