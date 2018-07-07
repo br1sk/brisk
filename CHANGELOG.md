@@ -10,6 +10,9 @@
 
 ## Bug Fixes
 
+- Fix preferences window default height
+  [change](https://github.com/br1sk/brisk/pull/141)
+
 - Update Sonar
   [issue 1](https://github.com/br1sk/brisk/issues/136)
   [issue 2](https://github.com/br1sk/brisk/issues/137)

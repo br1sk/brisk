@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -128,7 +128,8 @@
                                                 <action selector="runPageLayout:" target="Ady-hI-5gd" id="Din-rz-gC5"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Print…" keyEquivalent="p" id="aTl-1u-JFS">
+                                        <menuItem title="Print…" keyEquivalent="nil" id="aTl-1u-JFS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="print:" target="Ady-hI-5gd" id="qaZ-4w-aoO"/>
                                             </connections>
@@ -909,7 +910,6 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems/>
                         <connections>
                             <outlet property="delegate" destination="BhG-02-uGX" id="hiM-nb-0y6"/>
                         </connections>
@@ -987,7 +987,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="450" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="P60-fg-bV0">
+                            <button verticalHuggingPriority="501" translatesAutoresizingMaskIntoConstraints="NO" id="P60-fg-bV0">
                                 <rect key="frame" x="165" y="22" width="120" height="18"/>
                                 <buttonCell key="cell" type="check" title="Show Dock Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qTh-O2-m75">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1007,10 +1007,12 @@ DQ
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="P60-fg-bV0" firstAttribute="centerY" secondItem="yLd-6I-DVb" secondAttribute="centerY" id="BDf-bH-0H1"/>
+                            <constraint firstAttribute="bottom" secondItem="P60-fg-bV0" secondAttribute="bottom" constant="24" id="19f-MD-Ewg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JeI-yg-d2G" secondAttribute="trailing" id="BNF-wu-hYT"/>
                             <constraint firstItem="JeI-yg-d2G" firstAttribute="baseline" secondItem="P60-fg-bV0" secondAttribute="baseline" id="XBe-y1-RRm"/>
                             <constraint firstItem="P60-fg-bV0" firstAttribute="centerX" secondItem="yLd-6I-DVb" secondAttribute="centerX" id="mHe-se-yn7"/>
                             <constraint firstItem="JeI-yg-d2G" firstAttribute="leading" secondItem="P60-fg-bV0" secondAttribute="trailing" constant="8" id="mTk-Hs-hNq"/>
+                            <constraint firstItem="P60-fg-bV0" firstAttribute="top" secondItem="yLd-6I-DVb" secondAttribute="top" constant="23" id="wCh-rT-c7g"/>
                         </constraints>
                     </view>
                 </viewController>
