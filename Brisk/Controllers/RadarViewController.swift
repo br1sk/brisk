@@ -228,9 +228,9 @@ final class RadarViewController: ViewController {
 
             if UserDefaults.standard.bool(forKey: Defaults.copyOpenRadarLinkToClipboard) {
                 NSPasteboard.general.writeObjects(["http://www.openradar.me/\(code)" as NSString])
-                notification.informativeText = "The OpenRadar URL has been copied to your clipboard."
+                notification.informativeText = "The OpenRadar link has been copied to your clipboard."
             } else {
-                notification.informativeText = "Your radar identifier is: rdar://\(code)"
+                notification.informativeText = "Your report identifier is: rdar://\(code)"
             }
 
             NSUserNotificationCenter.default.deliver(notification)
