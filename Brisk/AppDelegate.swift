@@ -54,6 +54,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private func registerDefaults() {
         let defaults: [String: Any] = [
             Defaults.showDockIcon: false,
+            Defaults.copyOpenRadarLinkToClipboard: false
         ]
 
         UserDefaults.standard.register(defaults: defaults)
