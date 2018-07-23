@@ -227,12 +227,13 @@ final class RadarViewController: ViewController {
             notification.title = "Radar submitted"
 
             if UserDefaults.standard.bool(forKey: Defaults.copyOpenRadarLinkToClipboard) {
-                NSPasteboard.general.writeObjects(["http://www.openradar.me/\(code)" as NSString])
+                NSPasteboard.general.clearContents()
+                NSPasteboard.general.setString("http://www.openradar.me/\(code)", forType: .string)
                 notification.informativeText = "The OpenRadar link has been copied to your clipboard."
             } else {
                 notification.informativeText = "Your report identifier is: rdar://\(code)"
             }
-
+            NSUserNotificationCenter.default.delegate = self
             NSUserNotificationCenter.default.deliver(notification)
 
             self.document?.close()
@@ -345,5 +346,11 @@ extension RadarViewController: NSTextViewDelegate {
 extension RadarViewController: NSWindowDelegate {
     func windowDidBecomeKey(_ notification: Notification) {
         self.updateOpenRadarButton()
+    }
+}
+
+extension RadarViewController: NSUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
     }
 }
