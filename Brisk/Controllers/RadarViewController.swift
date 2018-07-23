@@ -150,7 +150,7 @@ final class RadarViewController: ViewController {
                     guard self?.postToOpenRadarButton.state == .on,
                         let (_, token) = Keychain.get(.openRadar) else
                     {
-                        self?.submitRadarCompletion(success: true)
+                        self?.submitRadarCompletion(success: true, code: radarID)
                         return
                     }
 
@@ -162,8 +162,8 @@ final class RadarViewController: ViewController {
                             closure(nil)
                     }, closure: { [weak self] result in
                         switch result {
-                        case .success(let code):
-                            self?.submitRadarCompletion(success: true, code: code)
+                        case .success:
+                            self?.submitRadarCompletion(success: true, code: radarID)
                         case .failure(let error):
                             self?.showError(message: error.message)
                             self?.submitRadarCompletion(success: false)
