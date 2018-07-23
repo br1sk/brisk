@@ -1024,21 +1024,43 @@ DQ
         <!--Open Radar-->
         <scene sceneID="UJb-pK-qqg">
             <objects>
+                <customObject id="dg4-4Q-65E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Open Radar" showSeguePresentationStyle="single" id="A5r-df-S82" customClass="OpenRadarPreferencesViewController" customModule="Brisk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="p59-mJ-TV3">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzK-9K-6Wp">
-                                <rect key="frame" x="18" y="23" width="54" height="17"/>
+                                <rect key="frame" x="18" y="38" width="54" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="API Key:" id="wso-qu-HEf">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-rv-PXK">
+                                <rect key="frame" x="78" y="34" width="244" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="2IW-Oc-6jo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="A5r-df-S82" id="yKn-ti-HWc"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mFR-eI-Nxs">
+                                <rect key="frame" x="76" y="10" width="330" height="18"/>
+                                <buttonCell key="cell" type="check" title="Copy OpenRadar link to clipboard after submission" bezelStyle="regularSquare" imagePosition="left" inset="2" id="He4-bb-INa">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="m72-X9-2Zx" name="value" keyPath="values.copyOpenRadarLinkToClipboard" id="NDZ-IJ-l1C"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-I4-UTN">
-                                <rect key="frame" x="324" y="13" width="112" height="32"/>
+                                <rect key="frame" x="324" y="28" width="112" height="32"/>
                                 <buttonCell key="cell" type="push" title="Get API Key" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BPD-fP-mud">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1049,35 +1071,27 @@ DQ
                                     <action selector="getAPIKey:" target="A5r-df-S82" id="MuT-P2-mxY"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-rv-PXK">
-                                <rect key="frame" x="78" y="20" width="244" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="2IW-Oc-6jo">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <outlet property="delegate" destination="A5r-df-S82" id="yKn-ti-HWc"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mFR-eI-Nxs" secondAttribute="trailing" constant="46" id="4s8-Ce-mCK"/>
+                            <constraint firstItem="mFR-eI-Nxs" firstAttribute="top" secondItem="iyh-rv-PXK" secondAttribute="bottom" constant="8" id="7Op-JT-N5m"/>
+                            <constraint firstItem="qZF-I4-UTN" firstAttribute="centerY" secondItem="iyh-rv-PXK" secondAttribute="centerY" id="8WW-1N-H2f"/>
                             <constraint firstItem="FzK-9K-6Wp" firstAttribute="leading" secondItem="p59-mJ-TV3" secondAttribute="leading" constant="20" id="8Zg-Mo-7nX"/>
-                            <constraint firstItem="qZF-I4-UTN" firstAttribute="baseline" secondItem="iyh-rv-PXK" secondAttribute="baseline" id="Oxq-jY-5xy"/>
                             <constraint firstItem="qZF-I4-UTN" firstAttribute="leading" secondItem="iyh-rv-PXK" secondAttribute="trailing" constant="8" id="Reh-lK-5Fu"/>
                             <constraint firstAttribute="trailing" secondItem="qZF-I4-UTN" secondAttribute="trailing" constant="20" id="TsI-0J-vBb"/>
-                            <constraint firstItem="iyh-rv-PXK" firstAttribute="baseline" secondItem="FzK-9K-6Wp" secondAttribute="baseline" id="aff-8p-10a"/>
+                            <constraint firstItem="iyh-rv-PXK" firstAttribute="baseline" secondItem="FzK-9K-6Wp" secondAttribute="baseline" constant="1" id="aff-8p-10a"/>
                             <constraint firstItem="iyh-rv-PXK" firstAttribute="leading" secondItem="FzK-9K-6Wp" secondAttribute="trailing" constant="8" id="jlc-ps-Ecv"/>
-                            <constraint firstItem="iyh-rv-PXK" firstAttribute="centerY" secondItem="p59-mJ-TV3" secondAttribute="centerY" id="wUh-pn-Tai"/>
+                            <constraint firstItem="mFR-eI-Nxs" firstAttribute="leading" secondItem="iyh-rv-PXK" secondAttribute="leading" id="k0E-UY-fSA"/>
+                            <constraint firstItem="iyh-rv-PXK" firstAttribute="centerY" secondItem="p59-mJ-TV3" secondAttribute="centerY" constant="-14" id="wUh-pn-Tai"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="APIKeyTextField" destination="iyh-rv-PXK" id="XXI-a9-beV"/>
                     </connections>
                 </viewController>
-                <customObject id="dg4-4Q-65E" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="m72-X9-2Zx"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="1226.5"/>
+            <point key="canvasLocation" x="1630" y="1241"/>
         </scene>
         <!--New Radar-->
         <scene sceneID="bIb-re-9Xr">
@@ -1148,14 +1162,14 @@ DQ
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9v-yv-l5N">
                                         <rect key="frame" x="0.0" y="312" width="572" height="70"/>
                                         <clipView key="contentView" id="H9Z-Ca-KFx">
-                                            <rect key="frame" x="1" y="1" width="570" height="68"/>
+                                            <rect key="frame" x="1" y="1" width="555" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="WH8-h7-UQ2" customClass="TextView" customModule="Brisk" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="555" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="570" height="68"/>
+                                                    <size key="minSize" width="555" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1170,21 +1184,21 @@ DQ
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="McA-KJ-qZh">
-                                            <rect key="frame" x="555" y="1" width="16" height="68"/>
+                                            <rect key="frame" x="556" y="1" width="15" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsr-Nw-FTS">
                                         <rect key="frame" x="0.0" y="234" width="572" height="70"/>
                                         <clipView key="contentView" id="MNA-Gj-HPY">
-                                            <rect key="frame" x="1" y="1" width="570" height="68"/>
+                                            <rect key="frame" x="1" y="1" width="555" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="NFX-5c-vMY" customClass="TextView" customModule="Brisk" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="555" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="570" height="68"/>
+                                                    <size key="minSize" width="555" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1199,21 +1213,21 @@ DQ
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="rKK-VD-8Gh">
-                                            <rect key="frame" x="555" y="1" width="16" height="68"/>
+                                            <rect key="frame" x="556" y="1" width="15" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snB-5I-Qzt">
                                         <rect key="frame" x="0.0" y="156" width="572" height="70"/>
                                         <clipView key="contentView" id="zHz-MX-s8T">
-                                            <rect key="frame" x="1" y="1" width="570" height="68"/>
+                                            <rect key="frame" x="1" y="1" width="555" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Y7a-Qh-n0G" customClass="TextView" customModule="Brisk" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="555" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="570" height="68"/>
+                                                    <size key="minSize" width="555" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1228,21 +1242,21 @@ DQ
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="z5Z-We-g4v">
-                                            <rect key="frame" x="555" y="1" width="16" height="68"/>
+                                            <rect key="frame" x="556" y="1" width="15" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-Cy-HfV">
                                         <rect key="frame" x="0.0" y="78" width="572" height="70"/>
                                         <clipView key="contentView" id="Fcy-S1-scV">
-                                            <rect key="frame" x="1" y="1" width="570" height="68"/>
+                                            <rect key="frame" x="1" y="1" width="555" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="uI0-Jp-4xg" customClass="TextView" customModule="Brisk" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="555" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="570" height="68"/>
+                                                    <size key="minSize" width="555" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1257,21 +1271,21 @@ DQ
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="uVa-27-jQH">
-                                            <rect key="frame" x="555" y="1" width="16" height="68"/>
+                                            <rect key="frame" x="556" y="1" width="15" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icu-Ch-hzl">
                                         <rect key="frame" x="0.0" y="0.0" width="572" height="70"/>
                                         <clipView key="contentView" id="Wiq-RY-Epv">
-                                            <rect key="frame" x="1" y="1" width="570" height="68"/>
+                                            <rect key="frame" x="1" y="1" width="555" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SKw-6e-Fyl" customClass="TextView" customModule="Brisk" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="570" height="68"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="555" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <size key="minSize" width="570" height="68"/>
+                                                    <size key="minSize" width="555" height="68"/>
                                                     <size key="maxSize" width="572" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <userDefinedRuntimeAttributes>
@@ -1286,7 +1300,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="uba-Ju-X04">
-                                            <rect key="frame" x="555" y="1" width="16" height="68"/>
+                                            <rect key="frame" x="556" y="1" width="15" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
