@@ -31,7 +31,7 @@ final class OpenRadarPreferencesViewController: ViewController {
 }
 
 extension OpenRadarPreferencesViewController: NSTextFieldDelegate {
-    override func controlTextDidEndEditing(_: Notification) {
+    func controlTextDidEndEditing(_: Notification) {
         if self.view.window?.isKeyWindow == true {
             self.saveCurrentToken()
         }
