@@ -22,7 +22,7 @@ There are a few different ways you can install Brisk:
    releases](https://github.com/br1sk/brisk/releases) and copy it to
    your Applications directory
 1. Using [brew-cask](https://github.com/caskroom/homebrew-cask) with
-   `brew cask install brisk`
+   `brew install --cask brisk`
 1. Clone the repo and run `make install`
 
 ## Development
