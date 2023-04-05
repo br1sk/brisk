@@ -150,7 +150,7 @@ final class RadarViewController: ViewController {
                     guard self?.postToOpenRadarButton.state == .on,
                         let (_, token) = Keychain.get(.openRadar) else
                     {
-                        self?.submitRadarCompletion(success: true)
+                        self?.submitRadarCompletion(success: true, code: radarID)
                         return
                     }
 
@@ -163,7 +163,7 @@ final class RadarViewController: ViewController {
                     }, closure: { [weak self] result in
                         switch result {
                         case .success:
-                            self?.submitRadarCompletion(success: true)
+                            self?.submitRadarCompletion(success: true, code: radarID)
                         case .failure(let error):
                             self?.showError(message: error.message)
                             self?.submitRadarCompletion(success: false)
@@ -214,14 +214,27 @@ final class RadarViewController: ViewController {
         }
     }
 
-    private func submitRadarCompletion(success: Bool) {
+    private func submitRadarCompletion(success: Bool, code: Int = -1) {
         self.progressIndicator.stopAnimation(self)
         self.submitButton.isEnabled = true
 
-        if success {
+        if success && code != -1 {
             if self.document?.fileURL != nil {
                 self.document?.save(self)
             }
+
+            let notification = NSUserNotification()
+            notification.title = "Radar submitted"
+
+            if UserDefaults.standard.bool(forKey: Defaults.copyOpenRadarLinkToClipboard) {
+                NSPasteboard.general.clearContents()
+                NSPasteboard.general.setString("http://www.openradar.me/\(code)", forType: .string)
+                notification.informativeText = "The OpenRadar link has been copied to your clipboard."
+            } else {
+                notification.informativeText = "Your report identifier is: rdar://\(code)"
+            }
+            NSUserNotificationCenter.default.delegate = self
+            NSUserNotificationCenter.default.deliver(notification)
 
             self.document?.close()
         }
@@ -333,5 +346,11 @@ extension RadarViewController: NSTextViewDelegate {
 extension RadarViewController: NSWindowDelegate {
     func windowDidBecomeKey(_ notification: Notification) {
         self.updateOpenRadarButton()
+    }
+}
+
+extension RadarViewController: NSUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
     }
 }
