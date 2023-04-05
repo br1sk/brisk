@@ -36,7 +36,7 @@ final class AttachmentDroppableView: NSView {
 
 fileprivate extension NSDraggingInfo {
     private var files: [URL] {
-        let asStrings = self.draggingPasteboard().propertyList(forType: makeFileNameType()) as? [String] ?? []
+        let asStrings = self.draggingPasteboard.propertyList(forType: makeFileNameType()) as? [String] ?? []
         return asStrings.map { URL(fileURLWithPath: $0) }
     }
 

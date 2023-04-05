@@ -56,11 +56,6 @@ final class FileDuplicateViewController: ViewController {
             }
     }
 
-    override func controlTextDidChange(_ notification: Notification) {
-        assert(notification.object as? NSTextField === self.radarIDTextField)
-        self.searchButton.isEnabled = radarID(from: self.radarIDTextField.stringValue) != nil
-    }
-
     private func showError(title: String, message: String) {
         let alert = NSAlert()
         alert.messageText = title
@@ -71,6 +66,13 @@ final class FileDuplicateViewController: ViewController {
     private func show(_ alert: NSAlert) {
         alert.runModal()
         self.radarIDTextField.becomeFirstResponder()
+    }
+}
+
+extension FileDuplicateViewController: NSControlTextEditingDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        assert(obj.object as? NSTextField === self.radarIDTextField)
+        self.searchButton.isEnabled = radarID(from: self.radarIDTextField.stringValue) != nil
     }
 }
 

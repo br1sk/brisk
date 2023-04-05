@@ -309,7 +309,7 @@ extension RadarViewController: NSTextViewDelegate {
         ]
     }
 
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         self.document?.updateChangeCount(.changeDone)
         self.textChanged()
     }

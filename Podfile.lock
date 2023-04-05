@@ -8,6 +8,11 @@ DEPENDENCIES:
   - Sonar (from `https://github.com/br1sk/Sonar.git`)
   - Sparkle
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Sparkle
+
 EXTERNAL SOURCES:
   Sonar:
     :git: https://github.com/br1sk/Sonar.git
@@ -24,4 +29,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 31638d14e4cbdaed3252aafe998baf86f9c87574
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
